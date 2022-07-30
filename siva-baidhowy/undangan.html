@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, maximum-scale=1.0">
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css" integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <script>
@@ -24,6 +24,9 @@
                         'semibold': 500,
                         'bold': 700
                     },
+                    animation: {
+                        'spin-slow': 'spin 6s linear infinite',
+                    }
                 },
                 screens: {
                     'xs': '428px',
@@ -47,7 +50,7 @@
 </head>
 <body class="bg-[url('./assets/img/bg.png')] bg-repeat font-body text-primary w-full overflow-x-hidden">
     <header class="w-full p-8">
-        <nav class="w-full flex items-center justify-evenly mx-auto text-xl font-normal">
+        <nav class="w-full flex lg:flex-row items-center justify-center lg:justify-evenly mx-auto text-xl font-normal">
             <a href="#" class="hidden lg:block">HOME</a>
             <a href="#" class="hidden lg:block">OUR STORY</a>
             <a href="#" class="hidden lg:block">PASANGAN</a>
@@ -69,23 +72,23 @@
             <article class="w-full max-w-3xl mx-auto flex flex-col items-center">
                 <h1 class="text-center text-3xl font-semibold">Hari yang ditunggu</h3>
                 <h2 class="text-center text-xl font-light my-6">Sabtu, 06 Agustus 2022</h4>
-                <article class="w-full flex flex-col items-center p-4">
+                <article class="w-full flex flex-col items-center sm:p-4">
                     <section class="w-full flex flex-wrap items-center justify-center gap-4">
-                        <div id="days-card" class="w-32 flex flex-col items-center px-8 py-6 bg-gray-200 rounded-xl text-primary">
-                            <h3 id="days" class="text-center text-6xl">-</h3>
-                            <p class="text-center text-xl">Hari</p>
+                        <div id="days-card" class="w-[68px] xs:w-[72px] sm:w-32 flex flex-col items-center px-8 py-6 bg-gray-200 rounded-xl text-primary">
+                            <h3 id="days" class="text-center text-3xl sm:text-6xl">-</h3>
+                            <p class="text-center text-lg sm:text-xl">Hari</p>
                         </div>
-                        <div id="hours-card" class="w-32 flex flex-col items-center px-8 py-6 bg-gray-200 rounded-xl text-primary">
-                            <h3 id="hours" class="text-center text-6xl">-</h3>
-                            <p class="text-center text-xl">Jam</p>
+                        <div id="hours-card" class="w-[68px] xs:w-[72px] sm:w-32 flex flex-col items-center px-8 py-6 bg-gray-200 rounded-xl text-primary">
+                            <h3 id="hours" class="text-center text-3xl sm:text-6xl">-</h3>
+                            <p class="text-center text-lg sm:text-xl">Jam</p>
                         </div>
-                        <div id="minutes-card" class="w-32 flex flex-col items-center px-8 py-6 bg-gray-200 rounded-xl text-primary">
-                            <h3 id="minutes" class="text-center text-6xl">-</h3>
-                            <p class="text-center text-xl">Menit</p>
+                        <div id="minutes-card" class="w-[68px] xs:w-[72px] sm:w-32 flex flex-col items-center px-8 py-6 bg-gray-200 rounded-xl text-primary">
+                            <h3 id="minutes" class="text-center text-3xl sm:text-6xl">-</h3>
+                            <p class="text-center text-lg sm:text-xl">Menit</p>
                         </div>
-                        <div id="seconds-card" class="w-32 flex flex-col items-center px-8 py-6 bg-gray-200 rounded-xl text-primary">
-                            <h3 id="seconds" class="text-center text-6xl">-</h3>
-                            <p class="text-center text-xl">Detik</p>
+                        <div id="seconds-card" class="w-[68px] xs:w-[72px] sm:w-32 flex flex-col items-center px-8 py-6 bg-gray-200 rounded-xl text-primary">
+                            <h3 id="seconds" class="text-center text-3xl sm:text-6xl">-</h3>
+                            <p class="text-center text-lg sm:text-xl">Detik</p>
                         </div>
                     </section>
                     <p id="wed-text" class="font-semibold text-lg text-center mt-12">
@@ -118,6 +121,10 @@
                             <br>
                             Bpk. H. Ahmad Fauzi & Ibu Sri Herlina
                         </p>
+                        <a href="https://www.instagram.com/baydhowy/" target="_blank" class="mt-3 flex items-center font-semibold">
+                            <img src="./assets/icon/instagram.svg" alt="instagram" class="w-8 h-8 mr-3">
+                            @baydhowy
+                        </a>
                     </div>
                     <p class="text-center font-title text-8xl">&</p>
                     <div class="flex flex-col items-center p-3 bride">
@@ -128,6 +135,10 @@
                             <br>
                             Bpk. Andrianto & Ibu Ida Kusuma
                         </p>
+                        <a href="https://www.instagram.com/sivalianda/" target="_blank" class="mt-3 flex items-center font-semibold">
+                            <img src="./assets/icon/instagram.svg" alt="instagram" class="w-8 h-8 mr-3">
+                            @sivalianda
+                        </a>
                     </div>
                 </section>
             </article>
@@ -304,6 +315,9 @@
                 </article>
             </article>
         </section>
+        <button id="discButton" class="fixed bottom-[85px] sm:bottom-5 left-5 w-14 outline-none">
+            <img src="./assets/img/Disc 1.png" alt="Disc" class="w-full">
+        </button>
         <nav class="w-full bg-gray-800 flex items-center justify-center fixed bottom-0 sm:hidden text-gray-400 py-2">
             <div class="w-full flex flex-wrap items-center justify-evenly">
                 <a id="home-btn" href="#home" class="nav-btn flex flex-col items-center p-2">
@@ -330,13 +344,14 @@
         </nav>
     </main>
     <footer class="w-full flex justify-center p-6 bg-primary text-white">
-        <h1 class="text-xl font-bold">Powered by Qitadev (Qita Develop Teknologi).</h1>
+        <h1 class="text-xl font-bold">Powered by Qitadev (Qita Development Teknologi).</h1>
     </footer>
 </body>
 <script src="./index.js"></script>
 <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
 <script>
     $(document).ready(function(){
+        $("#audio-player").get(0).play();
         setTimeout(() => {
             $(".card").slice(0, 6).show();
         }, 2000)

@@ -6,6 +6,7 @@ let groupNav = document.getElementById("group-btn");
 let agendaNav = document.getElementById("agenda-btn");
 let angpaoNav = document.getElementById("angpao-btn");
 let ucapanNav = document.getElementById("ucapan-btn");
+let audioPlayer = document.getElementById("audio-player");
 
 let x = setInterval(() => {
     let currentDate = new Date().getTime();
@@ -99,7 +100,23 @@ sendButton.addEventListener('click', async (e) => {
     }, 3000)
 })
 
-getUcapanData();
+const audio = new Audio('assets/bg-lagu.mp3');
+audio.loop = true;
+audio.volume = 0.3;
+const discButton = document.getElementById('discButton')
+discButton.addEventListener('click', function () {
+    if (audio.paused) {
+        discButton.classList.add('animate-spin-slow');
+        audio.play();
+    } else {
+        discButton.classList.remove('animate-spin-slow');
+        audio.pause();
+    }
+});
+
+window.onload = () => {
+    getUcapanData();
+}
 
 
 

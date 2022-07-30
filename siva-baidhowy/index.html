@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.5">
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
         tailwind.config = {
@@ -39,18 +39,19 @@
 </head>
 <body>
     <main class="w-full h-screen bg-[url('./assets/img/splash.png')] bg-no-repeat bg-cover bg-top z-0 relative font-body text-primary">
-        <div id="overlay" class="absolute inset-0 bg-black opacity-50 z-0"></div>
-        <section id="main-panel" class="max-w-7xl h-full p-8 sm:p-16 flex flex-col justify-center items-center z-10 relative mx-auto">
-            <article class="w-full bg-white/75 p-8 sm:p-16 flex flex-col items-center justify-center text-center">
-                <img src="./assets/icon/bismillah.svg" alt="bismillah" class="w-52 sm:w-64 my-4 sm:my-8">
-                <h1 class="text-xl sm:text-3xl my-4 sm:my-12 font-normal uppercase">The Wedding Of</h1>
-                <h2 class="text-5xl lg:text-8xl my-4 sm:my-12 font-title animate__animated animate__fadeInDown animate__slow">Siva & Baidhowy</h2>
-                <p class="text-xl font-semibold my-8 animate__animated animate__fadeInUp animate__slow">Sabtu, 06 Agustus 2022</p>
-                <a href="undangan.html" class="px-6 py-4 bg-primary text-white flex items-center my-6">
-                    Open Invitation
-                    <span><img src="./assets/icon/swipe.svg" alt="swipe" class="ml-4"></span>
-                </a>
-            </article>
+        <div id="overlay" class="absolute inset-0 bg-black opacity-50 z-[-10]"></div>
+        <section id="main-panel" class="max-w-screen-sm md:max-w-screen-md lg:max-w-screen-lg xl:max-w-screen-xl h-full p-8 sm:p-16 lg:p-20 flex flex-col justify-center items-center z-10 mx-auto">
+            <article class="w-full h-full bg-white/75 flex py-16 sm:py-8 flex flex-col items-center justify-center text-center">
+                <section class="w-full 2xl:w-3/4 px-4 max-h-full flex flex-col items-center justify-center text-center">
+                    <img src="./assets/icon/bismillah.svg" alt="bismillah" class="w-52 sm:w-64">
+                    <h1 class="text-xl sm:text-3xl font-normal py-8 uppercase">The Wedding Of</h1>
+                    <h2 class="text-5xl lg:text-7xl font-title py-8 animate__animated animate__fadeInDown animate__slow">Siva & Baidhowy</h2>
+                    <p class="text-xl font-semibold py-8 animate__animated animate__fadeInUp animate__slow">Sabtu, 06 Agustus 2022</p>
+                    <a href="undangan.html" class="px-6 py-4 bg-primary text-white flex items-center">
+                        Open Invitation
+                        <span><img src="./assets/icon/swipe.svg" alt="swipe" class="ml-4"></span>
+                    </a>
+                </section>
         </section>
     </main>
 </body>
