@@ -1,5 +1,5 @@
 let weddingDate = new Date("Aug 6, 2022 10:00:00").getTime();
-let googleSheetURL = "https://script.google.com/macros/s/AKfycbwVBBeQYkYkk00KbsAWlBEihrEfiuAvFIYVCwdT542Y_kqf633c9rdazKkOPcBBo2U6dg/exec";
+let googleSheetURL = "https://script.google.com/macros/s/AKfycbw4u-a3WgaiIoDWM1_ZA9RPP1CifyRxQi-VU-I1BF-BunUFkyEDJRefW_7p8V_2ekIj-g/exec";
 let sendButton = document.getElementById("ucapan-send");
 let homeNav = document.getElementById("home-btn");
 let groupNav = document.getElementById("group-btn");
@@ -7,6 +7,7 @@ let agendaNav = document.getElementById("agenda-btn");
 let angpaoNav = document.getElementById("angpao-btn");
 let ucapanNav = document.getElementById("ucapan-btn");
 let audioPlayer = document.getElementById("audio-player");
+let card = document.querySelectorAll(".card");
 
 let x = setInterval(() => {
     let currentDate = new Date().getTime();
@@ -60,12 +61,13 @@ window.addEventListener('hashchange', () => {
 
 async function getUcapanData () {
     let ucapanInner = document.getElementById("ucapan-inner");
+    let template = '';
     await fetch(`${googleSheetURL}?action=get_all_greetings`)
         .then((res) => res.json())
         .then((res) => {
             res.data.forEach((item) => {
-                ucapanInner.innerHTML += `
-                    <article id="card-wishes" class="card hidden break-inside-avoid mb-4 rounded-xl bg-gray-200 text-primary flex flex-col items-start p-6">
+                template += `
+                    <article id="card-wishes" class="card break-inside-avoid mb-4 rounded-xl bg-gray-200 text-primary flex flex-col items-start p-6">
                         <h1 class="text-xl font-bold font-title">
                             ${item.nama}
                         </h1>
@@ -73,17 +75,22 @@ async function getUcapanData () {
                             ${item.ucapan}
                         </p>
                     </article>
-                `
+                `;
             })
+            ucapanInner.innerHTML = template;
         })
 }
 
 sendButton.addEventListener('click', async (e) => {
     e.preventDefault();
+    document.getElementById("ucapanHandler").classList.remove('hidden');
     
     let nama = document.getElementById("ucapan-input").value;
     let ucapan = document.getElementById("ucapan-textarea").value;
-
+    
+    document.getElementById("ucapan-input").value = '';
+    document.getElementById("ucapan-textarea").value = '';
+    
     const form = new FormData();
     form.append('action', 'create_greeting');
     form.append('nama', nama);
@@ -93,18 +100,19 @@ sendButton.addEventListener('click', async (e) => {
         method: 'POST',
         body: form
     }).then((res) => res.json())
-    .then((res) => console.log(res))
-
-    setTimeout(() => {
+    .then(() => {
         getUcapanData();
-    }, 3000)
+        setTimeout(() => {
+            document.getElementById("ucapanHandler").classList.add('hidden');
+        }, 2000)
+    })
+    .catch((e) => console.log(e.message))
 })
 
 const audio = document.querySelector("audio");
 const discButton = document.getElementById('discButton');
 
 window.onload = () => {
-    audio.play();
     discButton.classList.add('animate-spin-slow');
     getUcapanData();
 }
