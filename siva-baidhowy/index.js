@@ -100,10 +100,15 @@ sendButton.addEventListener('click', async (e) => {
     }, 3000)
 })
 
-const audio = new Audio('assets/bg-lagu.mp3');
-audio.loop = true;
-audio.volume = 0.3;
-const discButton = document.getElementById('discButton')
+const audio = document.querySelector("audio");
+const discButton = document.getElementById('discButton');
+
+window.onload = () => {
+    audio.play();
+    discButton.classList.add('animate-spin-slow');
+    getUcapanData();
+}
+
 discButton.addEventListener('click', function () {
     if (audio.paused) {
         discButton.classList.add('animate-spin-slow');
@@ -114,9 +119,7 @@ discButton.addEventListener('click', function () {
     }
 });
 
-window.onload = () => {
-    getUcapanData();
-}
+
 
 
 

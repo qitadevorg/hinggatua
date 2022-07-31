@@ -342,6 +342,7 @@
                 </a>
             </div>
         </nav>
+        <audio id="bg-song" autoplay="autoplay" src="./assets/bg-lagu.mp3" loop="true"></audio>
     </main>
     <footer class="w-full flex justify-center p-6 bg-primary text-white">
         <h1 class="text-xl font-bold">Powered by Qitadev (Qita Development Teknologi).</h1>
@@ -351,10 +352,9 @@
 <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
 <script>
     $(document).ready(function(){
-        $("#audio-player").get(0).play();
         setTimeout(() => {
             $(".card").slice(0, 6).show();
-        }, 2000)
+        }, 3000)
         if($(".card:hidden").length == 0) {
             $("#loadMore").text("No Content").addClass("hidden");
         }
