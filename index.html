@@ -1,12 +1,646 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="id">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>Hingga Tua</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Epilogue:wght@400;500;600&family=Raleway:wght@400;600;700&display=swap" rel="stylesheet">
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        'sans': 'Raleway, sans-serif',
+                        'sans-secondary': 'Epilogue, sans-serif',
+                    },
+                    colors: {
+                        'brand-brown-dark': '#854836',
+                        'brand-brown-semilight': '#B87D4A',
+                        'brand-brown-light': '#E5A061',
+                        'brand-yellow': '#FFF7C8',
+                        'brand-cream': '#FFFDF0',
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style type="text/tailwindcss">
+        html {
+            @apply text-brand-brown-dark;
+        }
+    </style>
 </head>
+
 <body>
-    We are coming soon!
+    <header>
+        <nav class="max-w-6xl px-5 m-auto flex justify-between items-center">
+            <a href="/">
+                <div class="w-[100px] h-[20px] bg-gray-300 rounded-full">
+
+                </div>
+            </a>
+            <div class="py-5 block md:hidden">
+                <button class="text-brand-brown-dark">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16" />
+                    </svg>
+                </button>
+            </div>
+            <ul class="py-5 hidden items-center md:flex">
+                <li class="ml-8">
+                    <a href="#" class="font-bold">Home</a>
+                </li>
+                <li class="ml-8">
+                    <a href="#">Layanan</a>
+                </li>
+                <li class="ml-8">
+                    <a href="#">Desain</a>
+                </li>
+                <li class="ml-8">
+                    <a href="#">Testimoni</a>
+                </li>
+                <li class="ml-8">
+                    <a href="#" class="inline-block px-4 py-2 bg-brand-yellow rounded-full">Pilih Paket Undangan</a>
+                </li>
+            </ul>
+        </nav>
+        <article class="max-w-6xl m-auto px-5 pt-5 flex flex-col items-center md:flex-row">
+            <div>
+                <h1 class="text-6xl font-bold">
+                    Undangan Kekinian, di Momentum Spesial
+                </h1>
+                <p class="mt-4">
+                    Jadikan momen spesialmu dalam ikatan suci lebih bermakna & berkesan hingga tua bersama
+                </p>
+                <p class="mt-4">
+                    <a href="#" class="px-4 py-2 inline-block w-full bg-brand-brown-dark text-white rounded-full text-center md:w-auto">Pesan Sekarang</a>
+                    <a href="#" class="mt-4 px-4 py-2 inline-block w-full border border-brand-brown-light text-brand-brown-light rounded-full text-center md:w-auto md:ml-4">Lihat Contoh Undangan</a>
+                </p>
+            </div>
+            <div class="mt-8 w-full md:mt-0 md:ml-8">
+                <div class="bg-gray-300 w-full md:w-[500px] h-[480px]"></div>
+            </div>
+        </article>
+    </header>
+    <main>
+        <section class="bg-brand-cream pt-24">
+            <div class="max-w-6xl m-auto px-5">
+                <p class="text-brand-brown-light">What services are specific to you?</p>
+                <h2 class="mt-2 text-4xl font-semibold">
+                    Layanan Kami
+                </h2>
+                <ul class="mt-8 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
+                    <li class="p-5 bg-brand-yellow rounded-lg border">
+                        <div class="w-[80px] h-[80px] bg-gray-300 rounded-full"></div>
+                        <h3 class="mt-4 text-2xl font-semibold">
+                            Tamu Eksklusif
+                        </h3>
+                        <p class="mt-2 text-brand-brown-semilight text-sm">
+                            Cantumkan nama tamu undangan supaya  lebih spesial di momentum yang berbahagia.
+                        </p>
+                    </li>
+                    <li class="p-5 bg-brand-yellow rounded-lg border">
+                        <div class="w-[80px] h-[80px] bg-gray-300 rounded-full"></div>
+                        <h3 class="mt-4 text-2xl font-semibold">
+                            Love Story
+                        </h3>
+                        <p class="mt-2 text-brand-brown-semilight text-sm">
+                            Bagikan cerita pertemuan dan keyakinanmu untuk berjanji dalam ikatan suci hingga tua bersama dengannya.
+                        </p>
+                    </li>
+                    <li class="p-5 bg-brand-yellow rounded-lg border">
+                        <div class="w-[80px] h-[80px] bg-gray-300 rounded-full"></div>
+                        <h3 class="mt-4 text-2xl font-semibold">
+                            Doa & Ucapan
+                        </h3>
+                        <p class="mt-2 text-brand-brown-semilight text-sm">
+                            Permudah kerabat, sahabat, dan orang terdekat mengirimkan doa dan ucapan di momentum yang spesial.
+                        </p>
+                    </li>
+                    <li class="p-5 bg-brand-yellow rounded-lg border">
+                        <div class="w-[80px] h-[80px] bg-gray-300 rounded-full"></div>
+                        <h3 class="mt-4 text-2xl font-semibold">
+                            Hadiah Pernikahan
+                        </h3>
+                        <p class="mt-2 text-brand-brown-semilight text-sm">
+                            Permudah tamu undangan mengirimkan hadiah dimanapun dan kapanpun tanpa perlu ribet.
+                        </p>
+                    </li>
+                    <li class="p-5 bg-brand-yellow rounded-lg border">
+                        <div class="w-[80px] h-[80px] bg-gray-300 rounded-full"></div>
+                        <h3 class="mt-4 text-2xl font-semibold">
+                            Galeri Pasangan
+                        </h3>
+                        <p class="mt-2 text-brand-brown-semilight text-sm">
+                            Abadikan dan bagikan foto & video kebersamaanmu di momentum spesial bersamanya.
+                        </p>
+                    </li>
+                    <li class="p-5 bg-brand-yellow rounded-lg border">
+                        <div class="w-[80px] h-[80px] bg-gray-300 rounded-full"></div>
+                        <h3 class="mt-4 text-2xl font-semibold">
+                            Maps Acara
+                        </h3>
+                        <p class="mt-2 text-brand-brown-semilight text-sm">
+                            Permudah tamu undangan mendapatkan titik lokasi acara melalui terhubungnya layanan undangan dengan Google Maps.
+                        </p>
+                    </li>
+                </ul>
+            </div>
+        </section>
+        <section class="bg-brand-cream py-24">
+            <div class="max-w-6xl m-auto px-5 flex flex-col md:flex-row">
+                <div class="flex-1">
+                    <p class="text-brand-brown-light">Why choose us?</p>
+                    <h2 class="mt-2 text-4xl font-semibold">
+                        Alasan Memilih Kami
+                    </h2>
+                    <ul class="mt-8 grid grid-rows-4 grid-flow-col gap-4">
+                        <li class="flex items-center text-sm">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="inline mr-2 h-5 w-5 text-brand-brown-semilight" viewBox="0 0 20 20" fill="currentColor">
+                                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+                            </svg>
+                            Revisi Tanpa Batas
+                        </li>
+                        <li class="flex items-center text-sm">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="inline mr-2 h-5 w-5 text-brand-brown-semilight" viewBox="0 0 20 20" fill="currentColor">
+                                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+                            </svg>
+                            Kualitas Terjamin
+                        </li>
+                        <li class="flex items-center text-sm">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="inline mr-2 h-5 w-5 text-brand-brown-semilight" viewBox="0 0 20 20" fill="currentColor">
+                                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+                            </svg>
+                            Hemat Segalanya
+                        </li>
+                        <li class="flex items-center text-sm">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="inline mr-2 h-5 w-5 text-brand-brown-semilight" viewBox="0 0 20 20" fill="currentColor">
+                                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+                            </svg>
+                            Desain Eksklusif
+                        </li>
+                        <li class="flex items-center text-sm">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="inline mr-2 h-5 w-5 text-brand-brown-semilight" viewBox="0 0 20 20" fill="currentColor">
+                                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+                            </svg>
+                            Undangan Awet
+                        </li>
+                        <li class="flex items-center text-sm">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="inline mr-2 h-5 w-5 text-brand-brown-semilight" viewBox="0 0 20 20" fill="currentColor">
+                                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+                            </svg>
+                            Simpel & Fleksibel
+                        </li>
+                        <li class="flex items-center text-sm">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="inline mr-2 h-5 w-5 text-brand-brown-semilight" viewBox="0 0 20 20" fill="currentColor">
+                                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+                            </svg>
+                            Tanpa Keringat
+                        </li>
+                        <li class="flex items-center text-sm">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="inline mr-2 h-5 w-5 text-brand-brown-semilight" viewBox="0 0 20 20" fill="currentColor">
+                                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+                            </svg>
+                            Mudah Dibuat
+                        </li>
+                    </ul>
+                </div>
+                <div class="flex-1 mt-8 md:mt-0 md:ml-8">
+                    <div class="w-full h-[320px] rounded-full bg-gray-300"></div>
+                </div>
+            </div>
+        </section>
+        <section class="pt-24">
+            <div class="max-w-6xl m-auto px-5">
+                <p class="text-brand-brown-light text-center">Elegant and exclusive design is our principle</p>
+                <h2 class="mt-2 text-4xl font-semibold text-center">
+                    Pilih Desain Undangan Sesuai Selera
+                </h2>
+                <ul class="mt-8 grid sm:grid-cols-2 lg:grid-cols-4 gap-8">
+                    <li>
+                        <div class="w-full h-[220px] bg-gray-300 rounded-lg"></div>
+                        <h3 class="mt-4 text-xl font-semibold">Harmony Minimalis</h3>
+                        <ul class="mt-2">
+                            <li class="inline-block px-3 py-1 rounded-full bg-brand-yellow text-sm">Umum</li>
+                        </ul>
+                        <a href="#" class="mt-4 w-full block px-4 py-2 text-center rounded-full border border-brand-brown-dark font-semibold">Preview</a>
+                    </li>
+                    <li>
+                        <div class="w-full h-[220px] bg-gray-300 rounded-lg"></div>
+                        <h3 class="mt-4 text-xl font-semibold">Green Nature</h3>
+                        <ul class="mt-2">
+                            <li class="inline-block px-3 py-1 rounded-full bg-brand-yellow text-sm">Umum</li>
+                            <li class="inline-block px-3 py-1 rounded-full bg-brand-yellow text-sm">Minimalis</li>
+                        </ul>
+                        <a href="#" class="mt-4 w-full block px-4 py-2 text-center rounded-full border border-brand-brown-dark font-semibold">Preview</a>
+                    </li>
+                    <li>
+                        <div class="w-full h-[220px] bg-gray-300 rounded-lg"></div>
+                        <h3 class="mt-4 text-xl font-semibold">Smoot White</h3>
+                        <ul class="mt-2">
+                            <li class="inline-block px-3 py-1 rounded-full bg-brand-yellow text-sm">Elegan</li>
+                            <li class="inline-block px-3 py-1 rounded-full bg-brand-yellow text-sm">Minimalis</li>
+                        </ul>
+                        <a href="#" class="mt-4 w-full block px-4 py-2 text-center rounded-full border border-brand-brown-dark font-semibold">Preview</a>
+                    </li>
+                    <li>
+                        <div class="w-full h-[220px] bg-gray-300 rounded-lg"></div>
+                        <h3 class="mt-4 text-xl font-semibold">Harmony Minimalis</h3>
+                        <ul class="mt-2">
+                            <li class="inline-block px-3 py-1 rounded-full bg-brand-yellow text-sm">Umum</li>
+                        </ul>
+                        <a href="#" class="mt-4 w-full block px-4 py-2 text-center rounded-full border border-brand-brown-dark font-semibold">Preview</a>
+                    </li>
+                </ul>
+            </div>
+        </section>
+        <section class="pt-24">
+            <div class="max-w-6xl m-auto px-5">
+                <p class="text-brand-brown-light text-center">A variety of package options are available to suit your needs</p>
+                <h2 class="mt-2 text-4xl font-semibold text-center">
+                    Yuk Pilih Undangan Sesuai Kebutuhan
+                </h2>
+                <ul class="mt-8 grid sm:grid-cols-2 lg:grid-cols-4 gap-8 font-sans-secondary">
+                    <li class="rounded-lg border border-brand-brown-dark p-5 flex flex-col">
+                        <h3 class="text-xl font-semibold">The River</h3>
+                        <p class="mt-4 text-xl text-black font-semibold">
+                            Rp 100.000
+                            <span class="ml-2 font-normal text-sm line-through decoration-2 decoration-red-500">Rp 199.000</span>
+                        </p>
+                        <ul class="mt-4 flex-1">
+                            <li class="flex items-center text-sm">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="mr-2 text-brand-brown-light h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+                                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
+                                </svg>
+                                <span class="text-black">Hitung Mundur</span>
+                            </li>
+                            <li class="mt-2 flex items-center text-sm">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="mr-2 text-brand-brown-light h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+                                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
+                                </svg>
+                                <span class="text-black">Hadiah Pernikahan</span>
+                            </li>
+                            <li class="mt-2 flex items-center text-sm">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="mr-2 text-brand-brown-light h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+                                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
+                                </svg>
+                                <span class="text-black">Salam Pembuka</span>
+                            </li>
+                            <li class="mt-2 flex items-center text-sm">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="mr-2 text-brand-brown-light h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+                                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
+                                </svg>
+                                <span class="text-black">2 Acara</span>
+                            </li>
+                            <li class="mt-2 flex items-center text-sm">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="mr-2 text-brand-brown-light h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+                                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
+                                </svg>
+                                <span class="text-black">6 Galeri Foto</span>
+                            </li>
+                            <li class="mt-2 flex items-center text-sm">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="mr-2 text-brand-brown-light h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+                                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
+                                </svg>
+                                <span class="text-black">Maps Acara</span>
+                            </li>
+                            <li class="mt-2 flex items-center text-sm">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="mr-2 text-brand-brown-light h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+                                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
+                                </svg>
+                                <span class="text-black">4x Limited Edit</span>
+                            </li>
+                            <li class="mt-2 flex items-center text-sm">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="mr-2 text-brand-brown-light h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+                                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
+                                </svg>
+                                <span class="text-black">Backsound Music</span>
+                            </li>
+                            <li class="mt-2 flex items-center text-sm">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="mr-2 text-brand-brown-light h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+                                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
+                                </svg>
+                                <span class="text-black">300 Konfirmasi Kehadiran</span>
+                            </li>
+                            <li class="mt-2 flex items-center text-sm">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="mr-2 text-brand-brown-light h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+                                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
+                                </svg>
+                                <span class="text-black">300 WhatsApp Manual</span>
+                            </li>
+                            <li class="mt-2 flex items-center text-sm">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="mr-2 text-brand-brown-light h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+                                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
+                                </svg>
+                                <span class="text-black">Masa Aktif 6 Bulan</span>
+                            </li>
+                        </ul>
+                        <a href="#" class="mt-4 px-4 py-2 inline-block text-center w-full border border-brand-brown-dark font-medium rounded-lg">Pesan Sekarang</a>
+                    </li>
+                    <li class="rounded-lg border border-brand-brown-dark p-5 flex flex-col">
+                        <h3 class="text-xl font-semibold">The Stone</h3>
+                        <p class="mt-4 text-xl text-black font-semibold">
+                            Rp 300.000
+                            <span class="ml-2 font-normal text-sm line-through decoration-2 decoration-red-500">Rp 599.000</span>
+                        </p>
+                        <ul class="flex-1 mt-4">
+                            <li class="flex items-center text-sm">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="mr-2 text-brand-brown-light h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+                                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
+                                </svg>
+                                <span class="text-black">Semua Fitur The River</span>
+                            </li>
+                            <li class="mt-2 flex items-center text-sm">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="mr-2 text-brand-brown-light h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+                                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
+                                </svg>
+                                <span class="text-black">Domain Custom</span>
+                            </li>
+                            <li class="mt-2 flex items-center text-sm">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="mr-2 text-brand-brown-light h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+                                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
+                                </svg>
+                                <span class="text-black">10 Galeri Foto</span>
+                            </li>
+                            <li class="mt-2 flex items-center text-sm">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="mr-2 text-brand-brown-light h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+                                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
+                                </svg>
+                                <span class="text-black">5 Acara</span>
+                            </li>
+                            <li class="mt-2 flex items-center text-sm">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="mr-2 text-brand-brown-light h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+                                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
+                                </svg>
+                                <span class="text-black">Unlimited Edit</span>
+                            </li>
+                            <li class="mt-2 flex items-center text-sm">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="mr-2 text-brand-brown-light h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+                                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
+                                </svg>
+                                <span class="text-black">Unlimited Tamu</span>
+                            </li>
+                            <li class="mt-2 flex items-center text-sm">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="mr-2 text-brand-brown-light h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+                                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
+                                </svg>
+                                <span class="text-black">800 Konfirmasi Kehadiran</span>
+                            </li>
+                            <li class="mt-2 flex items-center text-sm">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="mr-2 text-brand-brown-light h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+                                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
+                                </svg>
+                                <span class="text-black">800 WhatsApp Manual</span>
+                            </li>
+                            <li class="mt-2 flex items-center text-sm">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="mr-2 text-brand-brown-light h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+                                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
+                                </svg>
+                                <span class="text-black">Masa Aktif 1 Tahun</span>
+                            </li>
+                        </ul>
+                        <a href="#" class="mt-4 px-4 py-2 inline-block text-center w-full border border-brand-brown-dark font-medium rounded-lg">Pesan Sekarang</a>
+                    </li>
+                    <li class="relative rounded-lg border border-brand-brown-dark bg-brand-brown-dark p-5 flex flex-col">
+                        <span class="absolute -top-5 left-1/2 transform -translate-x-1/2 px-4 py-1 bg-brand-brown-light text-white rounded-lg">
+                            Rekomendasi
+                        </span>
+                        <h3 class="text-xl font-semibold text-white">The Hill</h3>
+                        <p class="mt-4 text-xl font-semibold text-white">
+                            Rp 500.000
+                            <span class="ml-2 font-normal text-sm line-through decoration-2 decoration-red-500">Rp 810.000</span>
+                        </p>
+                        <ul class="flex-1 mt-4">
+                            <li class="flex items-center text-sm">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="mr-2 text-brand-brown-light h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+                                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
+                                </svg>
+                                <span class="text-white">Semua Fitur The Stone</span>
+                            </li>
+                            <li class="mt-2 flex items-center text-sm">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="mr-2 text-brand-brown-light h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+                                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
+                                </svg>
+                                <span class="text-white">Unlimited Foto</span>
+                            </li>
+                            <li class="mt-2 flex items-center text-sm">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="mr-2 text-brand-brown-light h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+                                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
+                                </svg>
+                                <span class="text-white">Lagu Custom</span>
+                            </li>
+                            <li class="mt-2 flex items-center text-sm">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="mr-2 text-brand-brown-light h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+                                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
+                                </svg>
+                                <span class="text-white">Video atau Live Streaming</span>
+                            </li>
+                            <li class="mt-2 flex items-center text-sm">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="mr-2 text-brand-brown-light h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+                                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
+                                </svg>
+                                <span class="text-white">Sesi Acara dan Kisah Cinta</span>
+                            </li>
+                            <li class="mt-2 flex items-center text-sm">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="mr-2 text-brand-brown-light h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+                                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
+                                </svg>
+                                <span class="text-white">1500 Konfirmasi Kehadiran</span>
+                            </li>
+                            <li class="mt-2 flex items-center text-sm">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="mr-2 text-brand-brown-light h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+                                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
+                                </svg>
+                                <span class="text-white">1500 WhatsApp Manual</span>
+                            </li>
+                            <li class="mt-2 flex items-center text-sm">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="mr-2 text-brand-brown-light h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+                                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
+                                </svg>
+                                <span class="text-white">Masa Aktif 2 Tahun</span>
+                            </li>
+                        </ul>
+                        <a href="#" class="mt-4 px-4 py-2 inline-block text-center w-full border border-brand-brown-dark bg-brand-yellow font-medium rounded-lg">Pesan Sekarang</a>
+                    </li>
+                    <li class="rounded-lg border border-brand-brown-dark p-5 flex flex-col">
+                        <h3 class="text-xl font-semibold">The Mountain</h3>
+                        <p class="mt-4 text-xl text-black font-semibold">
+                            Rp 900.000
+                            <span class="ml-2 font-normal text-sm line-through decoration-2 decoration-red-500">Rp 1,3 JT</span>
+                        </p>
+                        <ul class="flex-1 mt-4">
+                            <li class="flex items-center text-sm">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="mr-2 text-brand-brown-light h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+                                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
+                                </svg>
+                                <span class="text-black">Semua Fitur The Hill</span>
+                            </li>
+                            <li class="mt-2 flex items-center text-sm">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="mr-2 text-brand-brown-light h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+                                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
+                                </svg>
+                                <span class="text-black">Desain Custom</span>
+                            </li>
+                            <li class="mt-2 flex items-center text-sm">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="mr-2 text-brand-brown-light h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+                                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
+                                </svg>
+                                <span class="text-black">Unlimited Konfirmasi Kehadiran</span>
+                            </li>
+                            <li class="mt-2 flex items-center text-sm">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="mr-2 text-brand-brown-light h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+                                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
+                                </svg>
+                                <span class="text-black">Unlimited Whatsapp Manual</span>
+                            </li>
+                            <li class="mt-2 flex items-center text-sm">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="mr-2 text-brand-brown-light h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+                                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
+                                </svg>
+                                <span class="text-black">Masa Aktif Selamanya</span>
+                            </li>
+                            <li class="mt-2 flex items-center text-sm">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="mr-2 text-brand-brown-light h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+                                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
+                                </svg>
+                                <span class="text-black">Layar Sapa (Desember)</span>
+                            </li>
+                        </ul>
+                        <a href="#" class="mt-4 px-4 py-2 inline-block text-center w-full border border-brand-brown-dark font-medium rounded-lg">Pesan Sekarang</a>
+                    </li>
+                </ul>
+            </div>
+        </section>
+        <section class="py-24">
+            <div class="max-w-6xl m-auto px-5">
+                <p class="text-brand-brown-light">What they said</p>
+                <h2 class="mt-2 text-4xl font-semibold">
+                    Pendapat Pasangan Hingga Tua
+                </h2>
+                <ul class="mt-8 grid md:grid-cols-3 gap-8">
+                    <li class="p-5 bg-brand-yellow rounded-lg border">
+                        <figure>
+                            <blockquote class="text-sm">
+                                “Mau ngucapin, terima kasih banyak buat hingga tua layanan Digital Invitation, Buku Tamu Digital dan juga seluruh layanan digitalnya, keren banget pelayanannya professional dan juga sabar banget hehehe, pokoknya recommend banget deh”
+                            </blockquote>
+                            <figcaption class="mt-4 flex items-center">
+                                <div class="flex -space-x-2">
+                                    <div class="w-[45px] h-[45px] bg-gray-300 rounded-full ring-2 ring-brand-yellow"></div>
+                                    <div class="w-[45px] h-[45px] bg-gray-300 rounded-full ring-2 ring-brand-yellow"></div>
+                                </div>
+                                <div class="ml-4">
+                                    <div class="text-sm font-semibold">
+                                        Dowy & Siva
+                                    </div>
+                                    <div>
+                                        <svg xmlns="http://www.w3.org/2000/svg" class="inline-block text-yellow-500 h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+                                            <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                                        </svg>
+                                        <svg xmlns="http://www.w3.org/2000/svg" class="inline-block text-yellow-500 h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+                                            <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                                        </svg>
+                                        <svg xmlns="http://www.w3.org/2000/svg" class="inline-block text-yellow-500 h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+                                            <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                                        </svg>
+                                        <svg xmlns="http://www.w3.org/2000/svg" class="inline-block text-yellow-500 h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+                                            <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                                        </svg>
+                                        <svg xmlns="http://www.w3.org/2000/svg" class="inline-block text-yellow-500 h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+                                            <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                                        </svg>
+                                    </div>
+                                </div>
+                            </figcaption>
+                        </figure>
+                    </li>
+                    <li class="p-5 bg-brand-yellow rounded-lg border">
+                        <figure>
+                            <blockquote class="text-sm">
+                                “Mau ngucapin, terima kasih banyak buat hingga tua layanan Digital Invitation, Buku Tamu Digital dan juga seluruh layanan digitalnya, keren banget pelayanannya professional dan juga sabar banget hehehe, pokoknya recommend banget deh”
+                            </blockquote>
+                            <figcaption class="mt-4 flex items-center">
+                                <div class="flex -space-x-2">
+                                    <div class="w-[45px] h-[45px] bg-gray-300 rounded-full ring-2 ring-brand-yellow"></div>
+                                    <div class="w-[45px] h-[45px] bg-gray-300 rounded-full ring-2 ring-brand-yellow"></div>
+                                </div>
+                                <div class="ml-4">
+                                    <div class="text-sm font-semibold">
+                                        Dowy & Siva
+                                    </div>
+                                    <div>
+                                        <svg xmlns="http://www.w3.org/2000/svg" class="inline-block text-yellow-500 h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+                                            <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                                        </svg>
+                                        <svg xmlns="http://www.w3.org/2000/svg" class="inline-block text-yellow-500 h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+                                            <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                                        </svg>
+                                        <svg xmlns="http://www.w3.org/2000/svg" class="inline-block text-yellow-500 h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+                                            <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                                        </svg>
+                                        <svg xmlns="http://www.w3.org/2000/svg" class="inline-block text-yellow-500 h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+                                            <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                                        </svg>
+                                        <svg xmlns="http://www.w3.org/2000/svg" class="inline-block text-yellow-500 h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+                                            <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                                        </svg>
+                                    </div>
+                                </div>
+                            </figcaption>
+                        </figure>
+                    </li>
+                    <li class="p-5 bg-brand-yellow rounded-lg border">
+                        <figure>
+                            <blockquote class="text-sm">
+                                “Mau ngucapin, terima kasih banyak buat hingga tua layanan Digital Invitation, Buku Tamu Digital dan juga seluruh layanan digitalnya, keren banget pelayanannya professional dan juga sabar banget hehehe, pokoknya recommend banget deh”
+                            </blockquote>
+                            <figcaption class="mt-4 flex items-center">
+                                <div class="flex -space-x-2">
+                                    <div class="w-[45px] h-[45px] bg-gray-300 rounded-full ring-2 ring-brand-yellow"></div>
+                                    <div class="w-[45px] h-[45px] bg-gray-300 rounded-full ring-2 ring-brand-yellow"></div>
+                                </div>
+                                <div class="ml-4">
+                                    <div class="text-sm font-semibold">
+                                        Dowy & Siva
+                                    </div>
+                                    <div>
+                                        <svg xmlns="http://www.w3.org/2000/svg" class="inline-block text-yellow-500 h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+                                            <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                                        </svg>
+                                        <svg xmlns="http://www.w3.org/2000/svg" class="inline-block text-yellow-500 h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+                                            <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                                        </svg>
+                                        <svg xmlns="http://www.w3.org/2000/svg" class="inline-block text-yellow-500 h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+                                            <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                                        </svg>
+                                        <svg xmlns="http://www.w3.org/2000/svg" class="inline-block text-yellow-500 h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+                                            <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                                        </svg>
+                                        <svg xmlns="http://www.w3.org/2000/svg" class="inline-block text-yellow-500 h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+                                            <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                                        </svg>
+                                    </div>
+                                </div>
+                            </figcaption>
+                        </figure>
+                    </li>
+                </ul>
+            </div>
+        </section>
+    </main>
+    <footer class="py-24 bg-brand-brown-dark">
+        <div class="max-w-6xl m-auto px-5">
+
+        </div>
+    </footer>
 </body>
+
 </html>
