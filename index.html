@@ -22,6 +22,7 @@
                         'sans-secondary': 'Epilogue, sans-serif',
                     },
                     colors: {
+                        'brand-brown-darker': '#69392b',
                         'brand-brown-dark': '#854836',
                         'brand-brown-semilight': '#B87D4A',
                         'brand-brown-light': '#E5A061',
@@ -45,7 +46,6 @@
         <nav class="max-w-6xl px-5 m-auto flex justify-between items-center">
             <a href="/">
                 <div class="w-[100px] h-[20px] bg-gray-300 rounded-full">
-
                 </div>
             </a>
             <div class="py-5 block md:hidden">
@@ -636,9 +636,52 @@
             </div>
         </section>
     </main>
-    <footer class="py-24 bg-brand-brown-dark">
-        <div class="max-w-6xl m-auto px-5">
-
+    <footer class="bg-brand-brown-dark text-white">
+        <div class="py-24 max-w-6xl m-auto px-5 grid sm:grid-cols-3 md:grid-cols-5 gap-8">
+            <div class="sm:row-span-2 md:row-span-1">
+                <a href="/">
+                    <div class="w-[100px] h-[20px] bg-gray-300 rounded-full">
+                    </div>
+                </a>
+            </div>
+            <div>
+                <h3 class="mb-8 font-semibold">Fitur</h3>
+                <nav class="flex flex-col">
+                    <a href="#" class="text-sm mb-4">Layanan</a>
+                    <a href="#" class="text-sm mb-4">Desain</a>
+                    <a href="#" class="text-sm">Testimoni</a>
+                </nav>
+            </div>
+            <div>
+                <h3 class="mb-8 font-semibold"><span class="mr-2">Panduan</span> <span class="inline-block px-3 py-1 font-normal rounded-full bg-brand-brown-light text-white text-xs">Coming Soon</span></h3>
+                <nav class="flex flex-col">
+                    <a href="#" class="text-sm mb-4">Smart Dashboard</a>
+                    <a href="#" class="text-sm mb-4">Buat Akun</a>
+                    <a href="#" class="text-sm mb-4">Kelola Buka Tamu</a>
+                    <a href="#" class="text-sm">Video Tutorial</a>
+                </nav>
+            </div>
+            <div>
+                <h3 class="mb-8 font-semibold">Profil</h3>
+                <nav class="flex flex-col">
+                    <a href="#" class="text-sm mb-4">Tentang Kami</a>
+                    <a href="#" class="text-sm mb-4">Kebijakan Pengguna</a>
+                    <a href="#" class="text-sm">Syarat & Ketentuan</a>
+                </nav>
+            </div>
+            <div>
+                <h3 class="mb-8 font-semibold">Media Digital</h3>
+                <nav class="flex flex-col">
+                    <a href="#" class="text-sm mb-4">Instagram</a>
+                    <a href="#" class="text-sm mb-4">Whatsapp</a>
+                    <a href="#" class="text-sm">Tiktok</a>
+                </nav>
+            </div>
+        </div>
+        <div class="bg-brand-brown-darker">
+            <div class="max-w-6xl m-auto p-5 text-sm">
+                Hingga Tua - Powered by Qitadev Technology
+            </div>
         </div>
     </footer>
 </body>
