@@ -147,7 +147,6 @@ window.onload = async () => {
                 openButton.classList.add('animate__fadeIn');
                 openButton.classList.add('animate__delay-1s');
             } else {
-                document.getElementById("guestName").innerText = "-";
                 openButton.classList.remove('hidden');
                 openButton.classList.add('animate__animated');
                 openButton.classList.add('animate__fadeIn');
