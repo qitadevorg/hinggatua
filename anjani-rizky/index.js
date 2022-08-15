@@ -59,7 +59,7 @@ async function renderUcapan(greetings, total = defaultPagination) {
         let template = '';
         greetArr.forEach((item) => {
             template += `
-                <article id="card-wishes" class="card mb-4 rounded-xl bg-gray-200 text-primary flex flex-col items-start p-6">
+                <article id="card-wishes" class="card mb-4 rounded-xl bg-gray-200 text-justify flex flex-col items-start p-6">
                     <h1 class="text-xl font-bold font-brand">
                         ${item.name}
                     </h1>
