@@ -53,7 +53,6 @@ async function getUcapanData() {
 async function renderUcapan(greetings, total = defaultPagination) {
     if (greetings && greetings !== []) {
         let greetArr = (greetings && greetings.length > 6) ? greetings.slice(0, total) : greetings;
-        console.log(greetArr)
         if (greetArr.length === ucapanArr.length) loadMore.classList.add('hidden');
         else loadMore.classList.remove('hidden');
 
