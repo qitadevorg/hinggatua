@@ -28,6 +28,9 @@
                         'brand-brown-light': '#E5A061',
                         'brand-yellow': '#FFF7C8',
                         'brand-cream': '#FFFDF0',
+                    },
+                    transitionProperty: {
+                        'max-height': 'max-height',
                     }
                 }
             }
@@ -695,12 +698,51 @@
         </div>
     </footer>
 
+    <div id="contactUsPanel" class="fixed inset-x-5 bottom-[76px] translate-y-[200px] opacity-0 invisible transition-all duration-500">
+        <div class="rounded-xl overflow-hidden shadow-lg max-w-[360px] ml-auto">
+            <div class="p-4 bg-[#1C786A] text-white flex items-center relative">
+                <img src="/assets/img/logoCoklat.png" alt="Logo Hingga Tua" class="w-12 h-12 rounded-full">
+                <div class="ml-4">
+                    <div class="text-sm font-bold">Hingga Tua</div>
+                    <div class="text-xs">Online</div>
+                </div>
+                <button id="closeContactUsPanelBtn" type="button" class="absolute top-4 right-4 text-white">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+                        <path fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd" />
+                    </svg>
+                </button>
+            </div>
+            <div class="p-4 bg-green-200 flex">
+                <div class="p-3 rounded-r-xl rounded-b-xl bg-white">
+                    <div class="text-xs font-semibold text-[#8A8A8A]">Hingga Tua</div>
+                    <div class="mt-1 text-xs text-black">
+                        Halo kak,<br>
+                        Ada yang bisa kami bantu?
+                    </div>
+                </div>
+            </div>
+            <div class="p-4 bg-white">
+                <a href="https://wa.me/6282251919416?text=Halo%20kak%2C%20mau%20tanya%20tentang%20undangan%20nikah%20digital%20dong..." target="_blank" rel="noopener noreferrer" class="flex items-center justify-center bg-green-500 hover:bg-green-600 transition w-full px-4 py-2 rounded-full text-white font-semibold">
+                    <img src="/assets/icons/whatsapp-icon.svg" alt="Whatsapp Icon" class="w-6 mr-2">
+                    Mulai Chat
+                </a>
+            </div>
+        </div>
+    </div>
+    <button id="contactUsBtn" type="button" class="ml-5 fixed right-5 bottom-5 shadow-lg bg-green-500 hover:bg-green-600 transition text-white font-semibold px-4 py-2 rounded-l-xl rounded-t-xl flex items-center">
+        <img src="/assets/icons/whatsapp-icon.svg" alt="Whatsapp Icon" class="w-6 mr-2">
+        Hubungi Kami
+    </button>
+
     <script>
         const responsiveNav = document.getElementById('responsiveNav');
         const burgerBtn = document.getElementById('burgerBtn');
         const header = document.querySelector('header');
         const sections = document.querySelectorAll('section');
         const navLinks = document.querySelectorAll('header nav a');
+        const contactUsBtn = document.getElementById('contactUsBtn');
+        const contactUsPanel = document.getElementById('contactUsPanel');
+        const closeContactUsPanelBtn = document.getElementById('closeContactUsPanelBtn');
 
         let [isResponsiveNavOpen, setIsResponsiveNavOpen] = [false, function (newIsResponsiveNavOpen) {
             isResponsiveNavOpen = newIsResponsiveNavOpen;
@@ -718,6 +760,25 @@
                 responsiveNav.parentElement.classList.add('opacity-0');
                 responsiveNav.parentElement.classList.remove('visible');
                 responsiveNav.parentElement.classList.add('invisible');
+            }
+        }];
+
+        let [isContactUsPanelShow, setIsContactUsPanelShow] = [false, function (newIsContactUsPanelShow) {
+            isContactUsPanelShow = newIsContactUsPanelShow;
+            if (isContactUsPanelShow) {
+                contactUsPanel.classList.add('translate-y-0');
+                contactUsPanel.classList.remove('translate-y-[200px]');
+                contactUsPanel.classList.add('visible');
+                contactUsPanel.classList.remove('invisible');
+                contactUsPanel.classList.add('opacity-100');
+                contactUsPanel.classList.remove('opacity-0');
+            } else {
+                contactUsPanel.classList.remove('translate-y-0');
+                contactUsPanel.classList.add('translate-y-[200px]');
+                contactUsPanel.classList.remove('visible');
+                contactUsPanel.classList.add('invisible');
+                contactUsPanel.classList.remove('opacity-100');
+                contactUsPanel.classList.add('opacity-0');
             }
         }];
 
@@ -769,6 +830,14 @@
                 } 
             })
         }
+
+        contactUsBtn.addEventListener('click', function () {
+            setIsContactUsPanelShow(!isContactUsPanelShow);
+        });
+
+        closeContactUsPanelBtn.addEventListener('click', function () {
+            setIsContactUsPanelShow(false);
+        });
     </script>
 </body>
 
