@@ -139,6 +139,7 @@ window.onload = async () => {
         .then((res) => res.json())
         .then((res) => {
             if (res.data !== null) {
+                document.getElementById("guestTo").innerText = 'Kepada Yth Bapak/Ibu/Saudara/i:';
                 document.getElementById("guestName").innerText = res.data.nama;
                 document.getElementById("guestName").classList.add('animate__animated');
                 document.getElementById("guestName").classList.add('animate__fadeIn');
