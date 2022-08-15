@@ -20,6 +20,9 @@
                         'brand-green-3': '#D0DD97',
                         'brand-green-4': '#658960'
                     },
+                    animation: {
+                        'spin-slow': 'spin 6s linear infinite',
+                    }
                 },
                 screens: {
                     'xs': '425px',
@@ -303,7 +306,7 @@
                     Kebahagiaan tak terhingga dengan kedatangan ke pernikahan kami. Namun jika anda ingin memberikan hadiah kami 
                     menyediakan Amplop Digital untuk memudahkan anda. Terima kasih
                 </p>
-                <section id="angpao-inner" class="w-full sm:w-2/3 flex flex-col border-solid border-2 border-zinc-900 bg-white items-center p-8 gap-4">
+                <section id="hadiah-inner" class="w-full sm:w-2/3 flex flex-col border-solid border-2 border-zinc-900 bg-white items-center p-8 gap-4">
                     <h2 class="text-xl font-normal">Pengiriman Hadiah</h2>
                     <div class="w-full flex items-center rounded-lg border border-gray-400 bg-gray-200 py-2 px-3">
                         <div class="flex justify-center items-center">
@@ -339,14 +342,14 @@
                 <section class="w-full md:w-[60%] flex flex-col items-center py-6">
                     <input id="ucapan-input" type="text" class="p-4 w-full bg-gray-200" placeholder="John Doe">
                     <textarea name="ucapan" id="ucapan-textarea" rows="5" class="p-4 w-full bg-gray-200 mt-6" placeholder="Masukkan pesan disini"></textarea>
-                    <button id="ucapan-send" class="w-full px-6 py-3 bg-brand-green-2 text-white mt-6">
+                    <button id="submitBtn" class="w-full px-6 py-3 bg-brand-green-2 text-white mt-6">
                         Kirim
                     </button>
                     <p id="ucapanHandler" class="text-lg text-green-400 font-bold my-4 hidden">
                         Terima kasih telah mengirimkan ucapan! Silahkan tunggu sesaat
                     </p>
                 </section>
-                <article id="ucapan-inner" class="max-w 7xl grid md:grid-cols-3 sm:grid-cols-2 grid-cols-1 gap-4 p-5">
+                <article id="ucapan-inner" class="w-full grid md:grid-cols-3 sm:grid-cols-2 grid-cols-1 gap-4 p-5">
                     
                 </article>
                 <button id="loadMore" class="px-6 py-3 text-brand-green-2 underline text-xl cursor-pointer bg-transparent">
@@ -404,30 +407,119 @@
                 </a>
             </div>
         </nav>
-        <section id="modal" class="transition-all ease-out duration-500 w-full h-screen z-20 top-0 left-0 fixed bg-[url('./assets/img/splashBackground.webp')] bg-cover flex justify-center items-center">
-            <article class="w-[75%] h-[80vh] flex flex-col items-center justify-center bg-white/75 text-center text-brand-green-2">
-                <section class="w-full h-full p-5 flex flex-col items-center justify-center">
-                    <img src="./assets/icon/logo.webp" alt="Logo" class="w-32 sm:w-56 mb-5">
-                    <section class="w-full sm:w-[75%] flex flex-col items-center p-3 space-y-8">
-                        <h1 class="text-xl">THE WEDDING OF</h1>
-                        <h2 class="text-4xl sm:text-6xl lg:text-8xl font-brand">Anjani & Rizky</h2>
-                        <h3 class="text-xl font-semibold">Minggu, 21 Agustus 2022</h3>
-                        <h4 class="text-lg text-brand-green-4">Kepada Yth Bapak/Ibu/Saudara/i:</h4>
-                        <h5 class="text-2xl font-bold">Farhan</h5>
-                        <button id="openButton" class="bg-brand-green-2 text-white w-fit px-4 py-3 sm:text-lg">
-                            Open Invitation
-                            <span>
-                                <i class="fa-solid fa-arrow-right fa-xl ml-3"></i>
-                            </span>
-                        </button>
+        <section id="modal" class="w-full h-screen z-20 top-0 left-0 fixed bg-[url('./assets/img/splashBackground.webp')] bg-cover overflow-y-auto p-5">
+            <div class="flex flex-col justify-center min-h-full max-w-[1080px] m-auto">
+                <article class="w-full flex-1 flex flex-col items-center justify-center bg-white/75 text-center text-brand-green-2">
+                    <section class="w-full p-5">
+                        <img src="./assets/icon/logo.webp" alt="Logo" class="w-44 mb-5 mx-auto">
+                        <section class="p-3 space-y-8">
+                            <h1 class="text-xl">THE WEDDING OF</h1>
+                            <h2 class="text-4xl sm:text-6xl lg:text-8xl font-brand">Anjani & Rizky</h2>
+                            <h3 class="text-xl font-semibold">Minggu, 21 Agustus 2022</h3>
+                            <h4 class="text-lg text-brand-green-4">Kepada Yth Bapak/Ibu/Saudara/i:</h4>
+                            <h5 id="guestName" class="text-2xl font-bold"></h5>
+                            <button id="openButton" class="bg-brand-green-2 text-white w-fit px-4 py-3 sm:text-lg hidden">
+                                Open Invitation
+                                <span>
+                                    <i class="fa-solid fa-arrow-right fa-xl ml-3"></i>
+                                </span>
+                            </button>
+                        </section>
                     </section>
-                </section>
-            </article>
+                </article>
+            </div>
         </section>
+        <button id="discButton" class="fixed bottom-[85px] lg:bottom-5 left-5 w-14 outline-none">
+            <img src="./assets/img/Disc 1.png" alt="Disc" class="w-full">
+        </button>
+        <audio id="audio" src="./assets/song.mp3"></audio>
     </main>
     <footer class="w-full bg-brand-green-2 flex items-center justify-center text-white text-xl py-3">
         Powered by Qitadev Technology Development
     </footer>
 </body>
 <script src="./index.js"></script>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+<script>
+    $.fn.isInViewport = function() {
+        var elementTop = $(this).offset().top;
+        var elementBottom = elementTop + $(this).outerHeight();
+        var viewportTop = $(window).scrollTop();
+        var viewportBottom = viewportTop + $(window).height();
+        return elementBottom > viewportTop && elementTop < viewportBottom;
+    };
+    $(window).scroll((e) => {
+        if ($("#date").isInViewport()) {
+            $("#date h1").addClass("animate__animated animate__fadeInDown")
+            $("#date h2").addClass("animate__animated animate__fadeInDown animate__slow")
+            $("#days-card").addClass("animate__animated animate__fadeInUp")
+            $("#hours-card").addClass("animate__animated animate__fadeInUp")
+            $("#minutes-card").addClass("animate__animated animate__fadeInUp")
+            $("#seconds-card").addClass("animate__animated animate__fadeInUp")
+            $("#wed-text").addClass("animate__animated animate__fadeIn animate-slow")
+        }
+        if ($("#pasangan").isInViewport()) {
+            $("#pasangan h1").addClass("animate__animated animate__fadeInDown")
+            $("#pasangan p:first").addClass("animate__animated animate__fadeInDown animate__slow")
+            if ($("#pasangan-inner").isInViewport()) {
+                $("#pasangan-inner img[alt='baidhowy']").addClass("animate__animated animate__fadeInLeft")
+                $("#pasangan-inner img[alt='siva']").addClass("animate__animated animate__fadeInRight")
+                $("#pasangan-inner .groom, #pasangan .bride").addClass("animate__animated animate__fadeInUp")
+                $("#pasangan-inner .groom p, #pasangan-inner .bride p").addClass("animate__animated animate__fadeInUp animate__slow")
+            }
+        }
+        if ($("#galeri").isInViewport()) {
+            $("#galeri h1:first").addClass("animate__animated animate__fadeInDown")
+            if ($("#galeri-inner").isInViewport()) {
+                $("#galeri-inner").addClass("animate__animated animate__fadeIn")
+            }
+        }
+        if ($("#agenda").isInViewport()) {
+            $("#agenda h1:first").addClass("animate__animated animate__fadeInDown")
+            $("#agenda p:first").addClass("animate__animated animate__fadeInDown animate__slow")
+            if ($("#agenda-inner").isInViewport()) {
+                $("#agenda-inner").addClass("animate__animated animate__fadeIn animate_slower")
+            }
+        }
+        if ($("#protokol").isInViewport()) {
+            $("#protokol h1:first").addClass("animate__animated animate__fadeInDown")
+            $("#protokol p:first").addClass("animate__animated animate__fadeInDown animate__slow")
+            if ($("#protokol-inner").isInViewport()) {
+                $("#protokol-inner .mask").addClass("animate__animated animate__fadeIn animate_slow")
+                $("#protokol-inner .suhu").addClass("animate__animated animate__fadeIn animate_slow")
+                $("#protokol-inner .tangan").addClass("animate__animated animate__fadeIn animate_slow")
+                $("#protokol-inner .sanitizer").addClass("animate__animated animate__fadeIn animate_slower")
+                $("#protokol-inner .distance").addClass("animate__animated animate__fadeIn animate_slower")
+                $("#protokol-inner .qrcode").addClass("animate__animated animate__fadeIn animate_slower")
+            }
+        }
+        if ($("#hadiah").isInViewport()) {
+            $("#hadiah h1:first").addClass("animate__animated animate__fadeInDown")
+            $("#hadiah p:first").addClass("animate__animated animate__fadeInDown animate__slow")
+            if ($("#hadiah-inner").isInViewport()) {
+                $("#hadiah-inner").addClass("animate__animated animate__fadeIn animate_slower")
+            }
+        }
+        if ($("#ucapan").isInViewport()) {
+            $("#ucapan article h1:first").addClass("animate__animated animate__fadeInDown")
+            $("#ucapan article h2:first").addClass("animate__animated animate__fadeInDown animate__slow")
+            $("#ucapan article input:first").addClass("animate__animated animate__fadeInDown animate__slower")
+            $("#ucapan article textarea:first").addClass("animate__animated animate__fadeInDown animate__slower")
+            $("#ucapan article button:first").addClass("animate__animated animate__fadeInDown animate__slower")
+            if ($("#ucapan-inner").isInViewport()) {
+                $("#ucapan-inner").addClass("animate__animated animate__fadeIn animate_slower")
+            }
+        }
+        if ($("#hinggaTua").isInViewport()) {
+            $("#hinggaTua h1:first").addClass("animate__animated animate__fadeInDown")
+            $("#hinggaTua h2:first").addClass("animate__animated animate__fadeInDown animate__slow")
+            $("#hinggaTua #music").addClass("animate__animated animate__fadeInDown animate__slower")
+            if ($("#hinggaTua-inner").isInViewport()) {
+                $("#hinggaTua-inner h1").addClass("animate__animated animate__fadeInDown animate_slow")
+                $("#hinggaTua-inner a").addClass("animate__animated animate__fadeInDown animate_slower")
+                $("#hinggaTua-inner #socmed").addClass("animate__animated animate__fadeInDown animate_slower")
+            }
+        }
+    })
+</script>
 </html>
