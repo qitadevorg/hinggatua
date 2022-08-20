@@ -75,30 +75,33 @@ async function renderUcapan(greetings, total = defaultPagination) {
 
 submitBtn.addEventListener('click', async (e) => {
     e.preventDefault();
-    document.getElementById("ucapanHandler").classList.remove('hidden');
     
     let nama = document.getElementById("ucapan-input").value;
     let ucapan = document.getElementById("ucapan-textarea").value;
-    
-    document.getElementById("ucapan-input").value = '';
-    document.getElementById("ucapan-textarea").value = '';
-    
-    const form = new FormData();
-    form.append('action', 'create_greeting');
-    form.append('nama', nama);
-    form.append('ucapan', ucapan);
-    
-    await fetch(gsheetsUrl, {
-        method: 'POST',
-        body: form
-    }).then((res) => res.json())
-    .then(async () => {
-        await getUcapanData();
-        setTimeout(() => {
-            document.getElementById("ucapanHandler").classList.add('hidden');
-        }, 2000)
-    })
-    .catch((e) => console.log(e.message))
+
+    if ((nama !== '' || nama.length > 0) && (ucapan !== '' || ucapan.length > 0)) {
+        document.getElementById("ucapan-input").value = '';
+        document.getElementById("ucapan-textarea").value = '';
+        document.getElementById("ucapanHandler").classList.remove('hidden');
+        const form = new FormData();
+        form.append('action', 'create_greeting');
+        form.append('nama', nama);
+        form.append('ucapan', ucapan);
+        
+        await fetch(gsheetsUrl, {
+            method: 'POST',
+            body: form
+        }).then((res) => res.json())
+        .then(async () => {
+            await getUcapanData();
+            setTimeout(() => {
+                document.getElementById("ucapanHandler").classList.add('hidden');
+            }, 2000)
+        })
+        .catch((e) => console.log(e.message))
+    } else {
+        alert('Kolom nama dan ucapan tidak boleh kosong!');
+    }
 })
 
 loadMore.addEventListener('click', async (e) => {
