@@ -82,30 +82,44 @@ async function getUcapanData () {
 
 document.getElementById('sendUcapan').addEventListener('click', (e) => {
     e.preventDefault();
-    document.getElementById("textUcapan").classList.remove('hidden');
     
     let nama = document.getElementById("namaUcapan").value;
     let ucapan = document.getElementById("pesanUcapan").value;
-    
-    document.getElementById("namaUcapan").value = '';
-    document.getElementById("pesanUcapan").value = '';
-    
-    const form = new FormData();
-    form.append('action', 'create_greeting');
-    form.append('nama', nama);
-    form.append('ucapan', ucapan);
-    
-    fetch(SHEET_URL, {
-        method: 'POST',
-        body: form
-    }).then((res) => res.json())
-    .then(() => {
-        getUcapanData();
-        setTimeout(() => {
-            document.getElementById("textUcapan").classList.add('hidden');
-        }, 2000)
-    })
-    .catch((e) => console.log(e.message))
+
+    if (nama === "" && ucapan === "") {
+        document.getElementById('error-nama-ucapan').classList.remove('hidden')
+        document.getElementById('error-pesan-ucapan').classList.remove('hidden')
+    } else if (nama !== "" && ucapan === "") {
+        document.getElementById('error-nama-ucapan').classList.add('hidden')
+        document.getElementById('error-pesan-ucapan').classList.remove('hidden')
+    } else if (nama === "" && ucapan !== "") {
+        document.getElementById('error-nama-ucapan').classList.remove('hidden')
+        document.getElementById('error-pesan-ucapan').classList.add('hidden')
+    } else {
+        document.getElementById("namaUcapan").value = '';
+        document.getElementById("pesanUcapan").value = '';
+
+        document.getElementById("textUcapan").classList.remove('hidden');
+        document.getElementById('error-nama-ucapan').classList.add('hidden')
+        document.getElementById('error-pesan-ucapan').classList.add('hidden')
+        
+        const form = new FormData();
+        form.append('action', 'create_greeting');
+        form.append('nama', nama);
+        form.append('ucapan', ucapan);
+        
+        fetch(SHEET_URL, {
+            method: 'POST',
+            body: form
+        }).then((res) => res.json())
+        .then(() => {
+            getUcapanData();
+            setTimeout(() => {
+                document.getElementById("textUcapan").classList.add('hidden');
+            }, 2000)
+        })
+        .catch((e) => console.log(e.message))
+    }
 })
 
 // BANK
@@ -115,22 +129,52 @@ document.getElementById('sendHadiah').addEventListener('click', () => {
     let jumlah = document.getElementById('jumlahHadiah').value
     let pesan = document.getElementById('pesanHadiah').value
 
-    document.getElementById('namaHadiah').value = ''
-    document.getElementById('bankPengirim').value = ''
-    document.getElementById('jumlahHadiah').value = ''
-    document.getElementById('pesanHadiah').value = ''
+    if (nama === "") {
+        document.getElementById('error-nama-hadiah').classList.remove('hidden')
+    } else {
+        document.getElementById('error-nama-hadiah').classList.add('hidden')
+    }
+    if (pengirim === "") {
+        document.getElementById('error-bank-hadiah').classList.remove('hidden')
+    } else {
+        document.getElementById('error-bank-hadiah').classList.add('hidden')
+    }
+    if (jumlah === "") {
+        document.getElementById('error-jumlah-hadiah').classList.remove('hidden')
+    } else {
+        document.getElementById('error-jumlah-hadiah').classList.add('hidden')
+    }hadiah
+    if (pesan === "") {
+        document.getElementById('error-pesan-hadiah').classList.remove('hidden')
+    } else {
+        document.getElementById('error-pesan-hadiah').classList.add('hidden')
+    }
 
-    const form = new FormData();
-    form.append('action', 'create_gift');
-    form.append('bank', 'BCA');
-    form.append('nama', nama);
-    form.append('bank_pengirim', pengirim);
-    form.append('jumlah', jumlah);
-    form.append('pesan', pesan);
+    if (nama !== "" && pengirim !== "" && jumlah !== "" && pesan !== "") {
+        document.getElementById('namaHadiah').value = ''
+        document.getElementById('bankPengirim').value = ''
+        document.getElementById('jumlahHadiah').value = ''
+        document.getElementById('pesanHadiah').value = ''
+
+        document.getElementById('text-hadiah').classList.remove('hidden')
     
-    fetch(SHEET_URL, {
-        method: 'POST',
-        body: form
-    }).then((res) => res.json())
-    .catch((e) => console.log(e.message))
+        const form = new FormData();
+        form.append('action', 'create_gift');
+        form.append('bank', 'BCA');
+        form.append('nama', nama);
+        form.append('bank_pengirim', pengirim);
+        form.append('jumlah', jumlah);
+        form.append('pesan', pesan);
+        
+        fetch(SHEET_URL, {
+            method: 'POST',
+            body: form
+        }).then((res) => res.json())
+        .then(() => {
+            setTimeout(() => {
+                document.getElementById('text-hadiah').classList.add('hidden')
+            }, 2000)
+        })
+        .catch((e) => console.log(e.message))
+    }
 })
