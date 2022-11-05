@@ -30,6 +30,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
 // onload event 
 window.onload = async () => {
+    audio.play();
+    audio.volume = 0.3
     discButton.classList.add('animate-spin-slow');
     await getUcapanData();
 }
