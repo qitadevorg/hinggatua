@@ -1,6 +1,5 @@
 // Navbar Smooth Scroll
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-    console.log(anchor)
     anchor.addEventListener('click', function (e) {
         e.preventDefault();
 
@@ -14,6 +13,22 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
 const audio = document.querySelector("audio");
 const discButton = document.getElementById('discButton');
 
+// DOM EVENT
+document.addEventListener('DOMContentLoaded', () => {
+    if (document.getElementById('bank-select').value === 'bca') {
+        document.getElementById('bank-title').innerText = 'Bank BCA'
+        document.getElementById('bank-number').innerText = 'Account Number: 8691474861'
+        document.getElementById('bank-name').innerText = 'a.n Dewi Ratnawati'
+        document.getElementById('bank-qr').src = './assets/img/qr-bca.jpg'
+    } else {
+        document.getElementById('bank-title').innerText = 'Bank BNI'
+        document.getElementById('bank-number').innerText = 'Account Number: 1051726230'
+        document.getElementById('bank-name').innerText = 'a.n Dewi Ratnawati'
+        document.getElementById('bank-qr').src = './assets/img/qr-bni.jpeg'
+    } 
+})
+
+// onload event 
 window.onload = async () => {
     discButton.classList.add('animate-spin-slow');
     await getUcapanData();
@@ -176,5 +191,22 @@ document.getElementById('sendHadiah').addEventListener('click', () => {
             }, 2000)
         })
         .catch((e) => console.log(e.message))
+    }
+})
+
+// BANK CHANGE 
+document.getElementById('bank-select').addEventListener('input', (e) => {
+    let bank = e.target.value
+    
+    if (bank === 'bca') {
+        document.getElementById('bank-title').innerText = 'Bank BCA'
+        document.getElementById('bank-number').innerText = 'Account Number: 8691474861'
+        document.getElementById('bank-name').innerText = 'a.n Dewi Ratnawati'
+        document.getElementById('bank-qr').src = './assets/img/qr-bca.jpg'
+    } else {
+        document.getElementById('bank-title').innerText = 'Bank BNI'
+        document.getElementById('bank-number').innerText = 'Account Number: 1051726230'
+        document.getElementById('bank-name').innerText = 'a.n Dewi Ratnawati'
+        document.getElementById('bank-qr').src = './assets/img/qr-bni.jpeg'
     }
 })

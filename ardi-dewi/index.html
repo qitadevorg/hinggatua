@@ -431,14 +431,14 @@
                 <section id="hadiah-inner"
                     class="mt-16 max-w-2xl mx-auto bg-white w-full rounded-lg border p-5 text-gray-500">
                     <h2 class="text-center font-semibold">Pilih layanan pembayaran text</h2>
-                    <select name="" class="mt-4 px-4 py-3 w-full rounded-lg border">
-                        <option>BCA 1</option>
-                        <option>BCA 2</option>
+                    <select id="bank-select" class="mt-4 px-4 py-3 w-full rounded-lg border">
+                        <option value="bca">BCA</option>
+                        <option value="bni">BNI</option>
                     </select>
-                    <p class="mt-4 text-sm text-center">Bank Mandiri</p>
-                    <p class="font-semibold text-center">Account Number: 8691474861</p>
-                    <p class="text-sm text-center">a.n. Dewi Ratnawati</p>
-                    <img src="./assets/img/Group 281.webp" alt="qrcode" class="mt-4 w-[250px] mx-auto">
+                    <p id="bank-title" class="mt-4 text-sm text-center">Bank BCA</p>
+                    <p id="bank-number" class="font-semibold text-center"></p>
+                    <p id="bank-name" class="text-sm text-center"></p>
+                    <img id="bank-qr" src="" alt="qrcode" class="mt-4 w-[250px] mx-auto">
                     <p class="mt-4 text-center font-semibold">Silakan isi formulir keterangan berikut:</p>
                     <div class="mt-4">
                         <label for="namaHadiah">Nama *</label>
