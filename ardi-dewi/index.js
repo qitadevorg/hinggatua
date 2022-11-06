@@ -1,3 +1,6 @@
+const modal = document.getElementById("modal");
+const body = document.getElementById("body");
+
 // Navbar Smooth Scroll
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function (e) {
@@ -18,7 +21,7 @@ document.addEventListener('DOMContentLoaded', () => {
     if (document.getElementById('bank-select').value === 'bca') {
         document.getElementById('bank-title').innerText = 'Bank BCA'
         document.getElementById('bank-number').innerText = 'Account Number: 8691474861'
-        document.getElementById('bank-name').innerText = 'a.n Dewi Ratnawati'
+        document.getElementById('bank-name').innerText = 'a.n Ardiansyah'
         document.getElementById('bank-qr').src = './assets/img/qr-bca.jpg'
     } else {
         document.getElementById('bank-title').innerText = 'Bank BNI'
@@ -30,10 +33,38 @@ document.addEventListener('DOMContentLoaded', () => {
 
 // onload event 
 window.onload = async () => {
-    audio.play();
-    audio.volume = 0.3
-    discButton.classList.add('animate-spin-slow');
+    // audio.play();
+    // audio.volume = 0.3
+    // discButton.classList.add('animate-spin-slow');
     await getUcapanData();
+
+    const params = new Proxy(new URLSearchParams(window.location.search), {
+        get: (searchParams, prop) => searchParams.get(prop)
+    })
+    let guestName = params.tamu;
+    
+    await fetch(`${SHEET_URL}?action=check_guest&tamu=${guestName}`)
+        .then((res) => res.json())
+        .then((res) => {
+            if (res.data !== null) {
+                document.getElementById("guestTo").innerText = 'Kepada Yth Bapak/Ibu/Saudara/i:';
+                document.getElementById("guestTo").classList.add('animate__animated');
+                document.getElementById("guestTo").classList.add('animate__fadeIn');
+                document.getElementById("guestName").innerText = res.data.nama;
+                document.getElementById("guestName").classList.add('animate__animated');
+                document.getElementById("guestName").classList.add('animate__fadeIn');
+                document.getElementById("guestName").classList.add('animate__slow');
+                openButton.classList.remove('hidden');
+                openButton.classList.add('animate__animated');
+                openButton.classList.add('animate__fadeIn');
+                openButton.classList.add('animate__delay-1s');
+            } else {
+                openButton.classList.remove('hidden');
+                openButton.classList.add('animate__animated');
+                openButton.classList.add('animate__fadeIn');
+                openButton.classList.add('animate__delay-1s');
+            }
+        })
 }
 
 discButton.addEventListener('click', function () {
@@ -203,7 +234,7 @@ document.getElementById('bank-select').addEventListener('input', (e) => {
     if (bank === 'bca') {
         document.getElementById('bank-title').innerText = 'Bank BCA'
         document.getElementById('bank-number').innerText = 'Account Number: 8691474861'
-        document.getElementById('bank-name').innerText = 'a.n Dewi Ratnawati'
+        document.getElementById('bank-name').innerText = 'a.n Ardiansyah'
         document.getElementById('bank-qr').src = './assets/img/qr-bca.jpg'
     } else {
         document.getElementById('bank-title').innerText = 'Bank BNI'
@@ -211,4 +242,15 @@ document.getElementById('bank-select').addEventListener('input', (e) => {
         document.getElementById('bank-name').innerText = 'a.n Dewi Ratnawati'
         document.getElementById('bank-qr').src = './assets/img/qr-bni.jpeg'
     }
+})
+
+openButton.addEventListener('click', (e) => {
+    modal.classList.add('animate__animated');
+    modal.classList.add('animate__fadeOutUp');
+    body.classList.remove('overflow-hidden');
+    discButton.classList.add('animate-spin-slow');
+    audio.autoplay = true;
+    audio.loop = true;
+    audio.volume = 0.2;
+    audio.play();
 })
