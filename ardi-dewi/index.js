@@ -32,39 +32,46 @@ document.addEventListener('DOMContentLoaded', () => {
 })
 
 // onload event 
-window.onload = async () => {
+window.onload = () => {
     // audio.play();
     // audio.volume = 0.3
     // discButton.classList.add('animate-spin-slow');
-    await getUcapanData();
+    getUcapanData();
 
     const params = new Proxy(new URLSearchParams(window.location.search), {
         get: (searchParams, prop) => searchParams.get(prop)
     })
     let guestName = params.tamu;
+
+    if (guestName) {
+        fetch(`${SHEET_URL}?action=check_guest&tamu=${guestName}`)
+            .then((res) => res.json())
+            .then((res) => {
+                document.getElementById("loadingGuest").classList.add('hidden');
+                if (res.data !== null) {
+                    document.getElementById("guestTo").innerText = 'Kepada Yth Bapak/Ibu/Saudara/i:';
+                    document.getElementById("guestTo").classList.add('animate__animated');
+                    document.getElementById("guestTo").classList.add('animate__fadeIn');
+                    document.getElementById("guestName").innerText = res.data.nama;
+                    document.getElementById("guestName").classList.add('animate__animated');
+                    document.getElementById("guestName").classList.add('animate__fadeIn');
+                    document.getElementById("guestName").classList.add('animate__slow');
+                    openButton.classList.remove('hidden');
+                    openButton.classList.add('animate__animated');
+                    openButton.classList.add('animate__fadeIn');
+                    openButton.classList.add('animate__delay-1s');
+                } else {
+                    openButton.classList.remove('hidden');
+                    openButton.classList.add('animate__animated');
+                    openButton.classList.add('animate__fadeIn');
+                    openButton.classList.add('animate__delay-1s');
+                }
+            })
+    } else {
+        document.getElementById("loadingGuest").classList.add('hidden');
+        openButton.classList.remove('hidden');
+    }
     
-    await fetch(`${SHEET_URL}?action=check_guest&tamu=${guestName}`)
-        .then((res) => res.json())
-        .then((res) => {
-            if (res.data !== null) {
-                document.getElementById("guestTo").innerText = 'Kepada Yth Bapak/Ibu/Saudara/i:';
-                document.getElementById("guestTo").classList.add('animate__animated');
-                document.getElementById("guestTo").classList.add('animate__fadeIn');
-                document.getElementById("guestName").innerText = res.data.nama;
-                document.getElementById("guestName").classList.add('animate__animated');
-                document.getElementById("guestName").classList.add('animate__fadeIn');
-                document.getElementById("guestName").classList.add('animate__slow');
-                openButton.classList.remove('hidden');
-                openButton.classList.add('animate__animated');
-                openButton.classList.add('animate__fadeIn');
-                openButton.classList.add('animate__delay-1s');
-            } else {
-                openButton.classList.remove('hidden');
-                openButton.classList.add('animate__animated');
-                openButton.classList.add('animate__fadeIn');
-                openButton.classList.add('animate__delay-1s');
-            }
-        })
 }
 
 discButton.addEventListener('click', function () {
@@ -106,27 +113,46 @@ let x = setInterval(() => {
 const SHEET_URL = "https://script.google.com/macros/s/AKfycbz1kYLmQuvFLWi_9jr3_WehxMqF5YcqzyZKzBUEDkADVzQ5OCYh2zWM8cua9_-FYyex3g/exec"
 
 // UCAPAN
+let greetings = [];
+let maxGreetings = 6;
 async function getUcapanData () {
-    let ucapanInner = document.getElementById("ucapan-inner");
-    let template = '';
     await fetch(`${SHEET_URL}?action=get_all_greetings`)
         .then((res) => res.json())
         .then((res) => {
-            res.data.forEach((item) => {
-                template += `
-                    <article id="card-wishes" class="rounded-lg bg-white p-6 text-gray-700">
-                        <h1 class="text-xl font-brand text-brand-dark-blue">
-                            ${item.nama}
-                        </h1>
-                        <p class="mt-4">
-                            ${item.ucapan}
-                        </p>
-                    </article>
-                `;
-            })
-            ucapanInner.innerHTML = template;
+            greetings = res.data;
+            renderGreetings();
         })
 }
+
+function renderGreetings() {
+    let ucapanInner = document.getElementById("ucapan-inner");
+    let template = '';
+    let i = 0;
+    greetings.forEach(item => {
+        if (i < maxGreetings) {
+            template += `
+                <article id="card-wishes" class="rounded-lg bg-white p-6 text-gray-700">
+                    <h1 class="text-xl font-brand text-brand-dark-blue">
+                        ${item.nama}
+                    </h1>
+                    <p class="mt-4">
+                        ${item.ucapan}
+                    </p>
+                </article>
+            `;
+        }
+        i++;
+    });
+    if (greetings.length <= maxGreetings) {
+        document.getElementById('viewMoreGreetings').classList.add('hidden');
+    }
+    ucapanInner.innerHTML = template;
+}
+
+document.getElementById('viewMoreGreetings').addEventListener('click', () => {
+    maxGreetings += 3;
+    renderGreetings();
+});
 
 document.getElementById('sendUcapan').addEventListener('click', (e) => {
     e.preventDefault();

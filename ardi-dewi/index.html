@@ -54,7 +54,7 @@
 
 <body id="body" class="bg-brand-white">
     <header class="bg-brand-blue text-white">
-        <nav class="max-w-7xl mx-auto p-5 flex justify-center items-center font-light text-lg text-center">
+        <nav class="max-w-7xl mx-auto p-5 flex justify-between items-center font-light text-lg text-center">
             <ul class="flex-1 hidden lg:flex lg:justify-around lg:items-center">
                 <li>
                     <a id="homeBtn" href="#hero">HOME</a>
@@ -66,9 +66,11 @@
                     <a id="coupleBtn" href="#pasangan">PASANGAN</a>
                 </li>
             </ul>
+            <img src="./assets/icon/atas-kiri.svg" alt="ornamen" class="lg:hidden">
             <a href="/" class="mx-16">
                 <img src="./assets/icon/logo.svg" alt="Image Logo" class="w-[120px] lg:w-[200px]">
             </a>
+            <img src="./assets/icon/atas-kanan.svg" alt="ornamen" class="lg:hidden">
             <ul class="flex-1 hidden lg:flex lg:justify-around lg:items-center">
                 <li>
                     <a id="galleryBtn" href="#my-gallery">GALLERY</a>
@@ -244,7 +246,7 @@
                     </article>
                 </div>
                 <div class="mt-8 text-center">
-                    <a href="https://goo.gl/maps/64g4Co8JY1zWu12G8" target="_blank" rel="noopener noreferrer"
+                    <a href="https://maps.app.goo.gl/wh26iQHfcnyyooZo7" target="_blank" rel="noopener noreferrer"
                         class="inline-block bg-white text-brand-blue px-6 py-3 text-lg rounded-xl">
                         Lihat Peta
                         <span>
@@ -254,13 +256,13 @@
                 </div>
             </article>
         </section>
-        <section id="galeri" class="w-full">
+        <section id="my-gallery" class="w-full">
             <article class="mx-auto max-w-7xl py-20 px-5">
                 <img src="./assets/icon/ornamen-1.svg" alt="Ornament" class="w-[120px] mx-auto">
                 <h1 class="mt-4 text-4xl md:text-5xl font-brand font-semibold text-center text-brand-dark-blue">
                     Galeri
                 </h1>
-                <div class="mt-16 pswp-gallery grid grid-cols-3 gap-4" id="my-gallery">
+                <div class="mt-16 pswp-gallery grid md:grid-cols-2 lg:grid-cols-3 gap-4">
                     <a href="https://res.cloudinary.com/dnangmip5/image/upload/v1667482985/dewi/Gambar_JPEG_7_lfn14i.jpg"
                         data-pswp-width="4446" data-pswp-height="2501" target="_blank" class="w-full">
                         <img src="https://res.cloudinary.com/dnangmip5/image/upload/c_scale,w_300/v1667482985/dewi/Gambar_JPEG_7_lfn14i.jpg"
@@ -321,7 +323,7 @@
                         </div>
                         <div class="swiper-slide">
                             <section class="flex flex-col md:flex-row">
-                                <img src="./assets/img/story-1.png" alt="our story" class="flex-[2_2_0%]">
+                                <img src="./assets/img/story-2.png" alt="our story" class="flex-[2_2_0%]">
                                 <article class="flex-[3_3_0%] flex flex-col md:ml-8 mt-8">
                                     <h1 class="text-4xl font-brand font-bold">Januari 2017</h1>
                                     <p class="mt-4 mb-[80px]">
@@ -334,7 +336,7 @@
                         </div>
                         <div class="swiper-slide">
                             <section class="flex flex-col md:flex-row">
-                                <img src="./assets/img/story-1.png" alt="our story" class="flex-[2_2_0%]">
+                                <img src="./assets/img/story-3.png" alt="our story" class="flex-[2_2_0%]">
                                 <article class="flex-[3_3_0%] flex flex-col md:ml-8 mt-8">
                                     <h1 class="text-4xl font-brand font-bold">Februari 2017 - 5 Agustus 2022</h1>
                                     <p class="mt-4 mb-[80px]">
@@ -347,7 +349,7 @@
                         </div>
                         <div class="swiper-slide">
                             <section class="flex flex-col md:flex-row">
-                                <img src="./assets/img/story-1.png" alt="our story" class="flex-[2_2_0%]">
+                                <img src="./assets/img/story-4.png" alt="our story" class="flex-[2_2_0%]">
                                 <article class="flex-[3_3_0%] flex flex-col md:ml-8 mt-8">
                                     <h1 class="text-4xl font-brand font-bold">6 Agustus 2022</h1>
                                     <p class="mt-4 mb-[80px]">
@@ -360,7 +362,7 @@
                         </div>
                         <div class="swiper-slide">
                             <section class="flex flex-col md:flex-row">
-                                <img src="./assets/img/story-1.png" alt="our story" class="flex-[2_2_0%]">
+                                <img src="./assets/img/story-5.png" alt="our story" class="flex-[2_2_0%]">
                                 <article class="flex-[3_3_0%] flex flex-col md:ml-8 mt-8">
                                     <h1 class="text-4xl font-brand font-bold">19 November 2022</h1>
                                     <p class="mt-4 mb-[80px]">
@@ -447,19 +449,19 @@
                         <p id="error-nama-hadiah" class="text-red-500 text-sm mt-1 hidden">Nama tidak boleh kosong</p>
                     </div>
                     <div class="mt-4">
-                        <label for="bankPengirim">Bank Pengirim</label>
+                        <label for="bankPengirim">Bank Pengirim *</label>
                         <input id="bankPengirim" type="text" class="mt-2 px-4 py-3 rounded-lg border w-full"
                             placeholder="Bank Doel">
                         <p id="error-bank-hadiah" class="text-red-500 text-sm mt-1 hidden">Nama Bank pengirim tidak boleh kosong</p>
                     </div>
                     <div class="mt-4">
-                        <label for="jumlahHadiah">Jumlah Hadiah</label>
+                        <label for="jumlahHadiah">Jumlah Hadiah *</label>
                         <input id="jumlahHadiah" type="number" class="mt-2 px-4 py-3 rounded-lg border w-full"
                             placeholder="10000">
                         <p id="error-jumlah-hadiah" class="text-red-500 text-sm mt-1 hidden">Kolom jumlah tidak boleh kosong</p>
                     </div>
                     <div class="mt-4">
-                        <label for="pesanHadiah">Pesan</label>
+                        <label for="pesanHadiah">Pesan *</label>
                         <textarea id="pesanHadiah" class="mt-2 px-4 py-3 rounded-lg border w-full"
                             placeholder="Lancar dan samawa yaa.." rows="5"></textarea>
                         <p id="error-pesan-hadiah" class="text-red-500 text-sm mt-1 hidden">Pesan pengirim tidak boleh kosong</p>
@@ -489,7 +491,7 @@
                         <p id="error-nama-ucapan" class="text-red-500 text-sm mt-1 hidden">Nama tidak boleh kosong</p>
                     </div>
                     <div class="mt-4">
-                        <label for="pesanUcapan">Ucapan</label>
+                        <label for="pesanUcapan">Ucapan *</label>
                         <textarea id="pesanUcapan" class="mt-2 px-4 py-3 rounded-lg border w-full"
                             placeholder="Lancar dan samawa yaa.." rows="5" required></textarea>
                         <p id="error-pesan-ucapan" class="text-red-500 text-sm mt-1 hidden">Pesan tidak boleh kosong</p>
@@ -499,13 +501,13 @@
                             Kirim
                         </button>
                         <p id="textUcapan" class="text-center text-lg text-green-400 font-bold my-4 hidden">
-                            Terima kasih telah mengirimkan ucapan! Silahkan tunggu sesaat
+                            Terima kasih telah mengirimkan ucapan! Silakan tunggu sesaat.
                         </p>
                     </div>
                 </div>
                 <article id="ucapan-inner" class="mt-16 w-full grid md:grid-cols-3 sm:grid-cols-2 grid-cols-1 gap-5"></article>
                 <div class="mt-8 text-center">
-                    <button class="text-brand-dark-blue font-bold text-xl underline">Lihat Lainnya</button>
+                    <button id="viewMoreGreetings" class="text-brand-dark-blue font-bold text-xl underline">Lihat Lainnya</button>
                 </div>
             </article>
         </section>
@@ -537,52 +539,55 @@
         </section>
         <nav
             class="w-full bg-gray-800 flex items-center justify-center fixed bottom-0 lg:hidden text-gray-400 py-2 z-20">
-            <div class="w-full flex flex-wrap items-center justify-evenly">
+            <div class="w-full flex items-center justify-evenly">
                 <a id="home-btn" href="#hero" class="nav-btn flex flex-col items-center p-2">
                     <i class="fa-solid fa-house"></i>
-                    <span class="text-center text-sm">Home</span>
+                    <span class="text-center text-xs mt-1">Home</span>
                 </a>
                 <a id="group-btn" href="#our-story" class="nav-btn flex flex-col items-center p-2">
-                    <i class="fa-solid fa-user-group"></i>
-                    <span class="text-center text-sm">Our Story</span>
+                    <i class="fa-solid fa-heart"></i>
+                    <span class="text-center text-xs mt-1">Our Story</span>
                 </a>
                 <a id="group-btn" href="#pasangan" class="nav-btn flex flex-col items-center p-2">
                     <i class="fa-solid fa-user-group"></i>
-                    <span class="text-center text-sm">Pasangan</span>
+                    <span class="text-center text-xs mt-1">Pasangan</span>
                 </a>
                 <a id="gallery-btn" href="#my-gallery" class="nav-btn flex flex-col items-center p-2">
                     <i class="fa-solid fa-calendar"></i>
-                    <span class="text-center text-sm">Gallery</span>
+                    <span class="text-center text-xs mt-1">Gallery</span>
                 </a>
                 <a id="angpao-btn" href="#hadiah" class="nav-btn flex flex-col items-center p-2">
                     <i class="fa-solid fa-gift"></i>
-                    <span class="text-center text-sm">Hadiah</span>
+                    <span class="text-center text-xs mt-1">Hadiah</span>
                 </a>
                 <a id="ucapan-btn" href="#ucapan" class="nav-btn flex flex-col items-center p-2">
                     <i class="fa-solid fa-comments"></i>
-                    <span class="text-center text-sm">Ucapan</span>
+                    <span class="text-center text-xs mt-1">Ucapan</span>
                 </a>
             </div>
         </nav>
         <!-- Modal -->
         <section id="modal" class="w-full h-screen z-20 top-0 left-0 fixed bg-[url('https://res.cloudinary.com/dnangmip5/image/upload/v1667482983/dewi/Gambar_JPEG_2_yjqo2k.jpg')] bg-cover bg-center overflow-y-auto p-5">
             <div class="flex flex-col justify-center min-h-full max-w-[1080px] m-auto">
-                <article class="w-full flex-1 flex flex-col items-center justify-center bg-white/75 text-center text-brand-blue">
-                    <section class="w-full p-5">
+                <article class="w-full flex-1 flex flex-col items-center justify-between bg-white/75 text-center text-brand-blue">
+                    <section class="w-full px-5 pb-5 pt-16">
                         <img src="./assets/icon/logo-2.svg" alt="Logo" class="w-44 mb-5 mx-auto text-brand-blue">
-                        <section class="p-3 space-y-8">
+                        <section>
                             <h1 class="text-xl">THE WEDDING OF</h1> 
-                            <h2 class="text-4xl sm:text-6xl lg:text-8xl font-brand">Ardi & Dewi</h2>
-                            <h3 class="text-xl font-semibold">Sabtu, 19 November 2022</h3>
-                            <h4 id="guestTo" class="text-lg text-brand-green-4"></h4>
-                            <h5 id="guestName" class="text-2xl font-bold"></h5>
-                            <button id="openButton" class="bg-brand-blue text-white w-fit px-4 py-3 sm:text-lg hidden">
-                                Open Invitation
-                                <span>
-                                    <i class="fa-solid fa-arrow-right fa-xl ml-3"></i>
-                                </span>
-                            </button>
+                            <h2 class="mt-8 text-4xl sm:text-6xl lg:text-8xl font-brand">Ardi & Dewi</h2>
+                            <h3 class="mt-8 text-lg font-semibold">Sabtu, 19 November 2022</h3>
                         </section>
+                    </section>
+                    <section class="px-5 pb-16 pt-5">
+                        <p id="loadingGuest"><i>Sedang memuat tamu...</i></p>
+                        <h4 id="guestTo" class="mb-8 text-lg text-brand-green-4"></h4>
+                        <h5 id="guestName" class="mb-8 text-2xl font-bold"></h5>
+                        <button id="openButton" class=" bg-brand-blue text-white w-fit px-4 py-3 sm:text-lg hidden">
+                            Buka Undangan
+                            <span>
+                                <i class="fa-solid fa-arrow-right fa-xl ml-3"></i>
+                            </span>
+                        </button>
                     </section>
                 </article>
             </div>
