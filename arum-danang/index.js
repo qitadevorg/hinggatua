@@ -6,11 +6,13 @@ const discButton = document.getElementById('discButton');
 const ucapanContainer = document.getElementById("ucapan-inner");
 const loadMore = document.getElementById("loadMore");
 const submitBtn = document.getElementById("submitBtn");
+const copyBtn = document.getElementById("copyButton");
 
 let ucapanArr = [];
 let defaultPagination = 6;
 let gsheetsUrl =
   "https://script.google.com/macros/s/AKfycbxOrgsF6rmPm-jjVG_gU3PFxUFNo1VDRkmQdYqluGRVhCUeKQDiwg5xct8PJh7oKHuO/exec";
+let accountNumber = "0588783536";
 
 let x = setInterval(() => {
     let weddingDate = new Date("May 18, 2023 08:00:00").getTime();
@@ -129,6 +131,10 @@ discButton.addEventListener('click', (e) => {
         discButton.classList.remove('animate-spin-slow');
         audio.pause();
     }
+})
+
+copyBtn.addEventListener('click', (e) => {
+    navigator.clipboard.writeText(accountNumber);
 })
 
 window.onload = async () => {
