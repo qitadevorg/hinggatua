@@ -65,6 +65,8 @@
         rel="stylesheet"
         href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
     />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="https://unpkg.com/photoswipe@5.2.2/dist/photoswipe.css" />
     <link rel="stylesheet" href="./assets/style.css">
 </head>
 <body id="body" class="bg-[url('./assets/img/HeroSection_Background.webp')] bg-cover bg-fixed text-stone-800 overflow-hidden">
@@ -78,7 +80,7 @@
                     <a href="#pasangan">PASANGAN</a>
                 </li>
                 <li>
-                    <a href="#galeri">GALLERY</a>
+                    <a href="#agenda">AGENDA</a>
                 </li>
             </ul>
             <a href="/">
@@ -86,7 +88,7 @@
             </a>
             <ul class="md:mx-2 lg:mx-8 md:w-[30%] md:flex md:justify-between hidden">
                 <li>
-                    <a href="#agenda">AGENDA</a>
+                    <a href="#galeri">GALLERY</a>
                 </li>
                 <li>
                     <a href="#hadiah">HADIAH</a>
@@ -148,7 +150,7 @@
                 </p>
             </article>
         </section>
-        <section id="pasangan">
+        <section id="pasangan" class="bg-white">
             <article class="max-w-7xl py-12 px-5 mx-auto flex flex-col items-center text-center text-brand-green-2">
                 <img src="./assets/icon/ornamen 1.webp" alt="Ornament" class="w-56">
                 <article class="w-full lg:w-[60%] mt-5 p-5">
@@ -190,24 +192,7 @@
                     </article>
                 </section>
             </article>
-        </section>
-        <section id="galeri" class="w-full bg-white">
-            <article class="max-w-7xl py-12 px-5 mx-auto flex flex-col items-center text-center text-brand-green-2">
-                <img src="./assets/icon/ornamen 2.webp" alt="ornamen" class="w-56">
-                <h1 class="text-5xl text-center font-semibold font-brand my-8">
-                    Galeri
-                </h1>
-                <section id="galeri-inner" class="w-full grid md:grid-cols-3 grid-cols-2 gap-6">
-                    <img src="./assets/img/galeri-foto-1.png" alt="galeri foto">
-                    <img src="./assets/img/galeri-foto-2.png" alt="galeri foto">
-                    <img src="./assets/img/galeri-foto-3.png" alt="galeri foto">
-                    <img src="./assets/img/galeri-foto-4.png" alt="galeri foto">
-                    <img src="./assets/img/galeri-foto-5.png" alt="galeri foto">
-                    <img src="./assets/img/galeri-foto-6.png" alt="galeri foto">
-                </section>
-            </article>
-        </section>
-        <section id="agenda">
+        </section><section id="agenda">
             <article class="max-w-7xl mx-auto py-12 px-5 flex flex-col items-center text-brand-green-2 text-center">
                 <img src="./assets/icon/ornamen 1.webp" alt="ornamen" class="w-56">
                 <article class="w-full lg:w-[75%] p-5">
@@ -219,7 +204,8 @@
                         memberikan doa dan kehadiran dalam acara kami yang akan dilaksanakan pada
                     </p>
                 </article>
-                <section id="agenda-inner" class="w-full md:w-[75%] flex flex-col sm:flex-row items-center justify-between p-8 gap-4">
+                <section id="agenda-inner"
+                    class="w-full md:w-[75%] flex flex-col sm:flex-row items-center justify-between p-8 gap-4">
                     <article class="w-full rounded-lg border border-brand-green-2 flex flex-col justify-center p-8">
                         <div class="flex justify-center">
                             <img src="./assets/icon/icon_akad.webp" alt="Akad" class="w-24">
@@ -265,12 +251,104 @@
                         </section>
                     </article>
                 </section>
-                <a href="https://maps.app.goo.gl/Ej1eHbykAgwcp6UV8" target="_blank" class="bg-brand-green-2 text-white w-fit px-4 py-3 rounded sm:text-lg">
+                <a href="https://maps.app.goo.gl/Ej1eHbykAgwcp6UV8" target="_blank"
+                    class="bg-brand-green-2 text-white w-fit px-4 py-3 rounded sm:text-lg">
                     Lihat Peta
                     <span>
                         <i class="fa-solid fa-arrow-right ml-3"></i>
                     </span>
                 </a>
+            </article>
+        </section>
+        <section id="galeri" class="w-full bg-white">
+            <article class="max-w-7xl py-12 px-5 mx-auto flex flex-col items-center text-center text-brand-green-2">
+                <img src="./assets/icon/ornamen 2.webp" alt="ornamen" class="w-56">
+                <h1 class="text-5xl text-center font-semibold font-brand my-8">
+                    Galeri
+                </h1>
+                <section id="galeri-inner" class="w-full grid md:grid-cols-3 grid-cols-2 gap-6">
+                    <img src="./assets/img/galeri-foto-1.png" alt="galeri foto">
+                    <img src="./assets/img/galeri-foto-2.png" alt="galeri foto">
+                    <img src="./assets/img/galeri-foto-3.png" alt="galeri foto">
+                    <img src="./assets/img/galeri-foto-4.png" alt="galeri foto">
+                    <img src="./assets/img/galeri-foto-5.png" alt="galeri foto">
+                    <img src="./assets/img/galeri-foto-6.png" alt="galeri foto">
+                </section>
+            </article>
+        </section>
+        <section id="our-story" class="text-brand-green-2">
+            <article class="mx-auto max-w-7xl px-5 py-20 relative">
+                <img src="./assets/icon/ornamen 1.webp" alt="ornamen" class="w-56 mx-auto">
+                <h1 class="mt-4 text-4xl md:text-5xl font-brand font-semibold text-center">Cerita Cinta</h1>
+                <section class="swiper mySwiper w-full mt-16">
+                    <div class="swiper-wrapper relative">
+                        <div class="swiper-slide">
+                            <section class="flex flex-col md:flex-row">
+                                <img src="./assets/img/story-1.png" alt="our story" class="flex-[2_2_0%] rounded-t-[48px] rounded-b-none">
+                                <article class="flex-[3_3_0%] flex flex-col md:ml-20 mt-8">
+                                    <h1 class="text-4xl font-brand font-bold">21 April 2022</h1>
+                                    <p class="mt-4 mb-[80px]">
+                                        Danang di pindah tempat kerja karena kekurangan personil & bergabung dengan team yg baru. Seiring berjalannya waktu
+                                        Danang mulai menemukan tanda-tanda benih asmara pada salah satu karyawati.
+                                    </p>
+                                </article>
+                            </section>
+                        </div>
+                        <div class="swiper-slide">
+                            <section class="flex flex-col md:flex-row">
+                                <img src="./assets/img/story-2.png" alt="our story" class="flex-[2_2_0%] rounded-t-[48px] rounded-b-none">
+                                <article class="flex-[3_3_0%] flex flex-col md:ml-20 mt-8">
+                                    <h1 class="text-4xl font-brand font-bold">17 Juni 2022</h1>
+                                    <p class="mt-4 mb-[80px]">
+                                        Disitulah awal kami memberanikan diri untuk bertemu. Kami banyak berbagi cerita dan saling mengenal lebih dalam.
+                                    </p>
+                                </article>
+                            </section>
+                        </div>
+                        <div class="swiper-slide">
+                            <section class="flex flex-col md:flex-row">
+                                <img src="./assets/img/story-3.png" alt="our story" class="flex-[2_2_0%] rounded-t-[48px] rounded-b-none">
+                                <article class="flex-[3_3_0%] flex flex-col md:ml-20 mt-8">
+                                    <h1 class="text-4xl font-brand font-bold">20 Juli 2022</h1>
+                                    <p class="mt-4 mb-[80px]">
+                                        Setelah intens dan saling bertemu kami merasa ada beberapa kecocokan, hingga akhirnya Danang menyatakan perasaannya
+                                        tepat di bulan Juli dan kami mulai menjalin hubungan yang lebih serius.
+                                    </p>
+                                </article>
+                            </section>
+                        </div>
+                        <div class="swiper-slide">
+                            <section class="flex flex-col md:flex-row">
+                                <img src="./assets/img/story-4.png" alt="our story" class="flex-[2_2_0%] rounded-t-[48px] rounded-b-none">
+                                <article class="flex-[3_3_0%] flex flex-col md:ml-20 mt-8">
+                                    <h1 class="text-4xl font-brand font-bold">5 November 2022</h1>
+                                    <p class="mt-4 mb-[80px]">
+                                        Setelah melewati beberapa bulan kami menjalin kasih, kami sudah yakin dan mantap untuk serius, hingga akhirnya kami
+                                        memutuskan untuk bertunangan.
+                                    </p>
+                                </article>
+                            </section>
+                        </div>
+                        <div class="swiper-slide">
+                            <section class="flex flex-col md:flex-row">
+                                <img src="./assets/img/story-5.png" alt="our story" class="flex-[2_2_0%] rounded-t-[48px] rounded-b-none">
+                                <article class="flex-[3_3_0%] flex flex-col md:ml-20 mt-8">
+                                    <h1 class="text-4xl font-brand font-bold">18 Mei 2023</h1>
+                                    <p class="mt-4 mb-[80px]">
+                                        Kami memutuskan untuk mengakhiri masa lajang menuju pasangan seutuhnya dalam ikatan suami istri. Semoga pernikahan kami
+                                        diridhoi Allah dan menjadi keluarga yang sakinah, mawaddah, warahmah. Amiin.
+                                    </p>
+                                </article>
+                            </section>
+                        </div>
+                    </div>
+                    <div id="nextSwiper"
+                        class="swiper-button-next transition-all ease-in-out bg-white rounded-full w-12 h-12 after:text-[16px] after:content-['next'] bottom-0 right-0 top-auto">
+                    </div>
+                    <div id="prevSwiper"
+                        class="swiper-button-prev transition-all ease-in-out bg-white rounded-full w-12 h-12 after:text-[16px] after:content-['prev'] bottom-0 right-[64px] top-auto left-auto">
+                    </div>
+                </section>
             </article>
         </section>
         <section id="protokol" class="w-full bg-white">
@@ -548,5 +626,30 @@
             }
         }
     })
+</script>
+
+<script type="module">
+    import Swiper from 'https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.esm.browser.min.js'
+    import PhotoSwipeLightbox from 'https://unpkg.com/photoswipe/dist/photoswipe-lightbox.esm.js';
+
+    const swiper = new Swiper('.mySwiper', {
+        autoHeight: true,
+        navigation: {
+            nextEl: ".swiper-button-next",
+            prevEl: ".swiper-button-prev",
+        },
+        pagination: {
+            el: ".swiper-pagination"
+        }
+    })
+
+    const lightbox = new PhotoSwipeLightbox({
+        gallery: '#my-gallery',
+        children: 'a',
+        pswpModule: () => import('https://unpkg.com/photoswipe'),
+    });
+
+    lightbox.init();
+
 </script>
 </html>
