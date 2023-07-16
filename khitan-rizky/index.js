@@ -17,6 +17,7 @@ let greetingsArray = [];
 let defaultPagination = 6;
 
 bukaBtn.addEventListener('click', () => {
+  window.scrollTo(0, 0);
   modal.classList.add('animate__animated');
   modal.classList.add('animate__fadeOutLeft');
   body.classList.remove('overflow-y-hidden');
@@ -38,24 +39,28 @@ discButton.addEventListener('click', (e) => {
 });
 
 homeBtn.addEventListener('click', () => {
-  document.getElementById('banner-part').scrollIntoView();
+  document.getElementById('banner-part').scrollIntoView({ behavior: 'smooth' });
 });
 
 profileBtn.addEventListener('click', () => {
-  document.getElementById('profile-part').scrollIntoView();
+  document.getElementById('profile-part').scrollIntoView({ behavior: 'smooth' });
 });
 
 agendaBtn.addEventListener('click', () => {
-  document.getElementById('agenda-part').scrollIntoView();
+  document.getElementById('agenda-part').scrollIntoView({ behavior: 'smooth' });
 });
 
 ucapanBtn.addEventListener('click', () => {
-  document.getElementById('pray-words-part').scrollIntoView();
+  document.getElementById('pray-words-part').scrollIntoView({ behavior: 'smooth' });
 });
 
 loadMoreBtn.addEventListener('click', async () => {
   defaultPagination += 6;
   await renderGreetings();
+});
+
+petaBtn.addEventListener('click', () => {
+  window.open('https://goo.gl/maps/PnfiDszKZHQnvrA7A', '_blank');
 })
 
 sendBtn.addEventListener('click', async (e) => {
@@ -121,7 +126,6 @@ async function getGreetingsData() {
   await fetch(`${SHEET_URL}?action=get_all_greetings`, { method: 'GET' })
     .then((res) => res.json())
     .then(async (res) => {
-      console.log(res, "data getGreetingsData");
       greetingsArray = [];
       res.data.forEach((item) => greetingsArray.push({ name: item.nama, greeting: item.ucapan }));
       await renderGreetings();
@@ -142,9 +146,9 @@ async function renderGreetings() {
     else loadMoreBtn.classList.remove('hidden');
 
     let template = '';
-    slicedGreetings.forEach((greet, index) => {
+    slicedGreetings.forEach((greet) => {
       template += `
-        <div class="w-full p-5 rounded-md flex flex-col justify-start gap-1.5 bg-white">
+        <div class="greet-card w-full p-5 rounded-md flex flex-col justify-start gap-1.5 bg-white">
           <h4 class="text-primary-red text-xl font-bold font-body">${greet.name}</h4>
           <p class="text-md text-primary-red font-normal font-body leading-6">
             ${greet.greeting}
