@@ -1,7 +1,7 @@
 const audio = document.getElementById('audio');
 const bukaBtn = document.getElementById('buka-btn');
 const petaBtn = document.getElementById('peta-btn');
-const lainnyaBtn = document.getElementById('lainnya-btn');
+const loadMoreBtn = document.getElementById('lainnya-btn');
 const sendBtn = document.getElementById('send-btn');
 const homeBtn = document.getElementById('home-btn');
 const profileBtn = document.getElementById('profile-btn');
@@ -10,6 +10,11 @@ const ucapanBtn = document.getElementById('ucapan-btn');
 const discButton = document.getElementById('disc-btn');
 const body = document.getElementById('body');
 const modal = document.getElementById('modal-cover');
+const greetingContainer = document.getElementById('ucapan-container');
+
+const SHEET_URL = 'https://script.google.com/macros/s/AKfycby1M7VO2UMwSpw37YApiP8Fi1nJ51BWuoTG7cd5Vj5RwdzrRuvqcsALNY1NplYIgmcT1A/exec';
+let greetingsArray = [];
+let defaultPagination = 6;
 
 bukaBtn.addEventListener('click', () => {
   modal.classList.add('animate__animated');
@@ -48,6 +53,41 @@ ucapanBtn.addEventListener('click', () => {
   document.getElementById('pray-words-part').scrollIntoView();
 });
 
+loadMoreBtn.addEventListener('click', async () => {
+  defaultPagination += 6;
+  await renderGreetings();
+})
+
+sendBtn.addEventListener('click', async (e) => {
+  e.preventDefault();
+  
+  const nameField = document.getElementById('name-input').value;
+  const bodyField = document.getElementById('body-input').value;
+
+  if ((nameField !== '' || nameField.length > 0) && (bodyField !== '' || bodyField.length > 0)) {
+    document.getElementById("name-input").value = '';
+    document.getElementById("body-input").value = '';
+    document.getElementById("ucapanHandler").classList.remove('hidden');
+    const form = new FormData();
+    form.append('action', 'create_greeting');
+    form.append('nama', nameField);
+    form.append('ucapan', bodyField);
+    
+    await fetch(SHEET_URL, {
+      method: 'POST',
+      body: form
+    }).then((res) => res.json())
+    .then(async () => {
+      await getGreetingsData();
+      setTimeout(() => {
+        document.getElementById("ucapanHandler").classList.add('hidden');
+      }, 2000)
+    })
+    .catch((e) => console.log(e.message))
+  } else {
+    alert('Kolom nama dan ucapan tidak boleh kosong!');
+  }
+})
 
 let x = setInterval(() => {
   const dayTimer = document.getElementById('day-timer');
@@ -76,3 +116,46 @@ let x = setInterval(() => {
       secTimer.innerHTML = "00";
   }
 }, 1000);
+
+async function getGreetingsData() {
+  await fetch(`${SHEET_URL}?action=get_all_greetings`, { method: 'GET' })
+    .then((res) => res.json())
+    .then(async (res) => {
+      console.log(res, "data getGreetingsData");
+      greetingsArray = [];
+      res.data.forEach((item) => greetingsArray.push({ name: item.nama, greeting: item.ucapan }));
+      await renderGreetings();
+    });
+
+  if (greetingsArray.length > 6) {
+    loadMoreBtn.classList.remove('hidden');
+  } else {
+    loadMoreBtn.classList.add('hidden');
+  }
+}
+
+async function renderGreetings() {
+  if (greetingsArray.length > 0) {
+    const slicedGreetings = greetingsArray.slice(0, defaultPagination);
+
+    if (slicedGreetings.length === greetingsArray.length) loadMoreBtn.classList.add('hidden');
+    else loadMoreBtn.classList.remove('hidden');
+
+    let template = '';
+    slicedGreetings.forEach((greet, index) => {
+      template += `
+        <div class="w-full p-5 rounded-md flex flex-col justify-start gap-1.5 bg-white">
+          <h4 class="text-primary-red text-xl font-bold font-body">${greet.name}</h4>
+          <p class="text-md text-primary-red font-normal font-body leading-6">
+            ${greet.greeting}
+          </p>
+        </div>
+      `;
+    });
+    greetingContainer.innerHTML = template;
+  }
+}
+
+window.onload = async () => {
+  await getGreetingsData();
+}
