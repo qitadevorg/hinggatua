@@ -11,6 +11,7 @@ const discButton = document.getElementById('disc-btn');
 const body = document.getElementById('body');
 const modal = document.getElementById('modal-cover');
 const greetingContainer = document.getElementById('ucapan-container');
+const navContainer = document.getElementById('nav-container');
 
 const SHEET_URL = 'https://script.google.com/macros/s/AKfycby1M7VO2UMwSpw37YApiP8Fi1nJ51BWuoTG7cd5Vj5RwdzrRuvqcsALNY1NplYIgmcT1A/exec';
 let greetingsArray = [];
@@ -20,6 +21,7 @@ bukaBtn.addEventListener('click', () => {
   window.scrollTo(0, 0);
   modal.classList.add('animate__animated');
   modal.classList.add('animate__fadeOutLeft');
+  navContainer.classList.remove('hidden');
   body.classList.remove('overflow-y-hidden');
   discButton.classList.add('animate-spin-slow');
   audio.autoplay = true;

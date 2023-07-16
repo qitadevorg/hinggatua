@@ -20,6 +20,7 @@
 						'primary-red': '#853F42',
 						'primary-yellow': '#F4CE96',
 						'primary-smoke': '#FFF5F6',
+						'nav-red': '#983030'
 					},
 					animation: {
 						'spin-slow': 'spin 6s linear infinite',
@@ -188,45 +189,6 @@
 			</button>
 		</article>
 
-		<nav class="w-full hidden min-[375px]:flex items-center justify-evenly bg-primary-yellow p-3 gap-3 rounded-lg sticky bottom-[20px] mt-4">
-			<a 
-				id="home-btn" 
-				class="flex flex-col justify-center items-center gap-1 text-white hover:text-primary-red cursor-pointer transition-colors font-body font-semibold"
-			>
-			<span>
-				<i class="fa-solid fa-house fa-xl w-max mx-auto"></i>
-			</span>
-			Home
-			</a>
-			<a 
-				id="profile-btn" 
-				class="flex flex-col justify-center items-center gap-1 text-white hover:text-primary-red cursor-pointer transition-colors font-body font-semibold"
-			>
-				<span>
-					<i class="fa-solid fa-user fa-xl w-max mx-auto"></i>
-				</span>
-				Profil
-			</a>
-			<a 
-				id="agenda-btn" 
-				class="flex flex-col justify-center items-center gap-1 text-white hover:text-primary-red cursor-pointer transition-colors font-body font-semibold"
-			>
-				<span>
-					<i class="fa-solid fa-calendar fa-xl w-max mx-auto"></i>
-				</span>
-				Agenda
-			</a>
-			<a 
-				id="ucapan-btn" 
-				class="flex flex-col justify-center items-center gap-1 text-white hover:text-primary-red cursor-pointer transition-colors font-body font-semibold"
-			>
-				<span>
-					<i class="fa-solid fa-comments fa-xl w-max mx-auto"></i>
-				</span>
-				Ucapan
-			</a>
-		</nav>
-
 		<section 
 			id="modal-cover" 
 			class="fixed top-0 inset-x-0 z-10 max-w-2xl h-screen bg-primary-red mx-auto 
@@ -247,15 +209,62 @@
 				</button>
 			</article>
 		</section>
-
-		<button id="disc-btn" class="fixed bottom-5 left-5 w-14 outline-none cursor-pointer z-10">
-			<img src="./assets/img/Disc 1.png" alt="Disc" class="w-full">
-		</button>
 		<audio id="audio" src="./assets/song.mp3"></audio>
 	</main>
 
+	<section id="nav-container" class="max-w-2xl sticky bottom-[20px] hidden z-10 px-3 min-[475px]:px-6 mx-auto">
+		<button id="disc-btn" class="w-14 outline-none cursor-pointer mb-2">
+			<img src="./assets/img/Disc 1.png" alt="Disc" class="w-full">
+		</button>
+		<nav class="w-full hidden min-[375px]:flex items-center justify-evenly bg-primary-yellow p-3 gap-3 rounded-lg">
+			<a 
+				id="home-btn" 
+				class="flex flex-col justify-center items-center gap-1 text-primary-red hover:text-primary-red cursor-pointer transition-colors font-body font-semibold"
+			>
+			<span>
+				<i class="fa-solid fa-house fa-xl w-max mx-auto"></i>
+			</span>
+			Home
+			</a>
+			<a 
+				id="profile-btn" 
+				class="flex flex-col justify-center items-center gap-1 text-primary-red hover:text-primary-red cursor-pointer transition-colors font-body font-semibold"
+			>
+				<span>
+					<i class="fa-solid fa-user fa-xl w-max mx-auto"></i>
+				</span>
+				Profil
+			</a>
+			<a 
+				id="agenda-btn" 
+				class="flex flex-col justify-center items-center gap-1 text-primary-red hover:text-primary-red cursor-pointer transition-colors font-body font-semibold"
+			>
+				<span>
+					<i class="fa-solid fa-calendar fa-xl w-max mx-auto"></i>
+				</span>
+				Agenda
+			</a>
+			<a 
+				id="ucapan-btn" 
+				class="flex flex-col justify-center items-center gap-1 text-primary-red hover:text-primary-red cursor-pointer transition-colors font-body font-semibold"
+			>
+				<span>
+					<i class="fa-solid fa-comments fa-xl w-max mx-auto"></i>
+				</span>
+				Ucapan
+			</a>
+		</nav>
+	</section>
+
 	<footer class="max-w-2xl mx-auto bg-primary-smoke p-5 z-0">
-		<p class="text-center text-primary-red text-md font-body font-semibold">Powered by Qita Development Technology</p>
+		<p class="text-center text-primary-red text-md font-body font-semibold">
+			Powered by 
+			<span>
+				<a href="https://qitadev.com" target="_blank" class="hover:underline">
+					Qita Development Technology
+				</a>
+			</span>
+		</p>
 	</footer>
 </body>
 <script src="./index.js"></script>
