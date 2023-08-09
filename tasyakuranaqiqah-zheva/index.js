@@ -7,6 +7,8 @@ const homeBtn = document.getElementById('home-btn');
 const profileBtn = document.getElementById('profile-btn');
 const agendaBtn = document.getElementById('agenda-btn');
 const ucapanBtn = document.getElementById('ucapan-btn');
+const discButton = document.getElementById('disc-btn');
+
 const body = document.getElementById('body');
 const modal = document.getElementById('modal-cover');
 const greetingContainer = document.getElementById('ucapan-container');
@@ -22,22 +24,22 @@ bukaBtn.addEventListener('click', () => {
   modal.classList.add('animate__fadeOutLeft');
   navContainer.classList.remove('hidden');
   body.classList.remove('overflow-y-hidden');
-  // discButton.classList.add('animate-spin-slow');
-  // audio.autoplay = true;
-  // audio.loop = true;
-  // audio.volume = 0.2;
-  // audio.play();
+  discButton.classList.add('animate-spin-slow');
+  audio.autoplay = true;
+  audio.loop = true;
+  audio.volume = 0.2;
+  audio.play();
 });
 
-// discButton.addEventListener('click', (e) => {
-//   if (audio.paused) {
-//     discButton.classList.add('animate-spin-slow');
-//     audio.play();
-//   } else {
-//     discButton.classList.remove('animate-spin-slow');
-//     audio.pause();
-//   }
-// });
+discButton.addEventListener('click', (e) => {
+  if (audio.paused) {
+    discButton.classList.add('animate-spin-slow');
+    audio.play();
+  } else {
+    discButton.classList.remove('animate-spin-slow');
+    audio.pause();
+  }
+});
 
 homeBtn.addEventListener('click', () => {
   document.getElementById('banner-part').scrollIntoView({ behavior: 'smooth' });
