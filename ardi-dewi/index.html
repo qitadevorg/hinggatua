@@ -52,9 +52,7 @@
     <link rel="stylesheet" href="./assets/style.css">
 </head>
 
-<!-- <body id="body" class="flex overflow-y-hidden"> -->
-
-<body id="body" class="flex">
+<body id="body" class="flex overflow-y-hidden">
     <aside class="flex-1 bg-gray-200 sticky top-0 h-screen block">
         <img src="https://res.cloudinary.com/dnangmip5/image/upload/v1667482983/dewi/Gambar_JPEG_2_yjqo2k.jpg"
             class="w-full h-full object-cover" />
@@ -882,7 +880,7 @@
     openButton.addEventListener('click', (e) => {
         modal.classList.add('animate__animated');
         modal.classList.add('animate__fadeOutUp');
-        body.classList.remove('overflow-hidden');
+        body.classList.remove('overflow-y-hidden');
         discButton.classList.add('animate-spin-slow');
         audio.autoplay = true;
         audio.loop = true;
