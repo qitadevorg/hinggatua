@@ -293,3 +293,27 @@ const lightbox = new PhotoSwipeLightbox({
 });
 
 lightbox.init();
+
+window.copyToClipboard = (
+  event,
+  textToCopy,
+  textBeforeCopy,
+  textAfterCopy,
+  classNamesAfterCopy
+) => {
+  navigator.clipboard.writeText(textToCopy);
+
+  event.innerText = textAfterCopy;
+
+  classNamesAfterCopy.forEach((className) => {
+    event.classList.add(className);
+  });
+
+  setTimeout(() => {
+    classNamesAfterCopy.forEach((className) => {
+      event.classList.remove(className);
+    });
+
+    event.innerText = textBeforeCopy;
+  }, 2000);
+};
