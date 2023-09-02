@@ -63,10 +63,10 @@ window.onload = () => {
           openButton.classList.add("animate__fadeIn");
           openButton.classList.add("animate__delay-1s");
         } else {
+          guestTo?.classList.add("hidden");
           openButton.classList.remove("hidden");
           openButton.classList.add("animate__animated");
           openButton.classList.add("animate__fadeIn");
-          openButton.classList.add("animate__delay-1s");
         }
       });
   } else {
