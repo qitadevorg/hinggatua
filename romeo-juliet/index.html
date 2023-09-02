@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -37,548 +38,545 @@
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Jacques+Francois&family=Quicksand:wght@300;400;500;700&display=swap');
     </style>
-    <link 
-        rel="stylesheet" 
-        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css" 
-        integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A==" 
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link
-        rel="stylesheet"
-        href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
-    />
-    <!-- Link Swiper's CSS -->
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css"
-    />
-    <link rel="stylesheet" href="./assets/style.css">
+    <link rel="stylesheet" href="../invitation.css">
 </head>
-<body class="bg-brand-white overflow-x-hidden">
-    <header>
-        <nav class="max-w-full p-5 flex items-center justify-center lg:justify-between mx-auto font-light text-lg text-center">
-            <ul class="md:mx-2 lg:mx-8 w-full lg:flex lg:justify-between xl:justify-evenly items-center hidden">
-                <li>
-                    <a href="#hero">HOME</a>
-                </li>
-                <li>
-                    <a href="#our-story">OUR STORY</a>
-                </li>
-                <li>
-                    <a href="#pasangan">PASANGAN</a>
-                </li>
-            </ul>
-            <a href="/">
-                <img src="./assets/icon/logo.svg" alt="Image Logo" class="w-[250px] min-w-[200px]">
-            </a>
-            <ul class="md:mx-2 lg:mx-8 w-full lg:flex lg:justify-evenly items-center hidden">
-                <li>
-                    <a href="#gallery">GALLERY</a>
-                </li>
-                <li>
-                    <a href="#hadiah">HADIAH</a>
-                </li>
-                <li>
-                    <a href="#ucapan">UCAPAN</a>
-                </li>
-            </ul>
-        </nav>
-    </header>
-    <main>
-        <section id="hero" class="relative">
-            <img src="./assets/icon/ornamen-1.svg" alt="Ornament" class="w-[40%] md:w-[400px] absolute bottom-0 md:bottom-[-100px] left-[-120px] md:left-[-180px] -z-10">
-            <img src="./assets/icon/ornamen.svg" alt="Ornament" class="w-[40%] md:w-[400px] absolute bottom-0 md:bottom-[-100px] right-[-120px] md:right-[-180px] -z-10">
-            <img src="./assets/icon/ornamen-3.svg" alt="Ornament" class="w-[30%] md:w-[300px] absolute top-[40px] md:top-0 right-[-100px] -z-10">
-            <article class="w-full md:max-w-[80%] mx-auto px-5 py-12 flex flex-col items-center text-center text-brand-brown "
-                <h1 class="text-xl font-light">
-                    THE WEDDING OF
-                </h1>
-                <h2 class="mt-6 text-6xl md:text-8xl font-brand text-brand-green-2">
-                    Romeo & Juliet
-                </h2>
-                <img src="./assets/img/image-hero.webp" alt="Reza & Putri" class="w-full md:w-[90%] mt-12">
-            </article>
-            <article id="countdown" class="max-w-7xl mx-auto py-12 px-5 flex flex-col items-center text-center text-brand-darkGreen">
-                <h1 class="text-2xl font-semibold">
-                    Hari yang ditunggu
-                </h1>
-                <h2 class="text-xl mt-5">
-                    Minggu, 21 Agustus 2022
-                </h2>
-                <section class="w-full flex flex-wrap items-center justify-center gap-2 xs:gap-4 mt-5 p-5">
-                    <div id="days-card" class="w-20 h-20 xs:w-24 xs:h-24 sm:w-32 sm:h-32 flex flex-col justify-center items-center p-5 bg-white rounded-xl">
-                        <h3 id="days" class="text-center text-3xl sm:text-6xl">-</h3>
-                        <p class="text-center text-lg sm:text-xl">Hari</p>
-                    </div>
-                    <div id="hours-card" class="w-20 h-20 xs:w-24 xs:h-24 sm:w-32 sm:h-32 flex flex-col justify-center items-center p-5 bg-white rounded-xl">
-                        <h3 id="hours" class="text-center text-3xl sm:text-6xl">-</h3>
-                        <p class="text-center text-lg sm:text-xl">Jam</p>
-                    </div>
-                    <div id="minutes-card" class="w-20 h-20 xs:w-24 xs:h-24 sm:w-32 sm:h-32 flex flex-col justify-center items-center p-5 bg-white rounded-xl">
-                        <h3 id="minutes" class="text-center text-3xl sm:text-6xl">-</h3>
-                        <p class="text-center text-lg sm:text-xl">Menit</p>
-                    </div>
-                    <div id="seconds-card" class="w-20 h-20 xs:w-24 xs:h-24 sm:w-32 sm:h-32 flex flex-col justify-center items-center p-5 bg-white rounded-xl">
-                        <h3 id="seconds" class="text-center text-3xl sm:text-6xl">-</h3>
-                        <p class="text-center text-lg sm:text-xl">Detik</p>
-                    </div>
-                </section>
-            </article>
-        </section>
-        <section id="our-story" class="w-full relative">
-            <article class="w-[90%] md:max-w-full mx-auto flex flex-col items-center px-5 py-12 relative">
-                <img src="./assets/icon/orname.svg" alt="ornamen" class="w-[250px]">
-                <h1 class="text-4xl font-bold mt-8">Our Story</h1>
-                <section class="swiper mySwiper w-full mt-8">
-                    <div class="swiper-wrapper">
-                        <div class="swiper-slide">
-                            <section class="flex flex-col md:flex-row justify-center items-center">
-                                <img src="./assets/img/image story-1.webp" alt="our story" class="min-w-[400px] sm:w-[450px] lg:w-[500px] p-4">
-                                <article class="w-full md:w-[60%] flex flex-col items-start p-4">
-                                    <h1 class="text-4xl text-brand-brown font-brand font-bold">Januari 2022</h1>
-                                    <p class="mt-8">
-                                        Berawal dari sosial media dan kebetulan satu kampus kami sudah berteman lama. 
-                                        Namun, tidak ada rasa sebelumnya seringnya rasa lapar, kenyang, haus, bahkan lemas. 
-                                        Sepertinya kami butuh asupan makanan yang bergizi. 
-                                        <br>
-                                        <br>
-                                        Berawal dari sosial media dan kebetulan satu kampus 
-                                        kami sudah berteman lama. Namun, tidak ada rasa sebelumnya seringnya rasa lapar, kenyang, haus, bahkan lemas. 
-                                        Sepertinya kami butuh asupan makanan yang bergizi
-                                    </p>
-                                </article>
-                            </section>
-                        </div>
-                        <div class="swiper-slide">
-                            <section class="flex flex-col md:flex-row justify-center items-center">
-                                <img src="./assets/img/image story-1.webp" alt="our story" class="min-w-[400px] sm:w-[450px] lg:w-[500px] p-4">
-                                <article class="w-full md:w-[60%] flex flex-col items-start p-4">
-                                    <h1 class="text-4xl text-brand-brown font-brand font-bold">Januari 2022</h1>
-                                    <p class="mt-8">
-                                        Berawal dari sosial media dan kebetulan satu kampus kami sudah berteman lama. 
-                                        Namun, tidak ada rasa sebelumnya seringnya rasa lapar, kenyang, haus, bahkan lemas. 
-                                        Sepertinya kami butuh asupan makanan yang bergizi. 
-                                        <br>
-                                        <br>
-                                        Berawal dari sosial media dan kebetulan satu kampus 
-                                        kami sudah berteman lama. Namun, tidak ada rasa sebelumnya seringnya rasa lapar, kenyang, haus, bahkan lemas. 
-                                        Sepertinya kami butuh asupan makanan yang bergizi
-                                    </p>
-                                </article>
-                            </section>
-                        </div>
-                        <div class="swiper-slide">
-                            <section class="flex flex-col md:flex-row justify-center items-center">
-                                <img src="./assets/img/image story-1.webp" alt="our story" class="min-w-[400px] sm:w-[450px] lg:w-[500px] p-4">
-                                <article class="w-full md:w-[60%] flex flex-col items-start p-4">
-                                    <h1 class="text-4xl text-brand-brown font-brand font-bold">Januari 2022</h1>
-                                    <p class="mt-8">
-                                        Berawal dari sosial media dan kebetulan satu kampus kami sudah berteman lama. 
-                                        Namun, tidak ada rasa sebelumnya seringnya rasa lapar, kenyang, haus, bahkan lemas. 
-                                        Sepertinya kami butuh asupan makanan yang bergizi. 
-                                        <br>
-                                        <br>
-                                        Berawal dari sosial media dan kebetulan satu kampus 
-                                        kami sudah berteman lama. Namun, tidak ada rasa sebelumnya seringnya rasa lapar, kenyang, haus, bahkan lemas. 
-                                        Sepertinya kami butuh asupan makanan yang bergizi
-                                    </p>
-                                </article>
-                            </section>
-                        </div>
-                    </div>
-                    <!-- <div class="swiper-pagination bottom-0"></div> -->
-                    <div id="nextSwiper" class="swiper-button-next transition-all ease-in-out hover:bg-brand-darkGreen bg-brand-lightGreen text-white rounded-full w-16 h-16 after:text-[24px] after:content-['next'] top-[50%] md:top-[85%]"></div>
-                    <div id="prevSwiper" class="swiper-button-prev transition-all ease-in-out hover:bg-brand-darkGreen bg-brand-lightGreen text-white rounded-full w-16 h-16 after:text-[24px] after:content-['prev'] top-[50%] md:top-[85%] hidden"></div>
-                </section>
-            </article>
-            <img src="./assets/icon/ornamen-2.svg" alt="ornamen" class="rotate-180 w-[200px] absolute bottom-[-300px] left-[-80px] z-[-10]">
-        </section>
-        <section id="pasangan" class="relative">
-            <article class="max-w-7xl py-12 px-5 mx-auto flex flex-col items-center text-center text-brand-brown">
-                <img src="./assets/icon/orname.svg" alt="Ornament" class="w-[200px]">
-                <article class="w-full lg:w-[60%] mt-5">
-                    <h1 class="font-brand font-semibold text-3xl sm:text-5xl">
-                        Pasangan
+
+<body class="flex overflow-y-hidden">
+    <aside class="flex-1 sticky top-0 h-screen">
+        <img src="./assets/img/cover.jpg" class="w-full h-full object-cover" />
+    </aside>
+    <div class="w-full max-w-2xl bg-brand-white">
+        <main class="overflow-x-hidden">
+            <section id="hero" class="relative">
+                <header>
+                    <nav class="p-5 flex justify-center items-center font-light text-lg text-center">
+                        <a href="/romeo-juliet">
+                            <img src="./assets/icon/logo.svg" alt="Image Logo" class="w-[120px]">
+                        </a>
+                    </nav>
+                </header>
+                <img src="./assets/icon/ornamen-1.svg" alt="Ornament"
+                    class="w-[40%] md:w-[400px] absolute bottom-0 md:bottom-[-100px] left-[-120px] md:left-[-180px] -z-10">
+                <img src="./assets/icon/ornamen.svg" alt="Ornament"
+                    class="w-[40%] md:w-[400px] absolute bottom-0 md:bottom-[-100px] right-[-120px] md:right-[-180px] -z-10">
+                <img src="./assets/icon/ornamen-3.svg" alt="Ornament"
+                    class="w-[30%] md:w-[300px] absolute top-[40px] md:top-0 right-[-100px] -z-10">
+                <article class="px-5 pt-10 text-center text-brand-brown ">
+                    <h1 class="text-xs font-light">
+                        THE WEDDING OF
                     </h1>
-                    <h2 class="text-lg sm:text-xl mt-5">
-                        Maha Suci Allah yang telah menciptakan makhluk-Nya berpasang-pasangan. 
-                        Ya Allah semoga ridho-Mu tercurah mengiringi pernikahan kami :
+                    <h2 class="mt-4 text-4xl font-brand underline text-brand-green-2">
+                        Romeo & Juliet
                     </h2>
+                    <div class="mt-8 z-10 w-full px-3">
+                        <img src="./assets/img/image-hero.webp" alt="Reza & Putri" class="w-full">
+                    </div>
                 </article>
-                <section id="pasangan-inner" class="w-full flex flex-col md:flex-row items-center justify-evenly py-8 gap-4">
-                    <article class="flex flex-col items-center p-3 groom">
-                        <img src="./assets/img/foto-pria.webp" alt="rizky" class="w-64">
-                        <h1 class="text-center text-2xl font-semibold my-3">Romeo</h1>
-                        <p class="text-center text-xl font-normal">
-                            Putra dari
-                            <br>
-                            Bpk Saepudin & Ibu Yani
-                        </p>
-                        <a href="https://www.instagram.com/" target="_blank" class="mt-3 font-semibold">
-                            <i class="fa-brands fa-square-instagram fa-xl align-middle"></i>
-                            @romeocassa 
-                        </a>
+                <section class="text-brand-darkGreen">
+                    <article id="countdown" class="pt-10 px-5 text-center">
+                        <h1 class="text-sm font-medium">
+                            Hari yang ditunggu
+                        </h1>
+                        <h2 class="text-xs mt-1">
+                            Minggu, 21 Agustus 2022
+                        </h2>
                     </article>
-                    <p class="text-center font-brand text-8xl">&</p>
-                    <article class="flex flex-col items-center p-3 bride">
-                        <img src="./assets/img/foto-wanita.webp" alt="anjani" class="w-64">
-                        <h1 class="text-center text-2xl font-semibold my-3">Juliet</h1>
-                        <p class="text-center text-xl font-normal">
-                            Putri dari
-                            <br>
-                            Bpk Sumenep & Ibu Romlah
+                    <article class="mt-5 mx-auto max-w-2xl px-8 w-full flex">
+                        <div id="days-card" class="flex-1 mx-2 rounded-xl py-4 px-2 bg-white">
+                            <h3 id="days" class="text-center text-3xl font-medium">06</h3>
+                            <p class="text-center text-xs">Hari</p>
+                        </div>
+                        <div id="hours-card" class="flex-1 mx-2 rounded-xl py-4 px-2 bg-white">
+                            <h3 id="hours" class="text-center text-3xl font-medium">06</h3>
+                            <p class="text-center text-xs">Jam</p>
+                        </div>
+                        <div id="minutes-card" class="flex-1 mx-2 rounded-xl py-4 px-2 bg-white">
+                            <h3 id="minutes" class="text-center text-3xl font-medium">06</h3>
+                            <p class="text-center text-xs">Menit</p>
+                        </div>
+                        <div id="seconds-card" class="flex-1 mx-2 rounded-xl py-4 px-2 bg-white">
+                            <h3 id="seconds" class="text-center text-3xl font-medium">06</h3>
+                            <p class="text-center text-xs">Detik</p>
+                        </div>
+                    </article>
+                    <article class="mt-5 px-5">
+                        <p id="wed-text" class="text-xs text-center font-medium leading-relaxed">
+                            Dan di antara tanda-tanda (kebesaran)-Nya ialah Dia menciptakan pasangan-pasangan untukmu
+                            dari
+                            jenismu sendiri,
+                            agar kamu cenderung dan merasa tenteram kepadanya, dan Dia menjadikan di antaramu rasa kasih
+                            dan
+                            sayang. Sungguh,
+                            pada yang demikian itu benar-benar terdapat tanda-tanda (kebesaran Allah) bagi kaum yang
+                            berpikir.
                         </p>
-                        <a href="https://www.instagram.com/" target="_blank" class="mt-3 font-semibold">
-                            <i class="fa-brands fa-square-instagram fa-xl align-middle"></i>
-                            @julietcassa
-                        </a>
+                        <p class="mt-3 text-center text-sm font-semibold">(Q.S. Ar-Rum: 21)</p>
                     </article>
                 </section>
-            </article>
-            <img src="./assets/icon/ornamen-2.svg" alt="ornamen" class="w-[200px] absolute bottom-[-150px] right-[-60px] -z-10">
-        </section>
-        <section id="galeri" class="w-full bg-brand-darkGreen relative">
-            <img src="./assets/icon/ornamen-2.svg" alt="ornamen" class="rotate-180 w-[200px] absolute top-[90px] left-[-90px] z-[0]">
-            <article class="w-full lg:max-w-[75%] py-12 px-5 mx-auto flex flex-col items-center text-center text-white relative z-[10]">
-                <img src="./assets/icon/kembang.svg" alt="ornamen" class="w-[150px]">
-                <h1 class="text-5xl text-center font-semibold font-brand my-8">
-                    Galeri
-                </h1>
-                <section id="galeri-inner" class="w-full grid sm:grid-cols-3 md:grid-cols-4 grid-cols-2 gap-6 py-6">
-                    <img src="./assets/img/galeri-foto-1.webp" alt="galeri foto" class="rounded-md">
-                    <img src="./assets/img/galeri-foto-2.webp" alt="galeri foto" class="rounded-md">
-                    <img src="./assets/img/galeri-foto-3.webp" alt="galeri foto" class="rounded-md">
-                    <img src="./assets/img/galeri-foto-4.webp" alt="galeri foto" class="rounded-md">
-                    <img src="./assets/img/galeri-foto-1.webp" alt="galeri foto" class="rounded-md">
-                    <img src="./assets/img/galeri-foto-2.webp" alt="galeri foto" class="rounded-md">
-                    <img src="./assets/img/galeri-foto-3.webp" alt="galeri foto" class="rounded-md">
-                    <img src="./assets/img/galeri-foto-4.webp" alt="galeri foto" class="rounded-md">
-                </section>
-            </article>
-            <img src="./assets/icon/dedaun.svg" alt="ornamen" class="w-[300px] absolute bottom-0 right-[-80px] z-[0]">
-        </section>
-        <section id="agenda">
-            <article class="w-full md:max-w-[90%] mx-auto py-16 px-5 flex flex-col items-center text-brand-brown text-center">
-                <img src="./assets/icon/ornamen-5.svg" alt="ornamen" class="w-[150px]">
-                <article class="w-full lg:w-[75%] p-5">
-                    <h1 class="text-3xl sm:text-5xl font-brand font-semibold my-8">
+            </section>
+            <section id="our-story">
+                <article class="px-5 py-10 relative">
+                    <img src="./assets/icon/orname.svg" alt="ornamen" class="w-[80px] mx-auto">
+                    <h1 class="text-2xl font-brand font-semibold text-center text-brand-brown">Our Story</h1>
+                    <div class="mt-6 px-3">
+                        <section class="swiper mySwiper w-full">
+                            <div class="swiper-wrapper relative">
+                                <div class="swiper-slide">
+                                    <section class="flex flex-col">
+                                        <img src="./assets/img/image story-1.webp" alt="our story"
+                                            class="flex-[2_2_0%]">
+                                        <article class="flex-[3_3_0%] flex flex-col mt-8">
+                                            <h1 class="text-2xl font-brand font-bold text-brand-brown">November 2016
+                                            </h1>
+                                            <p class="mt-4 mb-[80px] text-sm">
+                                                Berawal dari sosial media dan kebetulan satu kampus kami sudah berteman
+                                                lama.
+                                                Namun, tidak ada rasa sebelumnya seringnya rasa lapar, kenyang, haus,
+                                                bahkan
+                                                lemas.
+                                                Sepertinya kami butuh asupan makanan yang bergizi.
+                                                <br>
+                                                <br>
+                                                Berawal dari sosial media dan kebetulan satu kampus
+                                                kami sudah berteman lama. Namun, tidak ada rasa sebelumnya seringnya
+                                                rasa
+                                                lapar, kenyang, haus, bahkan lemas.
+                                                Sepertinya kami butuh asupan makanan yang bergizi.
+                                            </p>
+                                        </article>
+                                    </section>
+                                </div>
+                                <div class="swiper-slide">
+                                    <section class="flex flex-col">
+                                        <img src="./assets/img/image story-1.webp" alt="our story"
+                                            class="flex-[2_2_0%]">
+                                        <article class="flex-[3_3_0%] flex flex-col mt-8">
+                                            <h1 class="text-2xl font-brand font-bold text-brand-brown">Desember 2016
+                                            </h1>
+                                            <p class="mt-4 mb-[80px] text-sm">
+                                                Berawal dari sosial media dan kebetulan satu kampus kami sudah berteman
+                                                lama.
+                                                Namun, tidak ada rasa sebelumnya seringnya rasa lapar, kenyang, haus,
+                                                bahkan
+                                                lemas.
+                                                Sepertinya kami butuh asupan makanan yang bergizi.
+                                                <br>
+                                                <br>
+                                                Berawal dari sosial media dan kebetulan satu kampus
+                                                kami sudah berteman lama. Namun, tidak ada rasa sebelumnya seringnya
+                                                rasa
+                                                lapar, kenyang, haus, bahkan lemas.
+                                                Sepertinya kami butuh asupan makanan yang bergizi.
+                                            </p>
+                                        </article>
+                                    </section>
+                                </div>
+                                <div class="swiper-slide">
+                                    <section class="flex flex-col">
+                                        <img src="./assets/img/image story-1.webp" alt="our story"
+                                            class="flex-[2_2_0%]">
+                                        <article class="flex-[3_3_0%] flex flex-col mt-8">
+                                            <h1 class="text-2xl font-brand font-bold text-brand-brown">Januari 2017
+                                            </h1>
+                                            <p class="mt-4 mb-[80px] text-sm">
+                                                Berawal dari sosial media dan kebetulan satu kampus kami sudah berteman
+                                                lama.
+                                                Namun, tidak ada rasa sebelumnya seringnya rasa lapar, kenyang, haus,
+                                                bahkan
+                                                lemas.
+                                                Sepertinya kami butuh asupan makanan yang bergizi.
+                                                <br>
+                                                <br>
+                                                Berawal dari sosial media dan kebetulan satu kampus
+                                                kami sudah berteman lama. Namun, tidak ada rasa sebelumnya seringnya
+                                                rasa
+                                                lapar, kenyang, haus, bahkan lemas.
+                                                Sepertinya kami butuh asupan makanan yang bergizi.
+                                            </p>
+                                        </article>
+                                    </section>
+                                </div>
+                            </div>
+                            <div id="nextSwiper"
+                                class="swiper-button-next transition-all ease-in-out hover:bg-brand-darkGreen bg-brand-lightGreen text-white rounded-full w-12 h-12 after:text-[16px] after:content-['next'] bottom-0 right-0 top-auto">
+                            </div>
+                            <div id="prevSwiper"
+                                class="swiper-button-prev transition-all ease-in-out hover:bg-brand-darkGreen bg-brand-lightGreen text-white rounded-full w-12 h-12 after:text-[16px] after:content-['prev'] bottom-0 right-[64px] top-auto left-auto">
+                            </div>
+                        </section>
+                    </div>
+                </article>
+            </section>
+            <section id="pasangan" class="relative text-brand-brown">
+                <article class="py-10 px-5">
+                    <div class="text-center">
+                        <img src="./assets/icon/orname.svg" alt="Ornament" class="w-[80px] mx-auto">
+                        <h2 class="mt-4 font-brand font-semibold text-2xl">
+                            Pasangan
+                        </h2>
+                        <p class="mt-4 text-xs leading-relaxed">
+                            Maha Suci Allah yang telah menciptakan makhluk-Nya berpasang-pasangan.
+                            Ya Allah semoga ridho-Mu tercurah mengiringi pernikahan kami :
+                        </p>
+                    </div>
+                    <div class="mt-6 mx-auto max-w-4xl flex flex-col items-center">
+                        <div class="flex-1 text-center">
+                            <img src="./assets/img/foto-pria.webp" alt="Ardi" class="w-48 inline-block">
+                            <h1 class="mt-3 text-xl font-semibold">Romeo</h1>
+                            <p class="mt-3 text-xs font-light">
+                                Putra dari
+                                <br>
+                                Bpk Saepudin & Ibu Yani
+                            </p>
+                            <p class="mt-3 text-xs">
+                                <a href="https://www.instagram.com/cristiano" target="_blank" rel="noopener noreferrer">
+                                    <i class="fa-brands fa-square-instagram fa-lg align-middle mr-1"></i>
+                                    @cristiano
+                                </a>
+                            </p>
+                        </div>
+                        <div class="my-10 flex items-center">
+                            <p class="text-center font-brand text-7xl">&</p>
+                        </div>
+                        <div class="flex-1 text-center">
+                            <img src="./assets/img/foto-wanita.webp" alt="Dewi" class="w-48 inline-block">
+                            <h1 class="mt-3 text-xl font-semibold">Juliet</h1>
+                            <p class="mt-3 text-xs font-light">
+                                Putri dari
+                                <br>
+                                Bpk Sumenep & Ibu Romlah
+                            </p>
+                            <p class="mt-3 text-xs">
+                                <a href="https://www.instagram.com/leomessi" target="_blank" rel="noopener noreferrer">
+                                    <i class="fa-brands fa-square-instagram fa-lg align-middle mr-1"></i>
+                                    @leomessi
+                                </a>
+                            </p>
+                        </div>
+                    </div>
+                </article>
+            </section>
+            <section id="my-gallery" class="w-full bg-brand-darkGreen relative">
+                <article class="z-10 relative py-10 px-5">
+                    <img src="./assets/icon/kembang.svg" alt="Ornament" class="w-[80px] mx-auto">
+                    <h1 class="mt-4 text-2xl font-brand font-semibold text-center text-white">
+                        Galeri
+                    </h1>
+                    <div class="mt-6 pswp-gallery grid grid-cols-2 gap-4 px-3">
+                        <a href="./assets/img/galeri-foto-1.webp" data-pswp-width="300" data-pswp-height="400"
+                            target="_blank" class="w-full">
+                            <img src="./assets/img/galeri-foto-1.webp" alt="" class="w-full rounded-lg" />
+                        </a>
+                        <a href="./assets/img/galeri-foto-2.webp" data-pswp-width="300" data-pswp-height="400"
+                            target="_blank" class="w-full">
+                            <img src="./assets/img/galeri-foto-2.webp" alt="" class="w-full rounded-lg" />
+                        </a>
+                        <a href="./assets/img/galeri-foto-3.webp" data-pswp-width="300" data-pswp-height="400"
+                            target="_blank" class="w-full">
+                            <img src="./assets/img/galeri-foto-3.webp" alt="" class="w-full rounded-lg" />
+                        </a>
+                        <a href="./assets/img/galeri-foto-4.webp" data-pswp-width="300" data-pswp-height="400"
+                            target="_blank" class="w-full">
+                            <img src="./assets/img/galeri-foto-4.webp" alt="" class="w-full rounded-lg" />
+                        </a>
+                    </div>
+                </article>
+                <img src="./assets/icon/ornamen-2.svg" alt="ornamen"
+                    class="rotate-180 w-[200px] absolute top-[90px] left-[-90px] z-0">
+                <img src="./assets/icon/dedaun.svg" alt="ornamen" class="w-[300px] absolute bottom-0 right-[-80px] z-0">
+            </section>
+            <section id="agenda" class="text-brand-brown">
+                <article class="py-10 px-5">
+                    <img src="./assets/icon/ornamen-5.svg" alt="ornamen" class="w-[80px] mx-auto">
+                    <h1 class="mt-4 text-2xl font-brand font-semibold text-center">
                         Waktu & Pelaksanaan
                     </h1>
-                    <p class="text-lg sm:text-xl font-normal text-center">
-                        Dengan memohon Rahmat Allah, merupakan kehormatan dan kebahagiaan kami apabila Bapak/Ibu/Saudara/i dapat
+                    <p class="mt-3 text-xs text-center leading-relaxed">
+                        Dengan memohon Rahmat Allah, merupakan kehormatan dan kebahagiaan kami apabila
+                        Bapak/Ibu/Saudara/i
+                        dapat
                         memberikan doa dan kehadiran dalam acara kami yang akan dilaksanakan pada
                     </p>
-                </article>
-                <section id="agenda-inner" class="w-full md:w-[80%] flex flex-col sm:flex-row items-center justify-between p-8 gap-4">
-                    <article class="w-full flex flex-col justify-center md:p-5">
-                        <h1 class="text-2xl font-bold">
-                            Akad Nikah
-                        </h1>
-                        <h2 class="text-lg mt-3">
-                            Sabtu, 24 November 2024
-                        </h2>
-                        <div class="flex justify-center my-5">
-                            <img src="./assets/icon/icon.svg" alt="Akad" class="w-32">
-                        </div>
-                        <h3 class="text-lg mt-3">
-                            Priority Sky Ballroom Lt 26, Hotel Aston Priority Simatupang
-                        </h3>
-                        <p class="text-xl font-bold mt-3">
-                            10.00 - Selesai
-                        </p>
-                    </article>
-                    <article class="w-full flex flex-col justify-center md:p-5">
-                        <h1 class="text-2xl font-bold">
-                            Resepsi
-                        </h1>
-                        <h2 class="text-lg mt-3">
-                            Sabtu, 24 November 2024
-                        </h2>
-                        <div class="flex justify-center my-5">
-                            <img src="./assets/icon/icon-1.svg" alt="Akad" class="w-32">
-                        </div>
-                        <h3 class="text-lg mt-3">
-                            Priority Sky Ballroom Lt 26, Hotel Aston Priority Simatupang
-                        </h3>
-                        <p class="text-xl font-bold mt-3">
-                            10.00 - Selesai
-                        </p>
-                    </article>
-                </section>
-                <a href="https://goo.gl/maps/64g4Co8JY1zWu12G8" target="_blank" class="bg-brand-lightGreen text-white w-fit px-6 py-3 sm:text-lg">
-                    Lihat Peta
-                    <span>
-                        <i class="fa-solid fa-arrow-right fa-xl ml-3"></i>
-                    </span>
-                </a>
-            </article>
-        </section>
-        <section id="protokol" class="bg-brand-darkGreen">
-            <article class="max-w-7xl mx-auto py-12 px-5 flex flex-col items-center text-white text-center">
-                <img src="./assets/icon/orname-p.svg" alt="ornamen" class="w-[300px]">
-                <h1 class="text-5xl text-center font-bold font-brand my-5">
-                    Protokol Kesehatan
-                </h1>
-                <p class="text-xl font-normal w-full md:w-2/3 my-8">
-                    Dengan segala hormat, tamu undangan harus mematuhi protokol kesehatan berikut
-                </p>
-                <section id="protokol-inner" class="w-full grid md:grid-cols-3 xs:grid-cols-2 grid-cols-1 gap-6 py-12">
-                    <article class="flex flex-col items-center mask">
-                        <img src="./assets/icon/icon_mask.svg" alt="icon mask">
-                        <p class="text-lg my-3">
-                            Menggunakan masker
-                        </p>
-                    </article>
-                    <article class="flex flex-col items-center suhu">
-                        <img src="./assets/icon/icon_suhu.svg" alt="icon mask">
-                        <p class="text-lg my-3">
-                            Suhu tubuh dibawah 37.3°C
-                        </p>
-                    </article>
-                    <article class="flex flex-col items-center tangan">
-                        <img src="./assets/icon/icon_jabat.svg" alt="icon mask">
-                        <p class="text-lg my-3">
-                            Hindari jabat tangan, beri salam atau kepalan tangan
-                        </p>
-                    </article>
-                    <article class="flex flex-col items-center sanitizer">
-                        <img src="./assets/icon/icon_sanitizer.svg" alt="icon mask">
-                        <p class="text-lg my-3">
-                            Tetap jaga kebersihan tanganmu
-                        </p>
-                    </article>
-                    <article class="flex flex-col items-center distance">
-                        <img src="./assets/icon/icon_distancing.svg" alt="icon mask">
-                        <p class="text-lg my-3">
-                            Jaga Jarak dengan tamu lainnya
-                        </p>
-                    </article>
-                    <article class="flex flex-col items-center qrcode">
-                        <img src="./assets/icon/icon_barcode.svg" alt="icon mask">
-                        <p class="text-lg my-3">
-                            Siapkan aplikasi PeduliLindungi
-                        </p>
-                    </article>
-                </section>
-            </article>
-        </section>
-        <section id="hadiah" class="relative">
-            <img src="./assets/icon/Group 311.svg" alt="ornamen" class="absolute top-0 left-[-90px] z-[-10]">
-            <img src="./assets/icon/ornamen.svg" alt="ornamen" class="absolute bottom-[-90px] right-[-175px] z-[-10]">
-            <article class="max-w-7xl mx-auto py-12 px-5 flex flex-col items-center text-brand-brown text-center">
-                <img src="./assets/icon/orname.svg" alt="ornament" class="w-[300px]">
-                <h1 class="text-5xl font-brand font-bold my-5">Hadiah Pernikahan</h1>
-                <p class="text-xl font-normal w-full md:w-2/3 my-8">
-                    Kebahagiaan tak terhingga dengan kedatangan ke pernikahan kami. Namun jika anda ingin memberikan hadiah kami 
-                    menyediakan Amplop Digital untuk memudahkan anda. Terima kasih
-                </p>
-                <section id="hadiah-inner" class="w-full sm:w-2/3 flex flex-col border-solid border-2 border-zinc-900 bg-white items-center p-8 gap-4 mb-12">
-                    <h2 class="text-xl font-normal">Pengiriman Hadiah</h2>
-                    <div class="w-full flex items-center rounded-lg border border-gray-400 bg-gray-200 py-2 px-3">
-                        <div class="flex justify-center items-center">
-                            <img src="./assets/icon/mandiri.svg" alt="bank bsi" class="w-[100px]">
-                        </div>
-                        <input type="text" value="Bank Mandiri" class="flex-1 bg-transparent ml-5 text-black focus:outline-none" readonly>
+                    <div id="agenda-inner" class="mt-6 mx-auto max-w-4xl flex flex-col items-center px-3">
+                        <article class="w-full p-8 border border-brand-brown">
+                            <img src="./assets/icon/akad.svg" alt="Akad" class="w-24 mx-auto">
+                            <h1 class="mt-4 text-lg font-bold text-center">
+                                Akad Nikah
+                            </h1>
+                            <p class="mt-3 text-sm text-center">
+                                Sabtu, 19 November 2022
+                            </p>
+                            <p class="mt-4 text-xs font-semibold mt-4 text-center">
+                                Kediaman Mempelai Wanita
+                            </p>
+                            <p class="mt-1 text-xs text-center">
+                                Perum Pondok Tirta Mandala <br>
+                                Jl. Merpati blok d3 no.65 Depok
+                            </p>
+                            <p class="text-lg font-bold mt-4 text-center">
+                                09.00 WIB - Selesai
+                            </p>
+                        </article>
+                        <article class="mt-10 w-full p-8 border border-brand-brown">
+                            <img src="./assets/icon/resepsi.svg" alt="Akad" class="w-24 mx-auto">
+                            <h1 class="mt-4 text-lg font-bold text-center">
+                                Resepsi
+                            </h1>
+                            <p class="mt-4 text-sm text-center">
+                                Sabtu, 19 November 2022
+                            </p>
+                            <p class="text-xs font-semibold mt-4 text-center">
+                                Kediaman Mempelai Wanita
+                            </p>
+                            <p class="mt-1 text-xs text-center">
+                                Perum Pondok Tirta Mandala <br>
+                                Jl. Merpati blok d3 no.65 Depok
+                            </p>
+                            <p class="text-lg font-bold mt-4 text-center">
+                                11.00 WIB - 19.30 WIB
+                            </p>
+                        </article>
                     </div>
-                    <article class="w-full flex flex-wrap gap-4 justify-center items-center">
-                        <h1 class="text-lg md:text-2xl font-semibold align-middle">
-                            Account Number : 14100123456789
-                        </h1>
-                        <button 
-                            id="copyButton"
-                            class="px-3 py-1 rounded-lg font-semibold text-sm border border-green-400 text-green-400 hover:text-white hover:bg-green-400 transition-all"
-                        >
-                            Salin
-                        </button>
-                    </article>
-                    <h3 class="text-xl font-normal">a.n Romeo</h3>
-                    <img src="./assets/img/Group 281.webp" alt="qrcode" class="min-w-[250px] w-[250px]">
-                </section>
-            </article>
-        </section>
-        <section id="ucapan" class="bg-brand-darkGreen relative z-0">
-            <img src="./assets/icon/ornamen-4.svg" alt="ornamen" class="w-[250px] absolute top-[100px] left-[-90px] -z-10">
-            <img src="./assets/icon/dedaun.svg" alt="ornamen" class="w-[250px] absolute bottom-[-40px] right-[-90px] -z-10">
-            <article class="w-full md:max-w-[90%] mx-auto py-12 px-5 flex flex-col items-center text-white text-center z-10">
-                <img src="./assets/icon/kembang.svg" alt="ornamen" class="w-[150px] my-6">
-                <h1 class="text-5xl font-semibold font-brand my-4">
-                    Doa & Ucapan
-                </h1>
-                <h2 class="text-xl font-normal my-4">
-                    Kirimkan doa & ucapan kepada kedua mempelai di momen spesial
-                </h2>
-                <section class="w-full lg:w-[80%] flex flex-col items-center py-6">
-                    <input id="ucapan-input" type="text" class="p-4 w-full bg-gray-200" placeholder="John Doe" required>
-                    <textarea name="ucapan" id="ucapan-textarea" rows="5" class="p-4 w-full bg-gray-200 mt-6" placeholder="Masukkan pesan disini" required></textarea>
-                    <button id="submitBtn" class="w-full px-6 py-3 bg-white text-brand-brown mt-6">
-                        Kirim
-                    </button>
-                    <p id="ucapanHandler" class="text-lg text-green-400 font-bold my-4 hidden">
-                        Terima kasih telah mengirimkan ucapan! Silahkan tunggu sesaat
+                    <div class="mt-6 text-center">
+                        <a href="https://maps.app.goo.gl/wh26iQHfcnyyooZo7" target="_blank" rel="noopener noreferrer"
+                            class="inline-block bg-brand-lightGreen text-white px-6 py-3 text-xs">
+                            Lihat Peta
+                            <span>
+                                <i class="fa-solid fa-arrow-right fa-lg ml-3"></i>
+                            </span>
+                        </a>
+                    </div>
+                </article>
+            </section>
+            <section id="protokol">
+                <article class="py-10 px-5 bg-brand-darkGreen text-white">
+                    <img src="./assets/icon/orname-p.svg" alt="Ornament" class="w-[80px] mx-auto">
+                    <h2 class="mt-4 font-brand font-semibold text-2xl text-center">
+                        Protokol Kesehatan
+                    </h2>
+                    <p class="mt-4 text-xs leading-relaxed text-center">
+                        Dengan segala hormat, tamu undangan harus mematuhi protokol kesehatan berikut:
                     </p>
-                </section>
-                <article id="ucapan-inner" class="w-full grid md:grid-cols-3 sm:grid-cols-2 grid-cols-1 gap-4 p-5">
-                    <article id="card-wishes" class="card mb-4 rounded-xl bg-white text-justify flex flex-col items-start p-6 text-brand-brown">
-                        <h1 class="text-xl font-bold font-brand">
-                            Fulanah
-                        </h1>
-                        <p class="my-4">
-                            Happy Wedding Iyak sayang... INSYA ALLAH jadi keluarga Sakinah Mawaddah Warrohmah 
-                            Senantiasa diberkahi dan dirahmati Allah
-                        </p>
+                    <section id="protokol-inner" class="mt-4 w-full grid grid-cols-2 gap-6 text-center">
+                        <article>
+                            <img src="./assets/icon/icon_mask.svg" alt="icon mask" class="w-[82px] mx-auto rounded-md">
+                            <p class="text-sm my-3">
+                                Menggunakan masker
+                            </p>
+                        </article>
+                        <article>
+                            <img src="./assets/icon/icon_suhu.svg" alt="icon suhu" class="w-[82px] mx-auto rounded-md">
+                            <p class="text-sm my-3">
+                                Suhu tubuh dibawah 37.3°C
+                            </p>
+                        </article>
+                        <article>
+                            <img src="./assets/icon/icon_jabat.svg" alt="icon jabat"
+                                class="w-[82px] mx-auto rounded-md">
+                            <p class="text-sm my-3">
+                                Hindari jabat tangan, beri salam atau kepalan tangan
+                            </p>
+                        </article>
+                        <article>
+                            <img src="./assets/icon/icon_sanitizer.svg" alt="icon sanitizer"
+                                class="w-[82px] mx-auto rounded-md">
+                            <p class="text-sm my-3">
+                                Tetap jaga kebersihan tanganmu
+                            </p>
+                        </article>
+                        <article>
+                            <img src="./assets/icon/icon_distancing.svg" alt="icon distancing"
+                                class="w-[82px] mx-auto rounded-md">
+                            <p class="text-sm my-3">
+                                Jaga Jarak dengan tamu lainnya
+                            </p>
+                        </article>
+                        <article>
+                            <img src="./assets/icon/icon_barcode.svg" alt="icon scan"
+                                class="w-[82px] mx-auto rounded-md">
+                            <p class="text-sm my-3">
+                                Siapkan aplikasi PeduliLindungi
+                            </p>
+                        </article>
+                    </section>
+                </article>
+            </section>
+            <section id="hadiah">
+                <article class="py-10 px-5 text-brand-brown text-center">
+                    <img src="./assets/icon/orname.svg" alt="ornament" class="w-[80px] mx-auto">
+                    <h1 class="font-semibold text-2xl font-brand">Hadiah Pernikahan</h1>
+                    <p class="mt-4 text-xs">
+                        Kebahagiaan tak terhingga dengan kedatangan ke pernikahan kami. Namun jika anda ingin memberikan
+                        hadiah kami
+                        menyediakan Amplop Digital untuk memudahkan anda. Terima kasih
+                    </p>
+                    <section id="hadiah-inner" class="mt-6 px-3">
+                        <div class="w-full border bg-white p-5">
+                            <h2 class="ext-center font-semibold">Pengiriman Hadiah</h2>
+                            <div class="mt-4 px-4 py-3 text-xs w-full border flex items-center bg-gray-200">
+                                <img src="./assets/icon/mandiri.svg" alt="Bank BSI" class="w-10 mr-3">
+                                Bank Mandiri
+                            </div>
+                            <p id="bank-number" class="mt-2 font-semibold ">No. Rekening: 14100123456789
+                            </p>
+                            <p id="bank-name" class="mt-2 text-sm">a.n. Romeo Lukaku</p>
+                            <img src="./assets/img/Group 281.webp" alt="qrcode" class="mt-4 w-[250px] mx-auto">
+                        </div>
+                    </section>
+                </article>
+            </section>
+            <section id="ucapan" class="relative bg-brand-darkGreen text-white">
+                <article class="relative z-10 py-10 px-5">
+                    <img src="./assets/icon/kembang.svg" alt="Ornament" class="w-[80px] mx-auto">
+                    <h2 class="mt-4 font-brand font-semibold text-2xl text-center">
+                        Doa & Ucapan
+                    </h2>
+                    <p class="mt-4 text-xs leading-relaxed text-center">
+                        Kirim doa & ucapan kepada kedua mempelai di momen spesial.
+                    </p>
+                    <div class="mt-6 px-3 w-full">
+                        <div>
+                            <label for="namaUcapan" class="text-xs">Nama *</label>
+                            <input id="namaUcapan" type="text"
+                                class="mt-2 px-4 py-3 text-brand-brown border w-full text-xs" required
+                                placeholder="John Doe">
+                            <p id="error-nama-ucapan" class="text-red-500 text-sm mt-1 hidden">Nama tidak boleh kosong
+                            </p>
+                        </div>
+                        <div class="mt-4">
+                            <label for="pesanUcapan" class="text-xs">Ucapan *</label>
+                            <textarea id="pesanUcapan" class="mt-2 px-4 py-3 text-brand-brown border w-full text-xs"
+                                placeholder="Lancar dan samawa yaa.." rows="5" required></textarea>
+                            <p id="error-pesan-ucapan" class="text-red-500 text-sm mt-1 hidden">Pesan tidak boleh kosong
+                            </p>
+                        </div>
+                        <div class="mt-4">
+                            <button id="sendUcapan" class="w-full px-6 py-3 bg-white text-brand-brown text-xs">
+                                Kirim
+                            </button>
+                            <p id="textUcapan" class="text-center text-xs text-white font-bold my-4 hidden">
+                                Terima kasih telah mengirimkan ucapan! Silakan tunggu sesaat.
+                            </p>
+                        </div>
+                    </div>
+                    <article id="ucapan-inner" class="mt-6 px-3 w-full grid grid-cols-1 gap-4">
                     </article>
-                    <article id="card-wishes" class="card mb-4 rounded-xl bg-white text-justify flex flex-col items-start p-6 text-brand-brown">
-                        <h1 class="text-xl font-bold font-brand">
-                            Fulanah
+                    <div class="text-center">
+                        <button id="viewMoreGreetings" class="mt-6 font-bold text-sm underline">Lihat
+                            Lainnya</button>
+                    </div>
+                </article>
+                <img src="./assets/icon/ornamen-4.svg" alt="ornamen"
+                    class="w-[250px] absolute top-[100px] left-[-90px] z-0">
+                <img src="./assets/icon/dedaun.svg" alt="ornamen"
+                    class="w-[250px] absolute bottom-[-40px] right-[-90px] z-0">
+            </section>
+            <section id="hinggaTua" class="text-brand-brown">
+                <article class="py-10 px-5 text-center">
+                    <h1 class="text-xs">Dibuat oleh HinggaTua</h1>
+                    <h2 class="text-xs">Digitalisasi undangan di momentum spesialmu</h2>
+                    <p id="music" class="mt-2 text-xs">
+                        <i class="fa-solid fa-music mr-2"></i>
+                        Kahitna - Menikahimu
+                    </p>
+                    <article class="mt-5">
+                        <h1 class="text-3xl font-bold">
+                            HinggaTua
                         </h1>
-                        <p class="my-4">
-                            Happy Wedding Iyak sayang... INSYA ALLAH jadi keluarga Sakinah Mawaddah Warrohmah 
-                            Senantiasa diberkahi dan dirahmati Allah
+                        <p class="mt-3 underline text-xs font-semibold">
+                            <a href="https://hinggatua.com">www.hinggatua.com</a>
                         </p>
-                    </article>
-                    <article id="card-wishes" class="card mb-4 rounded-xl bg-white text-justify flex flex-col items-start p-6 text-brand-brown">
-                        <h1 class="text-xl font-bold font-brand">
-                            Fulanah
-                        </h1>
-                        <p class="my-4">
-                            Happy Wedding Iyak sayang... INSYA ALLAH jadi keluarga Sakinah Mawaddah Warrohmah 
-                            Senantiasa diberkahi dan dirahmati Allah
-                        </p>
-                    </article>
-                    <article id="card-wishes" class="card mb-4 rounded-xl bg-white text-justify flex flex-col items-start p-6 text-brand-brown">
-                        <h1 class="text-xl font-bold font-brand">
-                            Fulanah
-                        </h1>
-                        <p class="my-4">
-                            Happy Wedding Iyak sayang... INSYA ALLAH jadi keluarga Sakinah Mawaddah Warrohmah 
-                            Senantiasa diberkahi dan dirahmati Allah
-                        </p>
-                    </article>
-                    <article id="card-wishes" class="card mb-4 rounded-xl bg-white text-justify flex flex-col items-start p-6 text-brand-brown">
-                        <h1 class="text-xl font-bold font-brand">
-                            Fulanah
-                        </h1>
-                        <p class="my-4">
-                            Happy Wedding Iyak sayang... INSYA ALLAH jadi keluarga Sakinah Mawaddah Warrohmah 
-                            Senantiasa diberkahi dan dirahmati Allah
-                        </p>
-                    </article>
-                    <article id="card-wishes" class="card mb-4 rounded-xl bg-white text-justify flex flex-col items-start p-6 text-brand-brown">
-                        <h1 class="text-xl font-bold font-brand">
-                            Fulanah
-                        </h1>
-                        <p class="my-4">
-                            Happy Wedding Iyak sayang... INSYA ALLAH jadi keluarga Sakinah Mawaddah Warrohmah 
-                            Senantiasa diberkahi dan dirahmati Allah
-                        </p>
+                        <div id="socmed" class="mt-3">
+                            <a href="https://wa.me/6285156348711" target="_blank">
+                                <i class="fa-brands fa-whatsapp fa-lg"></i>
+                            </a>
+                            <a href="https://www.instagram.com/hingga.tua/" target="_blank" class="ml-3">
+                                <i class="fa-brands fa-instagram fa-lg"></i>
+                            </a>
+                        </div>
                     </article>
                 </article>
-                <button id="loadMore" class="px-6 py-3 text-brand-green-2 underline text-xl cursor-pointer bg-transparent">
-                    Lihat lainnya
-                </button>
-            </article>
-        </section>
-        <section class="bg-brand-darkGreen relative py-16 z-0">
-            <img src="./assets/icon/ornamen-3.svg" alt="ornamen" class="rotate-180 w-[250px] absolute bottom-0 left-[-120px] -z-10">
-            <article class="w-full md:max-w-[80%] mx-auto py-12 px-5 flex flex-col items-center text-white text-center">
-                <img src="./assets/icon/kembang.svg" alt="ornamen" class="w-[150px] my-6">
-                <h1 class="text-5xl font-semibold font-brand my-4">
-                    Live Streaming
-                </h1>
-                <h2 class="text-xl font-normal my-4">
-                    Saksikan siaran langsung momentum bahagia dua insan dalam ikatan suci
-                </h2>
-                <section class="w-full flex flex-col md:flex-row justify-evenly items-center px-4 py-12">
-                    <img src="./assets/img/thumbnail.png" alt="thumbnail" class="w-[500px]">
-                    <div class="w-full md:w-[40%] flex flex-col items-start mt-6 md:mt-0">
-                        <p class="text-start text-xl">
-                            “Dan di antara tanda-tanda (kebesaran)-Nya adalah Dia menciptakan pasangan-pasangan untukmu dari jenismu sendiri, 
-                            agar kamu cenderung dan merasa tenteram kepadanya, dan Dia menjadikan di antaramu rasa kasih dan sayang." (Ar-Ruum : 21)
-                        </p>
-                        <button class="bg-white text-brand-brown px-6 py-2 mt-6 rounded-lg">
-                            Tonton siaran langsung
-                        </button>
-                    </div>
-                </section>
-            </article>
-        </section>
-        <section id="hinggaTua">
-            <article class="w-full md:max-w-[80%] mx-auto py-12 px-5 flex flex-col items-center text-brand-brown text-center">
-                <h1 class="text-2xl font-normal">Dibuat oleh HinggaTua</h1>
-                <h2 class="text-xl font-normal my-3">Digitalisasi undangan di momentum spesialmu</h2>
-                <div id="music" class="flex items-center justify-center mx-auto w-full my-3">
-                    <i class="fa-solid fa-music fa-xl"></i>
-                    <h3 class="text-lg sm:text-2xl font-semibold ml-3">
-                        Pamungkas - To the bone
-                    </h3>
-                </div>
-                <article id="hinggaTua-inner" class="w-full flex flex-col items-center mt-5">
-                    <h1 class="text-4xl font-bold my-4">
-                        HinggaTua
-                    </h1>
-                    <a href="https://hinggatua.com" class="text-xl sunderline-none">www.hinggatua.com</a>
-                    <div id="socmed" class="flex justify-center items-center w-full my-4">
-                        <a href="" class="mr-4">
-                            <i class="fa-brands fa-whatsapp fa-2xl"></i>
-                        </a>
-                        <a href="https://www.instagram.com/hingga.tua/" target="_blank" class="ml-4">
-                            <i class="fa-brands fa-instagram fa-2xl"></i>
-                        </a>
-                    </div>
-                </article>
-            </article>
-        </section>
-        <nav class="w-full bg-gray-800 flex items-center justify-center fixed bottom-0 md:hidden text-gray-400 py-2 z-20">
-            <div class="w-full flex flex-wrap items-center justify-evenly">
-                <a id="home-btn" href="#hero" class="nav-btn flex flex-col items-center p-2">
+            </section>
+            <footer class="w-full text-center py-4 px-5 text-xs bg-brand-darkGreen text-white">
+                Powered by Qitadev Technology Development
+            </footer>
+        </main>
+        <nav class="w-full bg-gray-800 flex items-center justify-center sticky inset-x-0 bottom-0 text-gray-400 z-20">
+            <div class="w-full flex items-center justify-evenly">
+                <a id="home-btn" href="#hero" class="nav-btn flex-1 flex flex-col items-center px-2 py-4">
                     <i class="fa-solid fa-house"></i>
-                    <span class="text-center text-sm">Home</span>
+                    <span class="text-center text-xs mt-1">Home</span>
                 </a>
-                <a id="group-btn" href="#pasangan" class="nav-btn flex flex-col items-center p-2">
+                <a id="group-btn" href="#pasangan" class="nav-btn flex-1 flex flex-col items-center px-2 py-4">
                     <i class="fa-solid fa-user-group"></i>
-                    <span class="text-center text-sm">Pasangan</span>
+                    <span class="text-center text-xs mt-1">Pasangan</span>
                 </a>
-                <a id="agenda-btn" href="#agenda" class="nav-btn flex flex-col items-center p-2">
+                <a id="agenda-btn" href="#agenda" class="nav-btn flex-1 flex flex-col items-center px-2 py-4">
                     <i class="fa-solid fa-calendar"></i>
-                    <span class="text-center text-sm">Agenda</span>
+                    <span class="text-center text-xs mt-1">Agenda</span>
                 </a>
-                <a id="angpao-btn" href="#hadiah" class="nav-btn flex flex-col items-center p-2">
+                <a id="angpao-btn" href="#hadiah" class="nav-btn flex-1 flex flex-col items-center px-2 py-4">
                     <i class="fa-solid fa-gift"></i>
-                    <span class="text-center text-sm">Hadiah</span>
+                    <span class="text-center text-xs mt-1">Hadiah</span>
                 </a>
-                <a id="ucapan-btn" href="#ucapan" class="nav-btn flex flex-col items-center p-2">
+                <a id="ucapan-btn" href="#ucapan" class="nav-btn flex-1 flex flex-col items-center px-2 py-4">
                     <i class="fa-solid fa-comments"></i>
-                    <span class="text-center text-sm">Ucapan</span>
+                    <span class="text-center text-xs mt-1">Ucapan</span>
                 </a>
             </div>
         </nav>
-    </main>
-    <footer class="w-full bg-brand-darkGreen flex items-center justify-center text-white text-xl py-3">
-        Powered by Qitadev Technology Development
-    </footer>
+    </div>
+
+    <!-- Modal -->
+    <section id="modal"
+        class="w-full z-50 fixed inset-0 bg-[url('./assets/img/cover.jpg')] bg-cover bg-center overflow-y-auto">
+        <div class="flex flex-col items-center justify-center max-w-4xl h-full m-auto p-5">
+            <article
+                class="w-full h-full sm:h-auto flex flex-col items-center justify-center bg-white/75 text-center text-brand-brown py-40">
+                <section class="w-full px-5">
+                    <img src="./assets/icon/logo.svg" alt="Logo" class="w-44 mb-8 mx-auto">
+                    <section>
+                        <h1 class="text-sm">THE WEDDING OF</h1>
+                        <h2 class="mt-3 text-3xl font-brand">Romeo & Juliet</h2>
+                        <h3 class="mt-3 text-xs">Sabtu, 19 November 2022</h3>
+                    </section>
+                </section>
+                <section class="px-5">
+                    <h4 id="guestTo" class="mt-8 text-sm"><i>Sedang memuat tamu...</i></h4>
+                    <button id="openButton"
+                        class="mt-8 hidden inline-block bg-brand-darkGreen text-white px-6 py-3 text-xs">
+                        Buka Undangan
+                        <span>
+                            <i class="fa-solid fa-arrow-right fa-xl ml-3"></i>
+                        </span>
+                    </button>
+                </section>
+            </article>
+        </div>
+    </section>
+    <button id="discButton" class="fixed bottom-[85px] lg:bottom-5 left-5 w-14 outline-none z-40">
+        <img src="../assets/img/disc.png" alt="Disc" class="w-full">
+    </button>
+    <audio id="bg-song" autostart="0" src="./assets/bg-lagu.mp3" loop="true"></audio>
+
+    <script>
+        const SHEET_URL = "https://script.google.com/macros/s/AKfycbz1kYLmQuvFLWi_9jr3_WehxMqF5YcqzyZKzBUEDkADVzQ5OCYh2zWM8cua9_-FYyex3g/exec";
+        const COUNTDOWN_TIME = "2023/09/12 09:00";
+
+        const templateUcapan = ({ name, message }) => {
+            return `
+                <article id="card-wishes" class="bg-white p-6 text-brand-brown">
+                    <h1 class="text-sm font-brand">
+                        ${name}
+                    </h1>
+                    <p class="mt-4 text-xs">
+                        ${message}
+                    </p>
+                </article>
+            `
+        }
+    </script>
+    <script src="../invitation.js" type="module"></script>
 </body>
-<script type="module">
-    import Swiper from 'https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.esm.browser.min.js'
-  
-    const swiper = new Swiper('.mySwiper', {
-        autoHeight: true,
-        navigation: {
-            nextEl: ".swiper-button-next",
-            prevEl: ".swiper-button-prev",
-        }, 
-        pagination: {
-            el: ".swiper-pagination"
-        }
-    })
-    
-    swiper.on('slideChange', () => {
-        if (swiper.activeIndex < (swiper.slides.length - 1) && swiper.activeIndex > 0) {
-            document.getElementById('prevSwiper').classList.remove('hidden')
-            document.getElementById('nextSwiper').classList.remove('hidden')
-        } else if (swiper.activeIndex === (swiper.slides.length - 1)) {
-            document.getElementById('nextSwiper').classList.add('hidden')
-        } else if (swiper.activeIndex === 0) {
-            document.getElementById('prevSwiper').classList.add('hidden')
-        }
-    })
-  </script>
+
 </html>
