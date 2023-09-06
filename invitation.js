@@ -265,6 +265,10 @@ bankSelect?.addEventListener("input", (e) => {
 });
 
 openButton?.addEventListener("click", (e) => {
+  AOS.init({
+    duration: 1000,
+  });
+
   modal.classList.add("animate__animated");
   modal.classList.add("animate__fadeOutUp");
   body.classList.remove("overflow-y-hidden");
