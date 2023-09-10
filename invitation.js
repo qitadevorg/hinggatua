@@ -264,6 +264,10 @@ bankSelect?.addEventListener("input", (e) => {
   }
 });
 
+AOS.init({
+  duration: 1000,
+});
+
 openButton?.addEventListener("click", (e) => {
   AOS.init({
     duration: 1000,
