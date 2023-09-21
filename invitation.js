@@ -8,6 +8,7 @@ const bankSelect = document.getElementById("bank-select");
 const bankTitle = document.getElementById("bank-title");
 const bankNumber = document.getElementById("bank-number");
 const bankName = document.getElementById("bank-name");
+const bankCopy = document.getElementById("bank-copy");
 const bankQr = document.getElementById("bank-qr");
 const audio = document.querySelector("audio");
 const discButton = document.getElementById("discButton");
@@ -27,17 +28,14 @@ document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
 // DOM EVENT
 document.addEventListener("DOMContentLoaded", () => {
   if (bankSelect) {
-    if (bankSelect.value === "bca") {
-      bankTitle.innerText = "Bank BCA";
-      bankNumber.innerText = "Account Number: 8691474861";
-      bankName.innerText = "a.n Ardiansyah";
-      bankQr.src = "./assets/img/qr-bca.jpg";
-    } else {
-      bankTitle.innerText = "Bank BNI";
-      bankNumber.innerText = "Account Number: 1051726230";
-      bankName.innerText = "a.n Dewi Ratnawati";
-      bankQr.src = "./assets/img/qr-bni.jpeg";
-    }
+    bankSelect.innerHTML = Object.keys(accounts)
+      .map(
+        (bankId) =>
+          `<option value='${bankId}'>${accounts[bankId].bank}</option>`
+      )
+      .join("");
+
+    changeBankInformation();
   }
 });
 
@@ -249,20 +247,32 @@ document.getElementById("sendHadiah")?.addEventListener("click", () => {
 
 // BANK CHANGE
 bankSelect?.addEventListener("input", (e) => {
-  let bank = e.target.value;
-
-  if (bank === "bca") {
-    bankTitle.innerText = "Bank BCA";
-    bankNumber.innerText = "Account Number: 8691474861";
-    bankName.innerText = "a.n Ardiansyah";
-    bankQr.src = "./assets/img/qr-bca.jpg";
-  } else {
-    bankTitle.innerText = "Bank BNI";
-    bankNumber.innerText = "Account Number: 1051726230";
-    bankName.innerText = "a.n Dewi Ratnawati";
-    bankQr.src = "./assets/img/qr-bni.jpeg";
-  }
+  changeBankInformation();
 });
+
+function changeBankInformation() {
+  const selectedBankId = bankSelect.value;
+
+  if (bankTitle) {
+    bankTitle.textContent = accounts[selectedBankId].bank;
+  }
+
+  if (bankNumber) {
+    bankNumber.textContent = accounts[selectedBankId].number;
+  }
+
+  if (bankName) {
+    bankName.textContent = accounts[selectedBankId].name;
+  }
+
+  if (bankCopy) {
+    bankCopy.dataset.copy = accounts[selectedBankId].number;
+  }
+
+  if (bankQr) {
+    bankQr.src = accounts[selectedBankId].qr;
+  }
+}
 
 openButton?.addEventListener("click", (e) => {
   AOS.init({
@@ -305,7 +315,7 @@ window.copyToClipboard = (
   textAfterCopy,
   classNamesAfterCopy
 ) => {
-  navigator.clipboard.writeText(textToCopy);
+  navigator.clipboard.writeText(textToCopy || event.dataset.copy);
 
   event.innerText = textAfterCopy;
 

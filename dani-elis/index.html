@@ -109,10 +109,10 @@
                                 Bapak Ujang Suja’i & Ibu Dede Kustini
                             </p>
                             <p class="mt-3 text-xs text-blue-1">
-                                <a href="https://www.instagram.com/putriummiaisyah" target="_blank"
+                                <a href="https://www.instagram.com/trunkz_dhany" target="_blank"
                                     rel="noopener noreferrer">
                                     <i class="fa-brands fa-square-instagram fa-lg align-middle mr-1"></i>
-                                    @putriummiaisyah
+                                    @trunkz_dhany
                                 </a>
                             </p>
                         </div>
@@ -128,10 +128,10 @@
                                 Bapak Uja & Ibu Aisyah (Isah)
                             </p>
                             <p class="mt-3 text-xs text-blue-1">
-                                <a href="https://www.instagram.com/trunkz_dhany" target="_blank"
+                                <a href="https://www.instagram.com/putriummiaisyah" target="_blank"
                                     rel="noopener noreferrer">
                                     <i class="fa-brands fa-square-instagram fa-lg align-middle mr-1"></i>
-                                    @trunkz_dhany
+                                    @putriummiaisyah
                                 </a>
                             </p>
                         </div>
@@ -192,7 +192,7 @@
                             class="w-full p-8 rounded-lg border border-blue-4 backdrop-blur-lg text-center">
                             <img src="./assets/img/akad.png" alt="Akad" class="w-24 mx-auto">
                             <h1 class="mt-4 text-lg font-bold text-blue-1">
-                                Akad Nikah
+                                Tasyakuran
                             </h1>
                             <p class="mt-3 text-sm">
                                 Senin, 9 Oktober 2023
@@ -221,7 +221,7 @@
                             class="mt-10 w-full p-8 rounded-lg border border-blue-4 backdrop-blur-lg text-center">
                             <img src="./assets/img/resepsi.png" alt="Akad" class="w-24 mx-auto">
                             <h1 class="mt-4 text-lg font-bold text-blue-1">
-                                Resepsi
+                                Akad & Resepsi
                             </h1>
                             <p class="mt-3 text-sm">
                                 Selasa, 10 Oktober 2023
@@ -338,7 +338,7 @@
                                 </div>
                                 <div class="swiper-slide">
                                     <section class="flex flex-col">
-                                        <img src="./assets/img/story-2.png" alt="our story"
+                                        <img src="./assets/img/story-3.png" alt="our story"
                                             class="flex-[2_2_0%] rounded-tr rounded-bl rounded-tl-3xl rounded-br-3xl">
                                         <article class="flex-[3_3_0%] flex flex-col mt-8">
                                             <h1 class="text-2xl font-bold font-roboto-slab text-blue-1">Komunikasi Jarak
@@ -354,7 +354,7 @@
                                 </div>
                                 <div class="swiper-slide">
                                     <section class="flex flex-col">
-                                        <img src="./assets/img/story-2.png" alt="our story"
+                                        <img src="./assets/img/story-4.png" alt="our story"
                                             class="flex-[2_2_0%] rounded-tr rounded-bl rounded-tl-3xl rounded-br-3xl">
                                         <article class="flex-[3_3_0%] flex flex-col mt-8">
                                             <h1 class="text-2xl font-bold font-roboto-slab text-blue-1">Momentum Jadian
@@ -370,7 +370,7 @@
                                 </div>
                                 <div class="swiper-slide">
                                     <section class="flex flex-col">
-                                        <img src="./assets/img/story-2.png" alt="our story"
+                                        <img src="./assets/img/story-5.png" alt="our story"
                                             class="flex-[2_2_0%] rounded-tr rounded-bl rounded-tl-3xl rounded-br-3xl">
                                         <article class="flex-[3_3_0%] flex flex-col mt-8">
                                             <h1 class="text-2xl font-bold font-roboto-slab text-blue-1">13 Juli 2022
@@ -465,16 +465,15 @@
                     <section id="hadiah-inner" data-aos="fade-up" class="mt-6 px-3">
                         <div class="bg-white w-full rounded-lg border p-5">
                             <h2 class="text-center font-semibold">Pengiriman Hadiah</h2>
-                            <div class="mt-4 px-4 py-3 text-xs w-full rounded border flex items-center">
-                                <img src="../assets/bank-logo/bri.png" alt="Bank Rakyat Indonesia" class="w-10 mr-3">
-                                Bank Rakyat Indonesia
-                            </div>
+                            <select id="bank-select" class="mt-4 px-4 py-3 w-full rounded border text-xs"></select>
                             <div class="text-center">
-                                <p id="bank-number" class="mt-2 font-semibold ">No. Rekening: 002501137567501
+                                <p id="bank-title" class="mt-4 font-semibold"></p>
+                                <p class="mt-2 font-semibold ">No. Rekening: <span id="bank-number"></span>
                                 </p>
-                                <p id="bank-name" class="mt-2 text-sm">a.n. Anwar Dani</p>
-                                <button class="mt-2 px-2 py-1 border border-blue-1 text-blue-1 text-xs rounded"
-                                    onclick="copyToClipboard(this, '002501137567501', 'Salin Rekening', 'Rekening Disalin', ['bg-blue-1', 'text-white'])">
+                                <p class="mt-2 text-sm">a.n. <span id="bank-name"></span></p>
+                                <button id="bank-copy"
+                                    class="mt-2 px-2 py-1 border border-blue-1 text-blue-1 text-xs rounded" data-copy=""
+                                    onclick="copyToClipboard(this, null, 'Salin Rekening', 'Rekening Disalin', ['bg-blue-1', 'text-white'])">
                                     Salin Rekening
                                 </button>
                             </div>
@@ -633,6 +632,19 @@
                         </p>
                     </article>
                 `
+        }
+
+        const accounts = {
+            bri1: {
+                bank: 'BRI (1)',
+                number: '002501137567501',
+                name: 'Anwar Dani'
+            },
+            bri2: {
+                bank: 'BRI (2)',
+                number: '080701084100537',
+                name: 'Elis Susanti'
+            }
         }
     </script>
     <script src="../invitation.js" type="module"></script>
