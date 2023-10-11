@@ -270,7 +270,12 @@ function changeBankInformation() {
   }
 
   if (bankQr) {
-    bankQr.src = accounts[selectedBankId].qr;
+    if (accounts[selectedBankId].qr) {
+      bankQr.classList.remove('hidden');
+      bankQr.src = accounts[selectedBankId].qr;
+    } else {
+      bankQr.classList.add('hidden');
+    }
   }
 }
 

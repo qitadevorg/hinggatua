@@ -394,19 +394,18 @@
                     <section id="hadiah-inner" data-aos="fade-up" class="mt-6 px-3">
                         <div class="bg-white w-full rounded-lg border p-5">
                             <h2 class="text-center font-semibold">Pengiriman Hadiah</h2>
-                            <div class="mt-4 px-4 py-3 text-xs w-full rounded border flex items-center">
-                                <img src="../assets/bank-logo/bni.png" alt="Bank BNI" class="w-10 mr-3">
-                                Bank BNI
-                            </div>
+                            <select id="bank-select" class="mt-4 px-4 py-3 w-full rounded border text-xs"></select>
                             <div class="text-center">
-                                <p id="bank-number" class="mt-2 font-semibold ">No. Rekening: 7642-0100-8971-533
+                                <p id="bank-title" class="mt-4 font-semibold"></p>
+                                <p class="mt-2 font-semibold ">No. Rekening: <span id="bank-number"></span>
                                 </p>
-                                <p id="bank-name" class="mt-2 text-sm">a.n. Warung Literasi</p>
-                                <button class="mt-2 px-2 py-1 border border-blue-1 text-blue-1 text-xs rounded"
-                                    onclick="copyToClipboard(this, '764201008971533', 'Salin Rekening', 'Rekening Disalin', ['bg-blue-1', 'text-white'])">
+                                <p class="mt-2 text-sm">a.n. <span id="bank-name"></span></p>
+                                <button id="bank-copy"
+                                    class="mt-2 px-2 py-1 border border-blue-1 text-blue-1 text-xs rounded" data-copy=""
+                                    onclick="copyToClipboard(this, null, 'Salin Rekening', 'Rekening Disalin', ['bg-blue-1', 'text-white'])">
                                     Salin Rekening
                                 </button>
-                                <img src="./assets/img/qr.png" alt="qrcode" class="mt-4 w-[250px] mx-auto">
+                                <img id="bank-qr" src="" alt="qrcode" class="mt-4 w-[250px] mx-auto">
                             </div>
                         </div>
                     </section>
@@ -431,9 +430,19 @@
                         Video Engagement</h1>
                     <p data-aos="fade-up" class="text-center text-sm mt-2">Kilas dokumentasi lamaran sebagai penanda awal lamaran sebelum janji suci terucap</p>
                     <div data-aos="fade-up" class="mt-6 px-3">
-                        <a href="https://youtu.be/-uG7JqqX1a0" target="_blank">
+                        <iframe 
+                            class="mx-auto w-full"
+                            width="560" 
+                            height="315" 
+                            src="https://www.youtube.com/embed/-uG7JqqX1a0?si=u3MjcvWVpftrTP8D" 
+                            title="YouTube video player" 
+                            frameborder="0" 
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                            allowfullscreen>
+                        </iframe>
+                        <!-- <a href="https://youtu.be/-uG7JqqX1a0" target="_blank">
                             <img src="./assets/img/video-engage.png" alt="Video Engagement" class="max-w-[400px] rounded-lg mx-auto">
-                        </a>
+                        </a> -->
                     </div>
                 </article>
             </section>
@@ -597,9 +606,10 @@
     <audio id="bg-song" autostart="0" src="./assets/bg-lagu.mp3" loop="true"></audio>
 
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.8.1/flowbite.min.js"></script>
     <script>
-        const SHEET_URL = "https://script.google.com/macros/s/AKfycbxW0BHvw7re01nLClo6DivWBOQ2SW48ZXXdowiQFrMTdRoabWDWAxESLUCUdQKxR275Pg/exec";
-        const COUNTDOWN_TIME = "2023/09/12 09:00";
+        const SHEET_URL = "https://script.google.com/macros/s/AKfycbyTPriGzcPgtU-EaaAkyz-GxBq8CEuGUnyFh4oZcFV9ZXrM1Oxzsc_9ldCJ1Ku9Xwod/exec";
+        const COUNTDOWN_TIME = "2023/11/11 13:30";
 
         const templateUcapan = ({ name, message }) => {
             return `
@@ -613,6 +623,24 @@
                     </article>
                 `
         }
+
+        const accounts = {
+            bri: {
+                bank: 'Bank BRI',
+                name: 'Iga Yastiara',
+                number: '7642-0100-8971-533'
+            },
+            bni: {
+                bank: 'Bank BNI',
+                name: 'Warung Literasi',
+                qr: './assets/img/qr.png'
+            },
+            bca: {
+                bank: 'Bank BCA',
+                name: 'Yoga Pratama Lumban Tobing',
+                number: '0292491831'
+            }
+        };
     </script>
     <script src="../invitation.js" type="module"></script>
 </body>
