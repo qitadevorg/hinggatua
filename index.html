@@ -76,7 +76,11 @@
       rel="stylesheet"
     />
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
-
+    <script src="https://kit.fontawesome.com/a692ebe3c9.js" crossorigin="anonymous"></script>
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.1.1/flowbite.min.css"
+      rel="stylesheet"
+    />
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
       tailwind.config = {
@@ -112,7 +116,7 @@
     </style>
   </head>
 
-  <body>
+  <body id="body" class="overflow-y-hidden">
     <!-- Google Tag Manager (noscript) -->
     <noscript
       ><iframe
@@ -124,6 +128,17 @@
     ></noscript>
     <!-- End Google Tag Manager (noscript) -->
     <header class="sticky top-0 bg-white z-40 transition-shadow">
+      <div class="w-full py-4 bg-yellow-950">
+        <p class="text-center text-white text-sm">
+          <span>
+            <i class="fa-solid fa-star text-yellow-500 fa-sm"></i>
+          </span>
+          Dapatkan undangan digital spesial dari Hingga Tua
+          <span>
+            <a href="https://bit.ly/giftbervol2" class="underline font-bold">daftar sekarang</a>
+          </span>
+        </p>
+      </div>
       <nav class="max-w-6xl m-auto px-5 flex justify-between items-center">
         <a href="/">
           <img src="/assets/img/logoNavbar.webp" alt="Hingga Tua Logo" class="w-[140px]" />
@@ -401,7 +416,7 @@
           </div>
         </div>
       </section>
-      <section id="pilihandesain" class="pt-24">
+      <section id="pilihandesain" class="py-24">
         <div class="max-w-6xl m-auto px-5">
           <p data-aos="fade-up" class="text-brand-brown-light text-center">
             Elegant and exclusive design is our principle
@@ -631,6 +646,37 @@
               >
             </li>
           </ul>
+        </div>
+      </section>
+      <section id="giftber" class="py-24 bg-brand-yellow">
+        <div class="max-w-6xl m-auto px-5">
+          <div class="w-full flex flex-col md:flex-row">
+            <div
+              class="w-full md:w-[60%] flex flex-col justify-center bg-gradient-to-b from-brand-brown-dark to-brand-brown-dark/75 rounded-t-lg md:rounded-l-lg md:rounded-r-none px-4 py-8 md:p-8"
+            >
+              <h1 class="text-3xl md:text-6xl font-bold text-white block">
+                GIFTBER
+                <span class="text-xl md:text-2xl font-medium">vol 2</span>
+              </h1>
+              <p class="text-white mt-3">
+                Bagi-bagi <span class="font-bold">Gift Undangan Digital</span> untuk pernikahan yang
+                diadakan pada bulan
+                <span class="font-bold">November - Desember 2023</span>
+              </p>
+              <a
+                href="https://bit.ly/giftbervol2"
+                target="_blank"
+                class="w-max px-3 py-1.5 bg-white text-brand-brown-dark rounded-full mt-3 text-sm"
+              >
+                Daftar Sekarang
+              </a>
+            </div>
+            <img
+              src="./assets/img/giftber_banner.png"
+              alt="giftber-banner"
+              class="object-cover w-full md:w-[40%] rounded-b-lg md:rounded-r-lg md:rounded-b-none"
+            />
+          </div>
         </div>
       </section>
       <section id="harga" class="pt-24">
@@ -1362,6 +1408,29 @@
     </footer>
 
     <div
+      id="giftber-modal"
+      tabindex="-1"
+      aria-hidden="true"
+      class="overflow-y-auto overflow-x-hidden fixed top-0 right-0 left-0 z-50 justify-center items-center flex w-full md:inset-0 h-full max-h-full bg-black/50"
+    >
+      <div class="relative flex justify-center items-center p-5">
+        <div class="relative w-full sm:w-[60%] z-50">
+          <a href="https://bit.ly/giftbervol2" target="_blank" class="">
+            <img src="./assets/img/giftber_vol2.png" alt="giftber" />
+          </a>
+          <button
+            id="giftber-close"
+            type="button"
+            class="absolute top-0 right-0 z-100 p-3"
+            data-modal-hide="giftber-modal"
+          >
+            <i class="fa-solid fa-xmark fa-lg text-yellow-950"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <div
       id="contactUsPanel"
       class="fixed inset-x-5 bottom-[76px] translate-y-[200px] opacity-0 invisible transition-all duration-500"
     >
@@ -1427,8 +1496,13 @@
     </button>
 
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.1.1/flowbite.min.js"></script>
     <script>
       AOS.init();
+
+      window.onunload = () => {
+        window.scrollTo(0, 0);
+      };
 
       const responsiveNav = document.getElementById("responsiveNav");
       const burgerBtn = document.getElementById("burgerBtn");
@@ -1438,6 +1512,8 @@
       const contactUsBtn = document.getElementById("contactUsBtn");
       const contactUsPanel = document.getElementById("contactUsPanel");
       const closeContactUsPanelBtn = document.getElementById("closeContactUsPanelBtn");
+      const giftberModal = document.getElementById("giftber-modal");
+      const modalGiftberClose = document.getElementById("giftber-close");
 
       let [isResponsiveNavOpen, setIsResponsiveNavOpen] = [
         false,
@@ -1538,6 +1614,11 @@
 
       closeContactUsPanelBtn.addEventListener("click", function () {
         setIsContactUsPanelShow(false);
+      });
+
+      modalGiftberClose.addEventListener("click", () => {
+        document.getElementById("body").classList.remove("overflow-y-hidden");
+        giftberModal.classList.add("hidden");
       });
     </script>
   </body>
