@@ -48,9 +48,10 @@
   <div class="w-full max-w-2xl bg-brand-white">
     <main class="overflow-x-hidden">
       <section id="hero" class="relative">
+        <img src="./assets/img/ornamen-4.png" alt="Ornamen" class="absolute right-0 top-[150px] h-[180px]">
         <header>
           <nav class="p-5 flex justify-center items-center font-light text-lg text-center">
-            <a href="/romeo-juliet" data-aos="fade-up">
+            <a href="/nanda-tila" data-aos="fade-up">
               <img src="./assets/img/logo.png" alt="Image Logo" class="w-[120px]" />
             </a>
           </nav>
@@ -65,7 +66,7 @@
           <h1 data-aos="fade-up" class="text-xs font-light">
             THE WEDDING OF
           </h1>
-          <h2 data-aos="fade-up" class="mt-4 text-4xl font-brand underline text-brand-green-2">
+          <h2 data-aos="fade-up" class="mt-4 text-4xl font-brand text-brand-green-2">
             Nanda & Tila
           </h2>
           <div data-aos="fade-up" class="mt-8 z-10 w-full px-3">
@@ -73,6 +74,8 @@
           </div>
         </article>
         <section id="pasangan" class="relative text-white bg-brand-lightGreen">
+          <img src="./assets/img/ornamen-2.png" alt="Ornamen" class="absolute left-0 top-[60px] h-[180px]">
+          <img src="./assets/img/ornamen-3.png" alt="Ornamen" class="absolute right-0 top-[430px] h-[180px]">
           <article class="py-10 px-5">
             <div class="text-center">
               <img src="./assets/img/ornamen-white-1.png" alt="Ornament" data-aos="fade-up" class="w-[120px] mx-auto" />
@@ -88,16 +91,16 @@
             <div class="mt-6 mx-auto max-w-4xl flex flex-col items-center">
               <div data-aos="fade-up" class="flex-1 text-center">
                 <img src="./assets/img/foto-pria.png" alt="Ardi" class="w-48 inline-block" />
-                <h1 class="mt-3 text-xl font-semibold">Romeo</h1>
+                <h1 class="mt-3 text-xl font-semibold">Ananda Finggit Cahyadi</h1>
                 <p class="mt-3 text-xs font-light">
                   Putra dari
                   <br />
-                  Bpk Saepudin & Ibu Yani
+                  Bapak Akbar Cahyono (alm) & Ibu Nanik Arinda Fintari
                 </p>
                 <p class="mt-3 text-xs">
-                  <a href="https://www.instagram.com/cristiano" target="_blank" rel="noopener noreferrer">
+                  <a href="https://www.instagram.com/nabaltra_bali888" target="_blank" rel="noopener noreferrer">
                     <i class="fa-brands fa-instagram fa-lg align-middle mr-1"></i>
-                    @cristiano
+                    @nabaltra_bali888
                   </a>
                 </p>
               </div>
@@ -106,16 +109,16 @@
               </div>
               <div data-aos="fade-up" class="flex-1 text-center">
                 <img src="./assets/img/foto-wanita.png" alt="Dewi" class="w-48 inline-block" />
-                <h1 class="mt-3 text-xl font-semibold">Juliet</h1>
+                <h1 class="mt-3 text-xl font-semibold">Sutilah</h1>
                 <p class="mt-3 text-xs font-light">
                   Putri dari
                   <br />
-                  Bpk Sumenep & Ibu Romlah
+                  Bapak Sopi’i & Ibu Kumayah
                 </p>
                 <p class="mt-3 text-xs">
-                  <a href="https://www.instagram.com/leomessi" target="_blank" rel="noopener noreferrer">
+                  <a href="https://www.instagram.com/tila_2692" target="_blank" rel="noopener noreferrer">
                     <i class="fa-brands fa-instagram fa-lg align-middle mr-1"></i>
-                    @leomessi
+                    @tila_2692
                   </a>
                 </p>
               </div>
@@ -128,7 +131,7 @@
               Hari yang ditunggu
             </h1>
             <h2 data-aos="fade-up" class="text-xs mt-1">
-              Minggu, 17 Desember 2023
+              Sabtu, 23 Desember 2023
             </h2>
           </article>
           <article data-aos="fade-up" class="mt-5 mx-auto max-w-2xl px-8 w-full flex">
@@ -168,7 +171,9 @@
           </article>
         </section>
       </section>
-      <section id="agenda" class="text-brand-brown">
+      <section id="agenda" class="relative text-brand-brown">
+        <img src="./assets/img/ornamen-2.png" alt="Ornamen" class="absolute left-0 top-[60px] h-[180px]">
+        <img src="./assets/img/ornamen-3.png" alt="Ornamen" class="absolute right-0 top-[430px] h-[180px]">
         <article class="py-10 px-5">
           <img src="./assets/img/ornamen-1.png" alt="ornamen" data-aos="fade-up" class="w-[120px] mx-auto" />
           <h1 data-aos="fade-up" class="mt-4 text-2xl font-semibold text-center">
@@ -314,14 +319,28 @@
           <section id="hadiah-inner" data-aos="fade-up" class="mt-6 px-3 text-brand-brown">
             <div class="w-full border bg-white p-5 rounded">
               <h2 class="ext-center font-semibold">Pengiriman Hadiah</h2>
-              <div class="mt-4 px-4 py-3 text-xs w-full border flex items-center bg-gray-200">
-                <img src="./assets/icon/mandiri.svg" alt="Bank BSI" class="w-10 mr-3" />
-                Bank Mandiri
-              </div>
-              <p id="bank-number" class="mt-2 font-semibold">
-                No. Rekening: 14100123456789
+              <select id="bank-select" class="mt-4 px-4 py-3 w-full rounded border text-sm"></select>
+              <p class="mt-2 font-semibold">No. Rekening: <span id="bank-number"></span></p>
+              <p class="mt-2 text-sm">a.n <span id="bank-name"></span></p>
+              <button id="bank-copy"
+                class="mt-2 px-2 py-1 border border-dark-brown-400 text-dark-brown-400 text-sm rounded" data-copy=""
+                onclick="copyToClipboard(this, null, 'Salin Rekening', 'Rekening Disalin', ['bg-brand-lightGreen', 'text-white'])">
+                Salin Rekening
+              </button>
+            </div>
+          </section>
+          <section data-aos="fade-up" class="mt-6 px-3 text-brand-brown">
+            <div class="w-full border bg-white p-5 rounded">
+              <h2 class="ext-center font-semibold">Pengiriman Hadiah Fisik</h2>
+              <img src="./assets/img/hadiah.png" alt="Hadiah" width="88" height="88" class="mt-4 mx-auto">
+              <p class="mt-2 font-semibold">
+                Nama Penerima: Tila
               </p>
-              <p id="bank-name" class="mt-2 text-sm">a.n. Romeo Lukaku</p>
+              <p class="mt-2 text-sm">No. HP: 081289958455</p>
+              <p class="mt-2 text-sm">
+                (BPVP BANYUWANGI) <br>
+                Jl. Ahmad Yani No. 28 Krajan, Kedungrejo, Muncar, Kab. Banyuwangi
+              </p>
             </div>
           </section>
         </article>
@@ -338,22 +357,22 @@
           <div data-aos="fade-up" class="mt-6 px-3 w-full">
             <div>
               <label for="namaUcapan" class="text-xs">Nama *</label>
-              <input id="namaUcapan" type="text" class="mt-2 px-4 py-3 text-brand-brown border w-full text-xs" required
-                placeholder="John Doe" />
+              <input id="namaUcapan" type="text" class="mt-2 px-4 py-3 text-brand-brown border w-full text-xs rounded"
+                required placeholder="Masukkan nama" />
               <p id="error-nama-ucapan" class="text-red-500 text-sm mt-1 hidden">
                 Nama tidak boleh kosong
               </p>
             </div>
             <div class="mt-4">
               <label for="pesanUcapan" class="text-xs">Ucapan *</label>
-              <textarea id="pesanUcapan" class="mt-2 px-4 py-3 text-brand-brown border w-full text-xs"
-                placeholder="Lancar dan samawa yaa.." rows="5" required></textarea>
+              <textarea id="pesanUcapan" class="mt-2 px-4 py-3 text-brand-brown border w-full text-xs rounded"
+                placeholder="Masukkan ucapan" rows="5" required></textarea>
               <p id="error-pesan-ucapan" class="text-red-500 text-sm mt-1 hidden">
                 Pesan tidak boleh kosong
               </p>
             </div>
             <div class="mt-4">
-              <button id="sendUcapan" class="w-full px-6 py-3 bg-white text-brand-brown text-xs">
+              <button id="sendUcapan" class="w-full px-6 py-3 bg-white text-brand-brown text-xs rounded">
                 Kirim
               </button>
               <p id="textUcapan" class="text-center text-xs text-white font-bold my-4 hidden">
@@ -368,8 +387,6 @@
             </button>
           </div>
         </article>
-        <img src="./assets/icon/ornamen-4.svg" alt="ornamen" class="w-[250px] absolute top-[100px] left-[-90px] z-0" />
-        <img src="./assets/icon/dedaun.svg" alt="ornamen" class="w-[250px] absolute bottom-[-40px] right-[-90px] z-0" />
       </section>
       <section id="hinggaTua" class="text-brand-brown">
         <article class="py-10 px-5 text-center">
@@ -436,14 +453,15 @@
           <section>
             <h1 class="text-sm">THE WEDDING OF</h1>
             <h2 class="mt-3 text-3xl font-brand">Nanda & Tila</h2>
-            <h3 class="mt-3 text-xs">Minggu, 17 Desember 2023</h3>
+            <h3 class="mt-3 text-xs">Sabtu, 23 Desember 2023</h3>
           </section>
         </section>
         <section class="px-5">
           <h4 id="guestTo" class="mt-8 text-sm">
             <i>Sedang memuat tamu...</i>
           </h4>
-          <button id="openButton" class="mt-8 hidden inline-block bg-brand-darkGreen text-white px-6 py-3 text-xs">
+          <button id="openButton"
+            class="mt-8 hidden inline-block bg-brand-darkGreen text-white px-6 py-3 text-xs rounded">
             Buka Undangan
             <span>
               <i class="fa-solid fa-arrow-right fa-xl ml-3"></i>
@@ -466,7 +484,7 @@
 
     const templateUcapan = ({ name, message }) => {
       return `
-                <article id="card-wishes" class="bg-white p-6 text-brand-brown">
+                <article id="card-wishes" class="bg-white p-6 text-brand-brown rounded">
                     <h1 class="text-sm font-brand">
                         ${name}
                     </h1>
@@ -476,8 +494,21 @@
                 </article>
             `;
     };
+
+    const accounts = {
+      bca1: {
+        bank: "Bank Central Asia (BCA)",
+        number: "3510626612",
+        name: "Sutilah",
+      },
+      bca2: {
+        bank: "Bank Central Asia (BCA)",
+        number: "0402986504",
+        name: "Ananda Finggit Cahyadi",
+      },
+    };
   </script>
-  <script src="../invitation.js" type="module"></script>
+  <script src="../invitation-v2.js" type="module"></script>
 </body>
 
 </html>
