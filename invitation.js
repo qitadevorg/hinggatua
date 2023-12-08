@@ -290,7 +290,7 @@ openButton?.addEventListener("click", (e) => {
   discButton.classList.add("animate-spin-slow");
   audio.autoplay = true;
   audio.loop = true;
-  audio.volume = 0.5;
+  audio.volume = 0.3;
   audio.play();
 });
 
