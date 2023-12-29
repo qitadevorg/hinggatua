@@ -65,7 +65,7 @@
           <h2 data-aos="fade-up" class="mt-4 text-4xl font-brand text-gray-1">
             Dita & Galih
           </h2>
-          <div data-aos="fade-up" class="mt-8 z-10 w-full px-3">
+          <div data-aos="fade-up" class="mt-8 z-10 w-full px-8">
             <img src="./assets/img/image-hero.png" alt="Dita & Galih" class="w-full" />
           </div>
         </article>
@@ -224,6 +224,10 @@
               data-aos="fade-up" class="w-full">
               <img src="./assets/img/gallery-4.png" alt="" class="w-full rounded-lg" />
             </a>
+            <a href="./assets/img/gallery-9-lg.jpeg" data-pswp-width="4000" data-pswp-height="3000" target="_blank"
+              data-aos="fade-up" class="w-full">
+              <img src="./assets/img/gallery-9.png" alt="" class="w-full rounded-lg" />
+            </a>
             <a href="./assets/img/gallery-5-lg.jpeg" data-pswp-width="4032" data-pswp-height="3024" target="_blank"
               data-aos="fade-up" class="w-full">
               <img src="./assets/img/gallery-5.png" alt="" class="w-full rounded-lg" />
@@ -235,10 +239,6 @@
             <a href="./assets/img/gallery-7-lg.jpeg" data-pswp-width="4032" data-pswp-height="3024" target="_blank"
               data-aos="fade-up" class="w-full">
               <img src="./assets/img/gallery-7.png" alt="" class="w-full rounded-lg" />
-            </a>
-            <a href="./assets/img/gallery-8-lg.jpeg" data-pswp-width="4032" data-pswp-height="3024" target="_blank"
-              data-aos="fade-up" class="w-full">
-              <img src="./assets/img/gallery-8.png" alt="" class="w-full rounded-lg" />
             </a>
           </div>
         </article>
@@ -311,19 +311,35 @@
           <section id="hadiah-inner" data-aos="fade-up" class="mt-6 px-3">
             <div class="bg-white w-full rounded-lg border p-5 text-gray-1">
               <h2 class="text-center font-semibold">Pengiriman Hadiah</h2>
-              <div class="mt-4 px-4 py-3 text-sm w-full rounded border flex items-center">
-                <img src="./assets/icon/mandiri.svg" alt="Bank Mandiri" class="w-10 mr-3" />
-                Bank Mandiri
-              </div>
+              <select id="bank-select" class="mt-4 px-4 py-3 w-full rounded border text-xs"></select>
               <div class="text-center">
-                <p id="bank-number" class="mt-2 font-semibold">
-                  No. Rekening: 103001121212121
+                <p id="bank-title" class="mt-4 font-semibold"></p>
+                <p class="mt-2 font-semibold ">No. Rekening: <span id="bank-number"></span>
                 </p>
-                <p id="bank-name" class="mt-2 text-sm">a.n. Galih Karismatika Husein</p>
-                <button class="mt-2 px-2 py-1 border border-gray-1 text-gray-1 text-sm rounded"
-                  onclick="copyToClipboard(this, '103001121212121', 'Salin Rekening', 'Rekening Disalin', ['bg-gray-1', 'text-white'])">
+                <p class="mt-2 text-sm">a.n. <span id="bank-name"></span></p>
+                <button id="bank-copy" class="mt-2 px-2 py-1 border border-blue-1 text-blue-1 text-xs rounded"
+                  data-copy=""
+                  onclick="copyToClipboard(this, null, 'Salin Rekening', 'Rekening Disalin', ['bg-gray-1', 'text-white'])">
                   Salin Rekening
                 </button>
+              </div>
+            </div>
+          </section>
+          <section id="hadiah-fisik" data-aos="fade-up" class="mt-6 px-3">
+            <div class="bg-white w-full rounded-lg border p-5 text-gray-1">
+              <h2 class="text-center font-semibold">Pengiriman Hadiah Fisik</h2>
+              <img src="./assets/img/hadiah.png" alt="Gift" class="mt-2 mx-auto w-[88px]" />
+              <div class="text-center">
+                <p class="mt-2 font-semibold">
+                  Nama Penerima: <br>
+                  Galih Karismatika Husein, S.Kom.
+                </p>
+                <p class="mt-2 text-sm">No. HP: 085705687771</p>
+                <p class="mt-2 text-sm">
+                  Alamat: Perumahan Grand shafa Blok F no.3, Gg. Melati, Ngajeg, Tirtomartani, Kec. Kalasan, Kabupaten
+                  Sleman, Daerah Istimewa
+                  Yogyakarta 55571
+                </p>
               </div>
             </div>
           </section>
@@ -478,6 +494,20 @@
                         </p>
                     </article>
                 `;
+
+  };
+
+  const accounts = {
+    mandiri1: {
+      bank: 'Bank Mandiri (Galih)',
+      name: 'Galih Karismatika Husein',
+      number: '103001121212121'
+    },
+    mandiri2: {
+      bank: 'Bank Mandiri (Dita)',
+      name: 'Dita Puspitaningrum',
+      number: '1380016357092'
+    },
   };
 </script>
 <script src="../invitation-v2.js" type="module"></script>
