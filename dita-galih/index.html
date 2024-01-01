@@ -317,7 +317,38 @@
             </p>
           </div>
           <section id="hadiah-inner" data-aos="fade-up" class="mt-6 px-3">
-            <div class="bg-white w-full rounded-lg border p-5 text-gray-1">
+            <div class="bg-white w-full rounded-lg border p-5">
+              <h2 class="text-center font-semibold">Pengiriman Hadiah</h2>
+              <div class="mt-4 px-4 py-3 text-sm w-full rounded border flex items-center">
+                <img src="../assets/bank-logo/mandiri.png" alt="Bank Mandiri" class="w-10 mr-3" />
+                Bank Mandiri
+              </div>
+              <div class="text-center">
+                <p id="bank-number" class="mt-2 font-semibold">
+                  No. Rekening: 1380016357092
+                </p>
+                <p id="bank-name" class="mt-2 text-sm">
+                  a.n. Dita Puspitaningrum
+                </p>
+                <button class="mt-2 px-2 py-1 border border-gray-4 text-gray-4 text-sm rounded"
+                  onclick="copyToClipboard(this, '1380016357092', 'Salin Rekening', 'Rekening Disalin', ['bg-gray-4', 'text-white'])">
+                  Salin Rekening
+                </button>
+              </div>
+              <div class="text-center">
+                <p id="bank-number" class="mt-2 font-semibold">
+                  No. Rekening: 1090018000075
+                </p>
+                <p id="bank-name" class="mt-2 text-sm">
+                  a.n. Galih Karismatika Husein
+                </p>
+                <button class="mt-2 px-2 py-1 border border-gray-4 text-gray-4 text-sm rounded"
+                  onclick="copyToClipboard(this, '1090018000075', 'Salin Rekening', 'Rekening Disalin', ['bg-gray-4', 'text-white'])">
+                  Salin Rekening
+                </button>
+              </div>
+            </div>
+            <!-- <div class="bg-white w-full rounded-lg border p-5 text-gray-1">
               <h2 class="text-center font-semibold">Pengiriman Hadiah</h2>
               <select id="bank-select" class="mt-4 px-4 py-3 w-full rounded border text-xs"></select>
               <div class="text-center">
@@ -331,7 +362,7 @@
                   Salin Rekening
                 </button>
               </div>
-            </div>
+            </div> -->
           </section>
           <section id="hadiah-fisik" data-aos="fade-up" class="mt-6 px-3">
             <div class="bg-white w-full rounded-lg border p-5 text-gray-1">
@@ -505,18 +536,18 @@
 
   };
 
-  const accounts = {
-    mandiri1: {
-      bank: 'Bank Mandiri (Galih)',
-      name: 'Galih Karismatika Husein',
-      number: '103001121212121'
-    },
-    mandiri2: {
-      bank: 'Bank Mandiri (Dita)',
-      name: 'Dita Puspitaningrum',
-      number: '1380016357092'
-    },
-  };
+  // const accounts = {
+  //   mandiri1: {
+  //     bank: 'Bank Mandiri (Galih)',
+  //     name: 'Galih Karismatika Husein',
+  //     number: '103001121212121'
+  //   },
+  //   mandiri2: {
+  //     bank: 'Bank Mandiri (Dita)',
+  //     name: 'Dita Puspitaningrum',
+  //     number: '1380016357092'
+  //   },
+  // };
 </script>
 <script src="../invitation-v2.js" type="module"></script>
 
