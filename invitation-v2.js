@@ -346,5 +346,6 @@ window.copyToClipboard = (
 
 showGiftBtn?.addEventListener("click", () => {
 	giftContentEl?.classList.remove("hidden");
+	document.getElementById("hadiah-fisik")?.classList.remove("hidden");
 	showGiftBtn.classList.add("hidden");
 });
