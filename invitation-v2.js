@@ -13,6 +13,8 @@ const bankQr = document.getElementById("bank-qr");
 const audio = document.querySelector("audio");
 const discButton = document.getElementById("discButton");
 const guestTo = document.getElementById("guestTo");
+const showGiftBtn = document.getElementById("showGift");
+const giftContentEl = document.getElementById("giftContent");
 
 // Navbar Smooth Scroll
 document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
@@ -341,3 +343,8 @@ window.copyToClipboard = (
 		event.innerText = textBeforeCopy;
 	}, 2000);
 };
+
+showGiftBtn?.addEventListener("click", () => {
+	giftContentEl?.classList.remove("hidden");
+	showGiftBtn.classList.add("hidden");
+});
