@@ -12,6 +12,9 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Arizonia&family=Neuton:ital,wght@0,200;0,300;0,400;0,700;0,800;1,400&family=Quicksand:wght@300..700&display=swap"
         rel="stylesheet">
+    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.14.5/dist/cdn.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
         tailwind.config = {
@@ -221,8 +224,65 @@
                 </div>
             </section>
             <img src="./assets/ornamen_2.1.png" alt="Ornamen 2.1" class="w-full bg-[#4A1719]">
+            <section class="bg-[#4A1619E5] text-foundation-yellow-900 relative overflow-hidden">
+                <div class="absolute top-0 right-0 left-1/2">
+                    <img src="./assets/bg_4.1.png" alt="Background 4.1" class="w-full">
+                </div>
+                <div x-data="{showingGallerySrc: './assets/gallery_1.jpeg'}" class="relative px-5 py-16">
+                    <img src="./assets/ornamen_1.1.png" alt="Ornamen 1.1" class="w-2/3 mx-auto">
+                    <h2 class="mt-1 text-center text-2xl font-semibold">
+                        Galeri
+                    </h2>
+                    <div class="mt-10">
+                        <img :src="showingGallerySrc" alt="Gallery"
+                            class="w-full rounded-2xl aspect-square object-cover">
+                    </div>
+                    <div class="swiper gallery-swiper mt-8">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide w-auto">
+                                <img src="./assets/gallery_1.jpeg" alt="Gallery 1"
+                                    class="w-20 aspect-square object-cover border-2 rounded-lg"
+                                    :class="showingGallerySrc == $el.getAttribute('src') ? 'border-white' : 'border-white/0'"
+                                    @click="showingGallerySrc = $el.getAttribute('src')">
+                            </div>
+                            <div class="swiper-slide w-auto">
+                                <img src="./assets/gallery_2.jpeg" alt="Gallery 2"
+                                    class="w-20 aspect-square object-cover border-2 rounded-lg"
+                                    :class="showingGallerySrc == $el.getAttribute('src') ? 'border-white' : 'border-white/0'"
+                                    @click="showingGallerySrc = $el.getAttribute('src')">
+                            </div>
+                            <div class="swiper-slide w-auto">
+                                <img src="./assets/gallery_3.jpeg" alt="Gallery 3"
+                                    class="w-20 aspect-square object-cover border-2 rounded-lg"
+                                    :class="showingGallerySrc == $el.getAttribute('src') ? 'border-white' : 'border-white/0'"
+                                    @click="showingGallerySrc = $el.getAttribute('src')">
+                            </div>
+                            <div class="swiper-slide w-auto">
+                                <img src="./assets/gallery_4.jpeg" alt="Gallery 4"
+                                    class="w-20 aspect-square object-cover border-2 rounded-lg"
+                                    :class="showingGallerySrc == $el.getAttribute('src') ? 'border-white' : 'border-white/0'"
+                                    @click="showingGallerySrc = $el.getAttribute('src')">
+                            </div>
+                            <div class="swiper-slide w-auto">
+                                <img src="./assets/gallery_5.jpeg" alt="Gallery 5"
+                                    class="w-20 aspect-square object-cover border-2 rounded-lg"
+                                    :class="showingGallerySrc == $el.getAttribute('src') ? 'border-white' : 'border-white/0'"
+                                    @click="showingGallerySrc = $el.getAttribute('src')">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
         </div>
     </div>
+
+    <script>
+        const swiper = new Swiper(".gallery-swiper", {
+            slidesPerView: "auto",
+            spaceBetween: 2,
+            freeMode: true,
+        });
+    </script>
 </body>
 
 </html>
