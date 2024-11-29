@@ -13,7 +13,7 @@
         href="https://fonts.googleapis.com/css2?family=Arizonia&family=Neuton:ital,wght@0,200;0,300;0,400;0,700;0,800;1,400&family=Quicksand:wght@300..700&display=swap"
         rel="stylesheet">
     <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.14.5/dist/cdn.min.js"></script>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="../invitation.css" />
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
@@ -36,7 +36,10 @@
                                 900: '#4A1619'
                             }
                         }
-                    }
+                    },
+                    animation: {
+                        "spin-slow": "spin 6s linear infinite",
+                    },
                 }
             }
         }
@@ -45,9 +48,11 @@
 
 <body>
     <div class="flex">
-        <div class="flex-1 bg-gray-500 min-h-screen"></div>
+        <div class="flex-1 bg-foundation-dark-red-700 sticky top-0 h-screen">
+            <img src="./assets/cover.jpeg" class="w-full h-full object-cover" />
+        </div>
         <div class="max-w-lg w-full">
-            <section class="bg-red-900 text-foundation-yellow-900 relative">
+            <section id="hero" class="bg-red-900 text-foundation-yellow-900 relative">
                 <img src="./assets/bg-1.1.png" alt="Background 1.1" class="absolute inset-0 w-full h-full object-cover">
                 <div class="relative">
                     <div class="flex items-center justify-center px-5 py-6">
@@ -55,11 +60,14 @@
                     </div>
                     <div class="px-5 pt-3 pb-6">
                         <h1 class="text-center flex flex-col items-center gap-6">
-                            <span class="text-sm uppercase">The Wedding of</span>
-                            <span class="text-4xl font-arizonia">Nadya <span class="text-xl">&</span> Satya</span>
+                            <span data-aos="fade-up" class="text-sm uppercase">The Wedding of</span>
+                            <span data-aos="fade-up" class="text-4xl font-arizonia">Nadya <span class="text-xl">&</span>
+                                Satya</span>
                         </h1>
-                        <img src="./assets/image_1.1.png" alt="Photo of Couple" class="mt-6 w-2/3 mx-auto">
-                        <p class="text-white opacity-60 text-center mt-6 text-xs italic">#SATuNADacinta</p>
+                        <img data-aos="fade-up" src="./assets/image_1.1.png" alt="Photo of Couple"
+                            class="mt-6 w-2/3 mx-auto">
+                        <p data-aos="fade-up" class="text-white opacity-60 text-center mt-6 text-sm italic">
+                            #SATuNADacinta</p>
                     </div>
                     <img src="./assets/ornamen_1.2.png" alt="Ornamen 1.2"
                         class="absolute bottom-0 left-0 w-1/6 translate-y-[12%]">
@@ -69,29 +77,30 @@
             </section>
             <div class="relative bg-[#772828] h-[58px] w-full border-y-2 border-foundation-yellow-900">
             </div>
-            <section class="text-foundation-yellow-900 relative">
+            <section id="pasangan" class="text-foundation-yellow-900 relative">
                 <img src="./assets/bg-1.1.png" alt="Background 1.1" class="absolute inset-0 w-full h-full object-cover">
                 <div class="relative px-5 py-16">
                     <img src="./assets/ornamen_1.1.png" alt="Ornamen 1.1" class="w-2/3 mx-auto">
-                    <h2 class="mt-1 text-center text-2xl font-semibold">
+                    <h2 data-aos="fade-up" class="mt-1 text-center text-2xl font-semibold">
                         Pasangan
                     </h2>
-                    <p class="mt-3 text-center text-white text-xs">
+                    <p data-aos="fade-up" class="mt-3 text-center text-white text-sm">
                         Maha Suci Allah yang telah menciptakan makhluk-Nya berpasang-pasangan. Ya Allah semoga ridho-Mu
                         tercurah mengiringi pernikahan kami:
                     </p>
-                    <img src="./assets/image_2.1.png" alt="Mempelai Wanita" class="mt-6 w-2/3 mx-auto">
-                    <h3 class="mt-5 text-center text-2xl font-neuton">
+                    <img data-aos="fade-up" src="./assets/image_2.1.png" alt="Mempelai Wanita"
+                        class="mt-6 w-2/3 mx-auto">
+                    <h3 data-aos="fade-up" class="mt-5 text-center text-2xl font-neuton">
                         Nadya Sakinah Putri, S.H.
                     </h3>
-                    <p class="mt-5 text-sm text-center text-white">
+                    <p data-aos="fade-up" class="mt-5 text-sm text-center text-white">
                         Putri dari <br>
                         Bapak Drs.H. Sulaiman Zuhdi, M.Pd.
                         & Ibu Israwati Syamsuddin, S.E.
                     </p>
-                    <p class="text-center mt-5">
+                    <p data-aos="fade-up" class="text-center mt-5">
                         <a href="https://instagram.com/nadyasakinahputri"
-                            class="inline-flex text-xs flex items-center gap-1 text-white bg-[#310D0F] p-2 underline">
+                            class="inline-flex text-sm flex items-center gap-1 text-white bg-[#310D0F] p-2 underline">
                             <svg width="14" height="14" viewBox="0 0 14 14" fill="none"
                                 xmlns="http://www.w3.org/2000/svg">
                                 <path
@@ -101,19 +110,19 @@
                             nadyasakinahputri
                         </a>
                     </p>
-                    <p class="text-6xl text-center my-10 font-neuton">&</p>
-                    <img src="./assets/image_2.2.png" alt="Mempelai Wanita" class="w-2/3 mx-auto">
-                    <h3 class="mt-5 text-center text-2xl font-neuton">
+                    <p data-aos="fade-up" class="text-6xl text-center my-10 font-neuton">&</p>
+                    <img data-aos="fade-up" src="./assets/image_2.2.png" alt="Mempelai Wanita" class="w-2/3 mx-auto">
+                    <h3 data-aos="fade-up" class="mt-5 text-center text-2xl font-neuton">
                         Muhammad Satya Nugraha, S.H.
                     </h3>
-                    <p class="mt-5 text-sm text-center text-white">
+                    <p data-aos="fade-up" class="mt-5 text-sm text-center text-white">
                         Putra dari <br>
                         Bapak Drs.H.Sugianto, M.Si. (Alm)
                         & Ibu Dra.Hj. Seniwati Hais, M.Si.
                     </p>
-                    <p class="text-center mt-5">
+                    <p data-aos="fade-up" class="text-center mt-5">
                         <a href="https://instagram.com/satyaangrh"
-                            class="inline-flex text-xs flex items-center gap-1 text-white bg-[#310D0F] p-2 underline">
+                            class="inline-flex text-sm flex items-center gap-1 text-white bg-[#310D0F] p-2 underline">
                             <svg width="14" height="14" viewBox="0 0 14 14" fill="none"
                                 xmlns="http://www.w3.org/2000/svg">
                                 <path
@@ -126,54 +135,55 @@
                 </div>
             </section>
             <img src="./assets/ornamen_2.1.png" alt="Ornamen 2.1" class="w-full bg-[#4A1719]">
-            <section class="text-foundation-yellow-900 relative">
+            <section id="agenda" class="text-foundation-yellow-900 relative">
                 <img src="./assets/bg-1.1.png" alt="Background 1.1" class="absolute inset-0 w-full h-full object-cover">
                 <div class="relative px-5 py-16">
-                    <p class="text-center text-sm font-medium">
+                    <p data-aos="fade-up" class="text-center text-sm font-medium">
                         Hari yang ditunggu
                     </p>
-                    <p class="mt-1 text-sm text-center">
+                    <p data-aos="fade-up" class="mt-1 text-sm text-center">
                         Ahad, 02 Februari 2025
                     </p>
-                    <div class="mt-5 grid grid-cols-4 gap-5">
+                    <div data-aos="fade-up" class="mt-5 grid grid-cols-4 gap-5">
                         <div
                             class="py-2 px-3 rounded bg-foundation-yellow-900 flex flex-col items-center text-foundation-dark-red-900">
-                            <div class="text-3xl font-medium">06</div>
+                            <div id="days" class="text-3xl font-medium">00</div>
                             <div class="mt-0.5 text-sm text-foundation-dark-red-700">HARI</div>
                         </div>
                         <div
                             class="py-2 px-3 rounded bg-foundation-yellow-900 flex flex-col items-center text-foundation-dark-red-900">
-                            <div class="text-3xl font-medium">06</div>
+                            <div id="hours" class="text-3xl font-medium">00</div>
                             <div class="mt-0.5 text-sm text-foundation-dark-red-700">JAM</div>
                         </div>
                         <div
                             class="py-2 px-3 rounded bg-foundation-yellow-900 flex flex-col items-center text-foundation-dark-red-900">
-                            <div class="text-3xl font-medium">06</div>
+                            <div id="minutes" class="text-3xl font-medium">00</div>
                             <div class="mt-0.5 text-sm text-foundation-dark-red-700">MENIT</div>
                         </div>
                         <div
                             class="py-2 px-3 rounded bg-foundation-yellow-900 flex flex-col items-center text-foundation-dark-red-900">
-                            <div class="text-3xl font-medium">06</div>
+                            <div id="seconds" class="text-3xl font-medium">00</div>
                             <div class="mt-0.5 text-sm text-foundation-dark-red-700">DETIK</div>
                         </div>
                     </div>
-                    <p class="mt-5 text-center text-xs">
+                    <p data-aos="fade-up" class="mt-5 text-center text-sm">
                         Dan di antara tanda-tanda (kebesaran)-Nya ialah Dia menciptakan pasangan-pasangan untukmu dari
                         jenismu sendiri, agar kamu cenderung dan merasa tenteram kepadanya, dan Dia menjadikan di
                         antaramu rasa kasih dan sayang. Sungguh, pada yang demikian itu benar-benar terdapat tanda-tanda
                         (kebesaran Allah) bagi kaum yang berpikir.
                     </p>
-                    <p class="text-sm text-white text-center mt-3 font-semibold">(Q.S. Ar-Rum: 21)</p>
+                    <p data-aos="fade-up" class="text-sm text-white text-center mt-3 font-semibold">(Q.S. Ar-Rum: 21)
+                    </p>
                     <img src="./assets/ornamen_1.1.png" alt="Ornamen 1.1" class="mt-16 w-2/3 mx-auto">
-                    <h2 class="mt-1 text-center text-2xl font-semibold">
+                    <h2 data-aos="fade-up" class="mt-1 text-center text-2xl font-semibold">
                         Waktu & Pelaksanaan
                     </h2>
-                    <p class="mt-1 text-center text-foundation-yellow-700 text-xs">
+                    <p data-aos="fade-up" class="mt-1 text-center text-foundation-yellow-700 text-sm">
                         Dengan memohon Rahmat Allah, merupakan kehormatan dan kebahagiaan kami apabila
                         Bapak/Ibu/Saudara/i dapat memberikan doa dan restu dalam acara pernikahan kami yang akan
                         dilaksanakan pada:
                     </p>
-                    <div class="mt-6 mx-4 rounded-xl border border-foundation-yellow-900">
+                    <div data-aos="fade-up" class="mt-6 mx-4 rounded-xl border border-foundation-yellow-900">
                         <div class="py-10 px-6 text-center flex flex-col items-center">
 
                             <img src="./assets/ornamen_3.1.png" alt="Akad Nikah" class="w-[75px] mb-4">
@@ -186,7 +196,7 @@
                             <p class="mt-8 text-sm font-medium">
                                 Gedung Wanita Pekanbaru
                             </p>
-                            <p class="mt-2 text-xs">
+                            <p class="mt-2 text-sm">
                                 Jl. Diponegoro
                             </p>
                             <p class="mt-2 text-lg font-semibold">
@@ -207,7 +217,7 @@
                             <p class="mt-8 text-sm font-medium">
                                 Gedung Wanita Pekanbaru
                             </p>
-                            <p class="mt-2 text-xs">
+                            <p class="mt-2 text-sm">
                                 Jl. Diponegoro
                             </p>
                             <p class="mt-2 text-lg font-semibold">
@@ -230,14 +240,14 @@
                 </div>
                 <div x-data="{showingGallerySrc: './assets/gallery_1.jpeg'}" class="relative px-5 py-16">
                     <img src="./assets/ornamen_1.1.png" alt="Ornamen 1.1" class="w-2/3 mx-auto">
-                    <h2 class="mt-1 text-center text-2xl font-semibold">
+                    <h2 data-aos="fade-up" class="mt-1 text-center text-2xl font-semibold">
                         Galeri
                     </h2>
-                    <div class="mt-10">
+                    <div data-aos="fade-up" class="mt-10">
                         <img :src="showingGallerySrc" alt="Gallery"
                             class="w-full rounded-2xl aspect-square object-cover">
                     </div>
-                    <div class="swiper gallery-swiper mt-8">
+                    <div data-aos="fade-up" class="swiper gallery-swiper mt-8">
                         <div class="swiper-wrapper">
                             <div class="swiper-slide w-auto">
                                 <img src="./assets/gallery_1.jpeg" alt="Gallery 1"
@@ -273,13 +283,13 @@
                     </div>
                 </div>
                 <div class="px-5 pb-16">
-                    <h2 class="text-center text-2xl font-semibold">
+                    <h2 data-aos="fade-up" class="text-center text-2xl font-semibold">
                         Teman Tapi Menikah
                     </h2>
-                    <p class="mt-1 text-center text-white text-xs">
+                    <p data-aos="fade-up" class="mt-1 text-center text-white text-sm">
                         Awal kisah dimulai hingga berkomitmen mengarungi kehidupan bersama
                     </p>
-                    <div class="mt-6 swiper story-swiper">
+                    <div data-aos="fade-up" class="mt-6 swiper story-swiper">
                         <div class="swiper-wrapper">
                             <div class="swiper-slide">
                                 <div class="flex flex-col gap-4">
@@ -383,14 +393,14 @@
                 <img src="./assets/bg-1.1.png" alt="Background 1.1" class="absolute inset-0 w-full h-full object-cover">
                 <div class="relative px-5 py-16">
                     <img src="./assets/ornamen_1.1.png" alt="Ornamen 1.1" class="w-2/3 mx-auto">
-                    <h2 class="mt-1 text-center text-2xl font-semibold">
+                    <h2 data-aos="fade-up" class="mt-1 text-center text-2xl font-semibold">
                         Informasi Tambahan
                     </h2>
-                    <p class="mt-3 text-center text-white text-xs">
+                    <p data-aos="fade-up" class="mt-3 text-center text-white text-sm">
                         Dengan segala hormat, izinkan menyampaikan beberapa hal informasi sebagai berikut
                     </p>
                     <div class="mt-10 grid grid-cols-2 gap-x-5 gap-y-6">
-                        <div class="text-center flex gap-3 flex-col items-center justify-center">
+                        <div data-aos="fade-up" class="text-center flex gap-3 flex-col items-center justify-center">
                             <svg width="82" height="82" viewBox="0 0 82 82" fill="none"
                                 xmlns="http://www.w3.org/2000/svg">
                                 <rect width="82" height="82" rx="5.07508" fill="#4A1619" />
@@ -404,11 +414,11 @@
                                     d="M40.9655 50.8096C38.9096 47.8292 37.1622 45.34 35.6772 43.2246C33.0236 39.4445 31.2081 36.8582 29.9684 34.7969C29.0137 33.2094 28.4363 31.9886 28.0914 30.8238C27.7486 29.6663 27.6218 28.5183 27.6218 27.0596C27.6218 19.266 33.9397 12.9481 41.7333 12.9481C49.5269 12.9481 55.8448 19.266 55.8448 27.0596C55.8448 28.5183 55.718 29.6663 55.3752 30.8238C55.0303 31.9886 54.4529 33.2094 53.4982 34.7969C52.2585 36.8582 50.443 39.4445 47.7894 43.2246C46.3044 45.3399 44.557 47.8292 42.5012 50.8095C42.1303 51.3445 41.3364 51.3445 40.9655 50.8096ZM41.7333 34.2823C45.7223 34.2823 48.956 31.0486 48.956 27.0596C48.956 23.0706 45.7223 19.8369 41.7333 19.8369C37.7443 19.8369 34.5106 23.0706 34.5106 27.0596C34.5106 31.0486 37.7443 34.2823 41.7333 34.2823Z"
                                     fill="#4A1619" stroke="#FBB655" stroke-width="1.89589" />
                             </svg>
-                            <p class="text-xs text-white">
+                            <p class="text-sm text-white">
                                 Cek tujuan sebelum menuju ke lokasi
                             </p>
                         </div>
-                        <div class="text-center flex gap-3 flex-col items-center justify-center">
+                        <div data-aos="fade-up" class="text-center flex gap-3 flex-col items-center justify-center">
                             <svg width="82" height="82" viewBox="0 0 82 82" fill="none"
                                 xmlns="http://www.w3.org/2000/svg">
                                 <rect width="82" height="82" rx="5" fill="#4A1619" />
@@ -426,11 +436,11 @@
                                     </clipPath>
                                 </defs>
                             </svg>
-                            <p class="text-xs text-white">
+                            <p class="text-sm text-white">
                                 Terima kasih sudah berkenan hadir
                             </p>
                         </div>
-                        <div class="text-center flex gap-3 flex-col items-center justify-center">
+                        <div data-aos="fade-up" class="text-center flex gap-3 flex-col items-center justify-center">
                             <svg width="82" height="82" viewBox="0 0 82 82" fill="none"
                                 xmlns="http://www.w3.org/2000/svg">
                                 <rect width="82" height="82" rx="2.19704" fill="#4A1619" />
@@ -450,11 +460,11 @@
                                     </clipPath>
                                 </defs>
                             </svg>
-                            <p class="text-xs text-white">
+                            <p class="text-sm text-white">
                                 Dipersilahkan memberi selamat dan salam
                             </p>
                         </div>
-                        <div class="text-center flex gap-3 flex-col items-center justify-center">
+                        <div data-aos="fade-up" class="text-center flex gap-3 flex-col items-center justify-center">
                             <svg width="82" height="82" viewBox="0 0 82 82" fill="none"
                                 xmlns="http://www.w3.org/2000/svg">
                                 <rect width="82" height="82" rx="2.1238" fill="#4A1619" />
@@ -474,40 +484,35 @@
                                     stroke="#FBB655" stroke-width="1.40541" stroke-linecap="round" />
                                 <circle cx="41.3514" cy="25.8919" r="1.05405" fill="#FBB655" />
                             </svg>
-                            <p class="text-xs text-white">
+                            <p class="text-sm text-white">
                                 Selamat menikmati santapan hidangan
                             </p>
                         </div>
                     </div>
                 </div>
-                <div class="relative px-5 py-16">
+                <div id="hadiah" class="relative px-5 pt-16">
                     <img src="./assets/ornamen_1.1.png" alt="Ornamen 1.1" class="w-2/3 mx-auto">
-                    <h2 class="mt-1 text-center text-2xl font-semibold">
+                    <h2 data-aos="fade-up" class="mt-1 text-center text-2xl font-semibold">
                         Hadiah Pernikahan
                     </h2>
-                    <p class="mt-3 text-center text-white text-xs">
+                    <p data-aos="fade-up" class="mt-3 text-center text-white text-sm">
                         Bagi Keluarga, Sahabat serta Kerabat yang ingin mengirimkan hadiah, silahkan mengirimkannya
                         melalui:
                     </p>
-                    <div
-                        class="mt-6 rounded-2xl py-5 px-3 border border-foundation-yellow-900 bg-[#772828] text-center flex flex-col">
+                    <div data-aos="fade-up"
+                        class="mt-6 rounded-2xl py-5 px-3 border border-foundation-yellow-900 bg-[#772828] text-center flex flex-col items-center">
                         <h3 class="text-sm">Pengiriman Hadiah</h3>
-                        <select id="bank-select" class="mt-4 px-4 py-3 w-full rounded-lg border text-sm text-[#4E4E4E]">
-                            <option value="bca">BCA</option>
-                            <option value="bni">BNI</option>
-                        </select>
-                        <div class="text-center">
-                            <p id="bank-title" class="mt-4 text-sm">Bank BCA</p>
-                            <p id="bank-number" class="font-semibold"></p>
-                            <p id="bank-name" class="text-sm"></p>
-                            <button id="bank-copy" data-copy=""
-                                class="mt-2 px-2 py-1 border border-brand-blue text-brand-blue text-sm rounded"
-                                onclick="copyToClipboard(this, null, 'Salin Rekening', 'Rekening Disalin', ['bg-brand-blue', 'text-white'])">
-                                Salin Rekening
-                            </button>
-                        </div>
+                        <select id="bank-select"
+                            class="mt-4 px-4 py-3 w-full rounded border text-sm text-black"></select>
+                        <p class="mt-2 font-semibold">No. Rekening: <span id="bank-number"></span></p>
+                        <p class="mt-2 text-sm text-white">a.n <span id="bank-name"></span></p>
+                        <button id="bank-copy" class="mt-2 px-2 py-1 border border-white text-white text-sm rounded"
+                            data-copy=""
+                            onclick="copyToClipboard(this, null, 'Salin Rekening', 'Rekening Disalin', ['bg-white', '!text-foundation-dark-red-900'])">
+                            Salin Rekening
+                        </button>
                     </div>
-                    <div
+                    <div data-aos="fade-up"
                         class="mt-5 rounded-2xl py-5 px-3 border border-foundation-yellow-900 bg-[#772828] text-center flex flex-col items-center">
                         <h3 class="text-sm text-white">Pengiriman Hadiah Fisik</h3>
                         <svg class="mt-4" width="88" height="88" viewBox="0 0 88 88" fill="none"
@@ -528,29 +533,65 @@
                         </p>
                     </div>
                 </div>
-                <div class="relative px-5 pb-16">
-                    <h2 class="mt-1 text-center text-2xl font-semibold">
+                <div id="ucapan" class="relative px-5 py-16">
+                    <h2 data-aos="fade-up" class="mt-1 text-center text-2xl font-semibold">
                         Doa & Ucapan
                     </h2>
-                    <p class="mt-3 text-center text-white text-xs">
+                    <p data-aos="fade-up" class="mt-3 text-center text-white text-sm">
                         Kirimkan doa & ucapan kepada kedua mempelai di momen spesial
                     </p>
+                    <div data-aos="fade-up" data-aos="fade-up" class="mt-6">
+                        <div>
+                            <label for="namaUcapan" class="text-sm text-white">Nama *</label>
+                            <input id="namaUcapan" type="text"
+                                class="mt-2 px-4 py-3 rounded-lg bg-white w-full text-sm text-black" required
+                                placeholder="Nama Anda di sini..." />
+                            <p id="error-nama-ucapan" class="text-red-500 text-sm mt-1 hidden">
+                                Nama tidak boleh kosong
+                            </p>
+                        </div>
+                        <div class="mt-4">
+                            <label for="pesanUcapan" class="text-sm text-white">Ucapan *</label>
+                            <textarea id="pesanUcapan"
+                                class="mt-2 px-4 py-3 rounded-lg bg-white w-full text-sm text-black"
+                                placeholder="Lancar dan samawa yaa..." rows="5" required></textarea>
+                            <p id="error-pesan-ucapan" class="text-red-500 text-sm mt-1 hidden">
+                                Pesan tidak boleh kosong
+                            </p>
+                        </div>
+                        <div class="mt-4">
+                            <button id="sendUcapan"
+                                class="block w-full bg-foundation-yellow-900 text-foundation-dark-red-900 px-6 py-3 text-sm rounded-lg">
+                                Kirim
+                            </button>
+                            <p id="textUcapan" class="text-center text-sm font-bold my-4 hidden">
+                                Terima kasih telah mengirimkan ucapan! Silakan tunggu sesaat.
+                            </p>
+                        </div>
+                    </div>
+                    <article id="ucapan-inner" data-aos="fade-up" class="mt-5 w-full grid grid-cols-1">
+                    </article>
+                    <div data-aos="fade-up" class="text-center">
+                        <button id="viewMoreGreetings" class="mt-6 font-semibold text-sm underline">
+                            Lihat Lainnya
+                        </button>
+                    </div>
                 </div>
             </section>
             <img src="./assets/ornamen_2.1.png" alt="Ornamen 2.1" class="w-full bg-[#4A1719]">
             <section class="text-foundation-yellow-900 relative">
                 <img src="./assets/bg-1.1.png" alt="Background 1.1" class="absolute inset-0 w-full h-full object-cover">
                 <div class="relative px-5 py-16">
-                    <p class="text-white opacity-60 text-center mt-6 text-xs italic">#SATuNADacinta</p>
+                    <p class="text-white opacity-60 text-center mt-6 text-sm italic">#SATuNADacinta</p>
                     <h1 class="mt-4 text-center">
                         <span class="text-4xl font-arizonia">Nadya <span class="text-xl">&</span> Satya</span>
                     </h1>
                     <img src="./assets/ornamen_1.1.png" alt="Ornamen 1.1" class="mt-10 w-2/3 mx-auto">
-                    <p class="text-center text-white mt-1 text-xs">
+                    <p class="text-center text-white mt-1 text-sm">
                         Dibuat oleh hinggatua.com ❤ <br>
                         Digitalisasi undangan di momentum spesialmu
                     </p>
-                    <p class="text-center text-white mt-1 text-xs">
+                    <p class="text-center text-white mt-1 text-sm">
                         <svg class="inline" width="13" height="11" viewBox="0 0 13 11" fill="none"
                             xmlns="http://www.w3.org/2000/svg">
                             <path
@@ -566,7 +607,7 @@
                     <p class="mt-5 text-3xl text-white font-bold text-center">
                         HinggaTua
                     </p>
-                    <p class="mt-3 text-center text-white text-xs underline">
+                    <p class="mt-3 text-center text-white text-sm underline">
                         <a href="https://hinggatua.com">www.hinggatua.com</a>
                     </p>
                     <ul class="flex gap-2 justify-center mt-3">
@@ -593,13 +634,78 @@
                     </ul>
                 </div>
                 <img src="./assets/ornamen_5.1.png" alt="Ornamen 5.1" class="w-full relative">
+                <footer class="text-center text-sm p-5 bg-foundation-yellow-900 text-dark-red-900">
+                    Powered by Qita Development Technology
+                </footer>
             </section>
-            <footer class="text-center text-xs p-5 bg-foundation-yellow-900 text-dark-red-900">
-                Powered by Qita Development Technology
-            </footer>
+            <nav
+                class="w-full bg-foundation-yellow-900 text-foundation-dark-red-900 flex items-center justify-center sticky bottom-0 inset-x-0 z-40">
+                <div class="w-full flex items-center justify-evenly">
+                    <a id="home-btn" href="#hero" class="flex-1 nav-btn flex flex-col items-center px-2 py-4">
+                        <i class="fa-solid fa-house"></i>
+                        <span class="text-center text-sm mt-1">Home</span>
+                    </a>
+                    <a id="group-btn" href="#pasangan" class="flex-1 nav-btn flex flex-col items-center px-2 py-4">
+                        <i class="fa-solid fa-user-group"></i>
+                        <span class="text-center text-sm mt-1">Pasangan</span>
+                    </a>
+                    <a id="gallery-btn" href="#agenda" class="flex-1 nav-btn flex flex-col items-center px-2 py-4">
+                        <i class="fa-solid fa-calendar"></i>
+                        <span class="text-center text-sm mt-1">Agenda</span>
+                    </a>
+                    <a id="angpao-btn" href="#hadiah" class="flex-1 nav-btn flex flex-col items-center px-2 py-4">
+                        <i class="fa-solid fa-gift"></i>
+                        <span class="text-center text-sm mt-1">Hadiah</span>
+                    </a>
+                    <a id="ucapan-btn" href="#ucapan" class="flex-1 nav-btn flex flex-col items-center px-2 py-4">
+                        <i class="fa-solid fa-comments"></i>
+                        <span class="text-center text-sm mt-1">Ucapan</span>
+                    </a>
+                </div>
+            </nav>
         </div>
     </div>
 
+    <!-- Modal -->
+    <section id="modal"
+        class="w-full z-50 fixed inset-0 bg-[url('./assets/cover.jpeg')] bg-cover bg-center overflow-y-auto">
+        <div class="flex flex-col items-center justify-center max-w-4xl h-full m-auto p-5">
+            <article
+                class="w-full h-full sm:h-auto flex flex-col items-center justify-center bg-[#511E1966] text-center text-white py-40">
+                <section class="w-full px-5">
+                    <img src="./assets/ornamen_1.1.png" alt="Logo" class="w-2/3 mb-8 mx-auto" />
+                    <section>
+                        <h1 class="text-sm">THE WEDDING OF</h1>
+                        <h2 class="mt-3 text-4xl font-arizonia">Nadya & Satya</h2>
+                        <h3 class="mt-3 text-sm text-foundation-yellow-900 font-bold">Ahad, 02 Februari 2025</h3>
+                    </section>
+                </section>
+                <section class="px-5">
+                    <h4 id="guestTo" class="mt-8 text-sm">
+                        <i>Sedang memuat tamu...</i>
+                    </h4>
+                    <button id="openButton"
+                        class="mt-8 hidden inline-flex items-center bg-foundation-yellow-900 text-foundation-dark-red-900 px-6 py-3 text-sm rounded font-medium">
+                        Buka Undangan
+                        <svg class="ml-2" width="13" height="11" viewBox="0 0 13 11" fill="none"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path d="M11.5 5.5H1.5" stroke="#4A1619" stroke-width="1.40406" stroke-linecap="round"
+                                stroke-linejoin="round" />
+                            <path d="M7.5 9.5L11.5 5.5L7.5 1.5" stroke="#4A1619" stroke-width="1.40406"
+                                stroke-linecap="round" stroke-linejoin="round" />
+                        </svg>
+                    </button>
+                </section>
+            </article>
+        </div>
+    </section>
+
+    <button id="discButton" class="fixed bottom-[85px] lg:bottom-5 left-5 w-14 outline-none z-40">
+        <img src="../assets/img/disc.png" alt="Disc" class="w-full" />
+    </button>
+    <audio id="bg-song" autostart="0" src="./assets/bg-lagu.mp3" loop="true"></audio>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
         const gallerySwiper = new Swiper(".gallery-swiper", {
             slidesPerView: "auto",
@@ -615,7 +721,38 @@
                 prevEl: ".prev-story",
             },
         });
+
+        const SHEET_URL =
+            "https://script.google.com/macros/s/AKfycbwSYa7_fliYCUb7J-6Q2orm1SCorKTCYK4sO9tMaISGKud1WyDmjRLvZPYvuEY-B0dO/exec";
+        const COUNTDOWN_TIME = "2025/02/02 08:15";
+
+        const templateUcapan = ({ name, message }) => {
+            return `
+                      <article id="card-wishes" class="px-2.5 py-5">
+                          <h1 class="text-sm">
+                              ${name}
+                          </h1>
+                          <p class="mt-4 text-sm text-white">
+                              ${message}
+                          </p>
+                      </article>
+                  `;
+        };
+
+        const accounts = {
+            mandiri: {
+                bank: "Bank Mandiri",
+                number: "1080024499429",
+                name: "Nadya Sakinah Putri",
+            },
+            bca: {
+                bank: "BCA",
+                number: "1440765099",
+                name: "Muhammad Satya Nugraha",
+            },
+        };
     </script>
+    <script src="../invitation-v2.js" type="module"></script>
 </body>
 
 </html>

@@ -74,6 +74,13 @@ discButton?.addEventListener("click", function () {
 	}
 });
 
+document.addEventListener('visibilitychange', function () {
+	if (document.visibilityState !== 'visible') {
+		discButton.classList.remove("animate-spin-slow");
+		audio.pause();
+	}
+});
+
 // Countdown date
 let x = setInterval(() => {
 	let weddingDate = new Date(COUNTDOWN_TIME).getTime();
