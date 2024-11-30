@@ -1,5 +1,6 @@
 import os
 from PIL import Image
+import argparse
 
 
 def optimize_images(input_folder, output_folder):
@@ -40,6 +41,19 @@ def optimize_images(input_folder, output_folder):
 
 
 if __name__ == "__main__":
-    current_folder = os.getcwd()
-    optimized_folder = os.path.join(current_folder, "optimized")
-    optimize_images(current_folder, optimized_folder)
+    # Set up argument parsing
+    parser = argparse.ArgumentParser(
+        description="Optimize and convert images to WebP format."
+    )
+    parser.add_argument(
+        "input_folder", help="Path to the folder containing the images to process."
+    )
+    parser.add_argument(
+        "output_folder",
+        help="Path to the folder where the optimized images will be saved.",
+    )
+
+    args = parser.parse_args()
+
+    # Call the optimize_images function with specified paths
+    optimize_images(args.input_folder, args.output_folder)
