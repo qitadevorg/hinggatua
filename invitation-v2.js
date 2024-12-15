@@ -51,7 +51,7 @@ window.onload = () => {
 	let guestName = params.tamu;
 
 	if (guestName) {
-		guestTo.innerHTML = `Kepada Yth Bapak/Ibu/Saudara/i:<br>${guestName}`;
+		guestTo.innerHTML = `Kepada Yth Bapak/Ibu/Saudara/i:<br><strong>${guestName}</strong>`;
 		guestTo.classList.add("animate__animated");
 		guestTo.classList.add("animate__fadeIn");
 		openButton.classList.remove("hidden");
