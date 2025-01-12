@@ -3,6 +3,19 @@ from PIL import Image
 import argparse
 
 
+def resize_image(img, max_size=512):
+    """
+    Resize the image to a maximum of `max_size` pixels in width or height,
+    while maintaining the aspect ratio.
+    """
+    width, height = img.size
+    if width > max_size:
+        new_width = max_size
+        new_height = int(height * (max_size / width))
+        img = img.resize((new_width, new_height), Image.Resampling.LANCZOS)
+    return img
+
+
 def optimize_images(input_folder, output_folder):
     # Create the output folder if it doesn't exist
     if not os.path.exists(output_folder):
@@ -23,6 +36,9 @@ def optimize_images(input_folder, output_folder):
             try:
                 # Open the image file
                 with Image.open(input_path) as img:
+                    # Resize the image if it's larger than 512 pixels
+                    img = resize_image(img, max_size=512)
+
                     # Handle transparency for PNGs
                     if img.mode in ("RGBA", "LA") or (
                         img.mode == "P" and "transparency" in img.info
