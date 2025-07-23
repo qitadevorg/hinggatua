@@ -259,7 +259,7 @@
               <p class="text-lg font-bold mt-4 text-center">
                 09.00 - 20.00 WIB
               </p>
-              <a href="https://maps.app.goo.gl/YNFKsDjsEhD7X1WZA" target="_blank" data-aos="fade-up"
+              <a href="https://maps.app.goo.gl/UWfbU2BgcCVvTMyE9?g_st=ipc" target="_blank" data-aos="fade-up"
                 class="mt-6 inline-block bg-dark-brown-900 rounded-lg text-white px-6 py-3 text-xs">
                 Lihat Peta
                 <span>
@@ -394,14 +394,19 @@
           <section id="hadiah-inner" data-aos="fade-up" class="mt-6 px-3">
             <div class="w-full border rounded-lg bg-white p-5">
               <h2 class="ext-center font-semibold">Pengiriman Hadiah</h2>
-              <div class="mt-4 px-4 py-3 text-xs w-full border flex items-center bg-gray-100 rounded">
-                <img src="../assets/bank-logo/bri.png" alt="Bank BRI" class="w-10 mr-3" />
-                Bank Rakyat Indonesia
+              <select id="bank-select" class="mt-4 px-4 py-3 w-full rounded border text-xs"></select>
+              <div class="text-center">
+                <p id="bank-title" class="mt-4 font-semibold"></p>
+                <p class="mt-2 font-semibold">
+                  No. Rekening: <span id="bank-number"></span>
+                </p>
+                <p class="mt-2 text-sm">a.n. <span id="bank-name"></span></p>
+                <button id="bank-copy" class="mt-2 px-2 py-1 border border-blue-1 text-blue-1 text-xs rounded"
+                  data-copy=""
+                  onclick="copyToClipboard(this, null, 'Salin Rekening', 'Rekening Disalin', ['bg-blue-1', 'text-white'])">
+                  Salin Rekening
+                </button>
               </div>
-              <p id="bank-number" class="mt-2 font-semibold">
-                No. Rekening: 091201062714539
-              </p>
-              <p id="bank-name" class="mt-2 text-sm">a.n. Rizky Fauziah</p>
             </div>
           </section>
 
@@ -559,6 +564,18 @@
     const SHEET_URL =
       "https://script.google.com/macros/s/AKfycbx2jI8sWoFhtnbX_wkBmn_Bm14Q3m4ZXRz8cgMpFfFbfUmwrryJ6G-DbF0Lin6FPZ64cw/exec";
     const COUNTDOWN_TIME = "2025/08/01 09:00";
+    const accounts = {
+      bri1: {
+        bank: "BRI (1)",
+        number: "091201062714539",
+        name: "Rizky Fauziah",
+      },
+      bri2: {
+        bank: "BRI (2)",
+        number: "067101384969501",
+        name: "Oman Iwan Irawan",
+      },
+    };
 
     const templateUcapan = ({ name, message }) => {
       return `
